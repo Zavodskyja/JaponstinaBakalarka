@@ -38,12 +38,8 @@ namespace Japonstina
             this.button1 = new System.Windows.Forms.Button();
             this.RegistrationError = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // RegistrationLoginBox
@@ -59,7 +55,7 @@ namespace Japonstina
             // RegistrationPasswordBox1
             // 
             this.RegistrationPasswordBox1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RegistrationPasswordBox1.Location = new System.Drawing.Point(412, 339);
+            this.RegistrationPasswordBox1.Location = new System.Drawing.Point(412, 331);
             this.RegistrationPasswordBox1.Name = "RegistrationPasswordBox1";
             this.RegistrationPasswordBox1.PasswordChar = '*';
             this.RegistrationPasswordBox1.Size = new System.Drawing.Size(250, 43);
@@ -82,7 +78,7 @@ namespace Japonstina
             // RegistrationPasswordBox2
             // 
             this.RegistrationPasswordBox2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RegistrationPasswordBox2.Location = new System.Drawing.Point(412, 399);
+            this.RegistrationPasswordBox2.Location = new System.Drawing.Point(412, 391);
             this.RegistrationPasswordBox2.Name = "RegistrationPasswordBox2";
             this.RegistrationPasswordBox2.PasswordChar = '*';
             this.RegistrationPasswordBox2.Size = new System.Drawing.Size(250, 43);
@@ -105,7 +101,7 @@ namespace Japonstina
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Salmon;
-            this.label3.Location = new System.Drawing.Point(412, 311);
+            this.label3.Location = new System.Drawing.Point(412, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 25);
             this.label3.TabIndex = 5;
@@ -118,7 +114,7 @@ namespace Japonstina
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(412, 471);
+            this.button1.Location = new System.Drawing.Point(412, 463);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 50);
             this.button1.TabIndex = 6;
@@ -128,18 +124,16 @@ namespace Japonstina
             // 
             // RegistrationError
             // 
-            this.RegistrationError.AutoSize = true;
             this.RegistrationError.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RegistrationError.ForeColor = System.Drawing.Color.Red;
-            this.RegistrationError.Location = new System.Drawing.Point(234, 235);
+            this.RegistrationError.Location = new System.Drawing.Point(412, 265);
             this.RegistrationError.Name = "RegistrationError";
-            this.RegistrationError.Size = new System.Drawing.Size(0, 21);
+            this.RegistrationError.Size = new System.Drawing.Size(245, 38);
             this.RegistrationError.TabIndex = 7;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(243)))), ((int)(((byte)(189)))));
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(201)))), ((int)(((byte)(185)))));
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.RegistrationError);
             this.panel1.Controls.Add(this.button1);
@@ -153,40 +147,6 @@ namespace Japonstina
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1066, 768);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Salmon;
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1066, 768);
-            this.panel2.TabIndex = 1;
-            this.panel2.Visible = false;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(369, 164);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(288, 45);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Můžete se přihlásit";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(248, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(522, 65);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Registrace dokončena";
             // 
             // label6
             // 
@@ -211,8 +171,6 @@ namespace Japonstina
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -228,9 +186,6 @@ namespace Japonstina
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label RegistrationError;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
     }
 }

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.IO;
 using Japonstina.models;
 using Newtonsoft.Json;
+using Japonstina;
+
 
 
 namespace Japonstina
@@ -148,16 +150,20 @@ namespace Japonstina
 
         private void Register_button_Click(object sender, EventArgs e)
         {
+            if (StavAplikace.ActiveForm != "Registrace")
+            {
 
+                PanelRegistrace f = new PanelRegistrace();
+                panel1.Controls.Clear();
+                f.TopLevel = false;
+                panel1.Controls.Add(f);
+                f.Show();
+                StavAplikace.ActiveForm = "Registrace";
+            }
+            else
+            {
 
-            PanelRegistrace f = new PanelRegistrace();
-
-            panel1.Controls.Clear();
-            f.TopLevel = false;
-            panel1.Controls.Add(f);
-            f.Show();
-
-
+            }
 
 
 

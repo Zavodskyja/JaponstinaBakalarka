@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Japonstina.kanji;
+using Japonstina.vyuka;
 
 namespace Japonstina
 {
@@ -43,7 +43,7 @@ namespace Japonstina
         public void KanjiMain()
 
         {
-            var slovnik = kanji.Kanji.Slovnik();
+            var slovnik = vyuka.Kanji.Slovnik();
             var random = new Random();
             var SeznamZnaku = slovnik.Where(i => i.Key.Uroven == JLPT.N5 || i.Key.Uroven == JLPT.N4).OrderBy(x => random.Next()).Select(x => x.Key.ID).Take(4).ToList(); /*22.6. Predelat dle hiragany pro vetsi seznamy*/
             var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)]; /*TODO: Dodelat plneni tlacitek*/

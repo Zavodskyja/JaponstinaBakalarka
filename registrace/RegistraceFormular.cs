@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Japonstina.models;
+using Japonstina.Registrace;
 using System.Text.RegularExpressions;
 
 
@@ -31,11 +32,24 @@ namespace Japonstina
         private void button1_Click(object sender, EventArgs e)
         {
             var validace = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,15}$");
+            var ValidaceLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$"); /*Dodělat kontroly*/
 
             if (userstorage.exist(RegistrationLoginBox.Text))
             {
 
                 RegistrationError.Text = "Login již existuje";
+            }
+
+            else if
+                (String.IsNullOrWhiteSpace(RegistrationLoginBox.Text))
+            {
+                RegistrationError.Text = "Nevyplněn login";
+            }
+
+            else if
+                (!ValidaceLogin.IsMatch(RegistrationLoginBox.Text))
+            {
+                RegistrationError.Text = "Nevalidní Login";
             }
 
             else if
@@ -49,6 +63,8 @@ namespace Japonstina
             {
                 RegistrationError.Text = "Heslo neodpovídá požadavkům";
             }
+
+
             //else if (RegistrationPasswordBox1.Text.Length < 5)
             //{
             //    RegistrationError.Text = "Heslo musí být delší nez 5 znaků";
@@ -67,7 +83,12 @@ namespace Japonstina
                     user.username = RegistrationLoginBox.Text;
                     user.password = RegistrationPasswordBox1.Text;
                     userstorage.adduser(user);
-                    panel2.Visible = true;
+                    Program.welcome.panel1.Controls.Clear();
+                    RegistraceOk ROk = new RegistraceOk();
+                    Program.welcome.panel1.Controls.Add(ROk);
+                    ROk.Dock = DockStyle.Fill;
+                    ROk.Show();
+                    StavAplikace.ActiveForm = "RegistraceOk";
                     ProgressManager.FirstLoginRun(user.username);
 
 
@@ -102,6 +123,11 @@ namespace Japonstina
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
