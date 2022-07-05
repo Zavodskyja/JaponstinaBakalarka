@@ -31,18 +31,18 @@ namespace Japonstina
         {
             this.KatakanaList = new System.Windows.Forms.CheckedListBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.HiraganaList = new System.Windows.Forms.CheckedListBox();
             this.HiraganaGraf = new CircularProgressBar.CircularProgressBar();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.KatakanaGraf = new CircularProgressBar.CircularProgressBar();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -81,6 +81,17 @@ namespace Japonstina
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(102, 288);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 43);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Detailní pohled";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // HiraganaList
             // 
             this.HiraganaList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(186)))), ((int)(((byte)(147)))));
@@ -106,7 +117,7 @@ namespace Japonstina
             this.HiraganaGraf.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.HiraganaGraf.ForeColor = System.Drawing.Color.White;
             this.HiraganaGraf.InnerColor = System.Drawing.Color.Transparent;
-            this.HiraganaGraf.InnerMargin = 2;
+            this.HiraganaGraf.InnerMargin = 0;
             this.HiraganaGraf.InnerWidth = -1;
             this.HiraganaGraf.Location = new System.Drawing.Point(102, 46);
             this.HiraganaGraf.MarqueeAnimationSpeed = 2000;
@@ -163,6 +174,17 @@ namespace Japonstina
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(508, 711);
             this.panel4.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(147, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(200, 43);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Detailní pohled";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // KatakanaGraf
             // 
@@ -239,28 +261,6 @@ namespace Japonstina
             this.label3.TabIndex = 4;
             this.label3.Text = "Progres Hiragany a Katakany";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(102, 288);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 43);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Detailní pohled";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(147, 288);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(200, 43);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Detailní pohled";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // account
             // 

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Japonstina.models
 {
-    public static class StavAplikace
+    public static class StavAplikace /*Uklada ID otevrene formy*/
     {
-        public static string ActiveForm { get; set; }
+        public static string ActiveForm { get; set; } 
     }
 }
