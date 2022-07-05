@@ -68,27 +68,27 @@ namespace Japonstina
 
         private void circularProgressBar1_MouseHover(object sender, EventArgs e)
         {
-            circularProgressBar1.Size = new Size(270, 270);
+            circularProgressBar1.Size = new Size(250, 250);
             
 
         }
 
         private void circularProgressBar1_MouseLeave(object sender, EventArgs e)
         {
-            circularProgressBar1.Size = new Size(250, 250);
+            circularProgressBar1.Size = new Size(200, 200);
 
         }
 
         private void circularProgressBar2_MouseHover(object sender, EventArgs e)
         {
-            circularProgressBar2.Size = new Size(270, 270);
+            circularProgressBar2.Size = new Size(250, 250);
             
 
         }
 
         private void circularProgressBar2_MouseLeave(object sender, EventArgs e)
         {
-            circularProgressBar2.Size = new Size(250, 250);
+            circularProgressBar2.Size = new Size(200, 200);
 
         }
 
