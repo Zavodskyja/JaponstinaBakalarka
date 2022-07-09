@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Japonstina.vyuka
 {
-    public enum JLPT
-    {
-        N5,
-        N4
-    }
+
 
     public class KanjiZnak
     {
@@ -23,7 +19,11 @@ namespace Japonstina.vyuka
     public class KanjiDetail
     {
         public int ID { get; set; }
-        public JLPT Uroven { get; set; }
+        public string Uroven { get; set; }
+
+        public string Typ1 { get; set; }
+
+        public string Typ2 { get; set; }
 
 
     }
@@ -31,16 +31,11 @@ namespace Japonstina.vyuka
     public class Kanji
     {
         public static Dictionary<KanjiDetail, KanjiZnak> Slovnik()
-        /*TODO? --dodelat rozdeleni na sloveso/pridavne jmeno atd? */
+        
         {
             return new Dictionary<KanjiDetail, KanjiZnak>()
             {
-                { new KanjiDetail { ID = 0, Uroven = JLPT.N5 }, new KanjiZnak { Kanji = "浴びる", JP = "あびる", CZ = "Sprchovat se" } },
-                { new KanjiDetail { ID = 1, Uroven = JLPT.N5 }, new KanjiZnak { Kanji = "危ない", JP = "あぶない", CZ = "Nebezpečný" } },
-                { new KanjiDetail { ID = 2, Uroven = JLPT.N5 }, new KanjiZnak { Kanji = "", JP = "あっち", CZ = "Támhle" } },
-                { new KanjiDetail { ID = 3, Uroven = JLPT.N5 }, new KanjiZnak { Kanji = "", JP = "あちら", CZ = "Tam" } },
-                { new KanjiDetail { ID = 4, Uroven = JLPT.N5 }, new KanjiZnak { Kanji = "上げる", JP = "あげる", CZ = "Zvednout" } },
-                { new KanjiDetail { ID = 5, Uroven = JLPT.N5 }, new KanjiZnak { Kanji = "赤", JP = "あか", CZ = "červená" } },
+
             };
 
         }

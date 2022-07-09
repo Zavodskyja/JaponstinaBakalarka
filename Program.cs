@@ -16,7 +16,6 @@ namespace Japonstina
         static void Main()
         {
             ProgressManager.Init();
-
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

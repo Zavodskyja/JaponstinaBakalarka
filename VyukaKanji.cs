@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Japonstina.vyuka;
 
+
 namespace Japonstina
 {
     public partial class VyukaKanji : Form
@@ -43,15 +44,16 @@ namespace Japonstina
         public void KanjiMain()
 
         {
-            var slovnik = vyuka.Kanji.Slovnik();
+            var test = ProgressManager.KanjiLoadData.Data;
+            var slovnik = test;
             var random = new Random();
-            var SeznamZnaku = slovnik.Where(i => i.Key.Uroven == JLPT.N5 || i.Key.Uroven == JLPT.N4).OrderBy(x => random.Next()).Select(x => x.Key.ID).Take(4).ToList(); /*22.6. Predelat dle hiragany pro vetsi seznamy*/
+            var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList(); /*22.6. Predelat dle hiragany pro vetsi seznamy*/
             var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)]; /*TODO: Dodelat plneni tlacitek*/
-            var KanjiZnak = slovnik.FirstOrDefault(i => i.Key.ID == RandomKanji);
-            Kanji = KanjiZnak.Value.Kanji;
-            Furigana = KanjiZnak.Value.JP;
-            Cesky = KanjiZnak.Value.CZ;
-            var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.Key.ID)).Select(x => x.Value.CZ).ToList();
+            var KanjiZnak = slovnik.FirstOrDefault(i => i.KanjiId == RandomKanji);
+            Kanji = KanjiZnak.KanjiZnak;
+            Furigana = KanjiZnak.KanjiJp;
+            Cesky = KanjiZnak.KanjiCZ;
+            var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.KanjiId)).Select(x => x.KanjiCZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             /*Tlacitka - Zatim nastrel funkcionality*/
             kanji_button1.Text = PrekladRandom[0].ToString();

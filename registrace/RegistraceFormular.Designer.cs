@@ -153,7 +153,7 @@ namespace Japonstina
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Salmon;
-            this.label6.Location = new System.Drawing.Point(234, 603);
+            this.label6.Location = new System.Drawing.Point(297, 571);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(517, 17);
             this.label6.TabIndex = 8;

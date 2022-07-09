@@ -3,6 +3,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using Japonstina.vyuka;
 using Japonstina.Models;
+using Japonstina.models;
 using System.IO;
 
 
@@ -18,13 +19,21 @@ namespace Japonstina
     {
         public static ProgressDataModel ProgressData { get; set; }
 
+        public static KanjiDataModel KanjiLoadData { get; set; }
+
+
+
+
+
 
 
 
         public static void Init()
         {
-
+            
             var slovnik = JP.Slovnik();
+
+            var KanjiSlovnik = Kanji.Slovnik();
 
             ProgressData = new ProgressDataModel()
             {
@@ -35,6 +44,21 @@ namespace Japonstina
                     
 
                 }).ToList()
+            };
+
+            KanjiLoadData = new KanjiDataModel()
+            {
+                Data = KanjiSlovnik.Select(kanji => new KanjiModel() /*TODO dodelat korektni vyhledani*/
+                {
+                    KanjiId = kanji.Key.ID,
+                    KanjiUroven = kanji.Key.Uroven.ToString(),
+                    KanjiTyp1 = kanji.Key.Typ1.ToString(),
+                    KanjiTyp2 = kanji.Key.Typ2.ToString(),
+                    KanjiZnak = kanji.Value.Kanji.ToString(),
+                    KanjiJp = kanji.Value.JP.ToString(),
+                    KanjiCZ = kanji.Value.CZ.ToString()
+                }).ToList()
+
             };
 
         }
@@ -115,6 +139,14 @@ namespace Japonstina
 
         }
 
+        public static void LoadKanji()
+        {
+            var path = $"Data/Kanji";
+            string jsonFile = File.ReadAllText(path);
+            KanjiLoadData = JsonConvert.DeserializeObject<KanjiDataModel>(jsonFile);
+
+        }
 
     }
+
 }

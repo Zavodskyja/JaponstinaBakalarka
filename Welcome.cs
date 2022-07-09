@@ -187,6 +187,7 @@ namespace Japonstina
             {
                 ProgressManager.FirstLoginRun(user.username);
                 ProgressManager.LoadProgress(user.username);
+                ProgressManager.LoadKanji();
                 PrihlasenyUzivatel = LoginBox.Text;
                 LoginPanel.Controls.Clear();
                 MainMenu m = new MainMenu();
