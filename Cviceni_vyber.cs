@@ -20,7 +20,15 @@ namespace Japonstina
             InitializeComponent();
         }
 
-        
+        public bool Hiragana;
+        public bool Katakana;
+        public bool N5;
+        public bool N4;
+        public bool Ichidan;
+        public bool Godan;
+        public bool Irregular;
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,6 +64,16 @@ namespace Japonstina
             {
                 
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

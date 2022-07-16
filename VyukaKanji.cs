@@ -27,6 +27,8 @@ namespace Japonstina
         string Cesky { get; set; }
 
 
+
+       
         public VyukaKanji()
         {
             InitializeComponent();
@@ -36,13 +38,117 @@ namespace Japonstina
         private void Kanji_Load(object sender, EventArgs e)
         {
 
+                    }
+
+        public void KanjiMain()
+
+        {
+
+            KanjiRandomFunkce();
+
+
 
 
 
         }
+       
 
-        public void KanjiMain()
+            private void kanji_char_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void kanji_hiragana_Click(object sender, EventArgs e)
+        {
+            /*TODO Dodelat funkci tlacitek --  naplnit list 3+1 , shuffle , priradit tlacitkum*/
+        }
+
+        private async void kanji_button1_Click(object sender, EventArgs e)
+        {
+            if (kanji_button1.Text == Cesky)
+            {
+                ButtonColorCorrect(kanji_button1);
+                ButtonDisable();
+                await Task.Delay(1000);
+                KanjiMain();
+
+            }
+            else
+            {
+                ButtonColorIncorrect(kanji_button1);
+                ButtonDisable();
+                label1.Text = Cesky;
+                await Task.Delay(2000);
+                KanjiMain();
+            }
+
+        }
+
+        private async void kanji_button2_Click(object sender, EventArgs e)
+        {
+            if(kanji_button2.Text == Cesky)
+            {
+                ButtonColorCorrect(kanji_button2);
+                ButtonDisable();
+                await Task.Delay(1000);
+                KanjiMain();
+
+            }
+            else
+            {
+                ButtonColorIncorrect(kanji_button2);
+                ButtonDisable();
+                label1.Text = Cesky;
+                await Task.Delay(2000);
+                KanjiMain();
+            }
+        }
+
+        private async void kanji_button3_Click(object sender, EventArgs e)
+        {
+            if (kanji_button3.Text == Cesky)
+            {
+                ButtonColorCorrect(kanji_button3);
+                ButtonDisable();
+                await Task.Delay(1000);
+                KanjiMain();
+
+            }
+            else
+            {
+                ButtonColorIncorrect(kanji_button3);
+                ButtonDisable();    
+                label1.Text = Cesky;
+                await Task.Delay(2000);
+                KanjiMain();
+            }
+
+        }
+
+        private async void kanji_button4_Click(object sender, EventArgs e)
+        {
+            if (kanji_button4.Text == Cesky)
+            {
+                
+                ButtonColorCorrect(kanji_button4);
+                ButtonDisable();
+                await Task.Delay(1000);
+                KanjiMain();
+
+            }
+            else
+            {
+                ButtonColorIncorrect(kanji_button4);
+                ButtonDisable();
+                label1.Text = Cesky;
+                await Task.Delay(2000);
+                KanjiMain();
+            }
+
+        }
+
+
+        public void KanjiRandomFunkce()
         {
             var test = ProgressManager.KanjiLoadData.Data;
             var slovnik = test;
@@ -60,97 +166,62 @@ namespace Japonstina
             kanji_button2.Text = PrekladRandom[1].ToString();
             kanji_button3.Text = PrekladRandom[2].ToString();
             kanji_button4.Text = PrekladRandom[3].ToString();
-
-
-
-
+            ButtonDefault();
+            label1.Text = "";
 
             /* --Zjednodusit
             Dodelat funkci na tlacitka a posialt do ni pouze objekt daneho tlaticka ( button1, button2 atd.)
             */
 
-
             if (String.IsNullOrEmpty(Kanji))
-             {
-                 kanji_char.Text = Furigana;
-                 kanji_hiragana.Text = "";
-             }
-             else
-             {
-                 kanji_char.Text = Kanji;
-                 kanji_hiragana.Text = Furigana;
-             }
-
-            
-
-
-
-        }
-       
-
-            private void kanji_char_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kanji_hiragana_Click(object sender, EventArgs e)
-        {
-            /*TODO Dodelat funkci tlacitek --  naplnit list 3+1 , shuffle , priradit tlacitkum*/
-        }
-
-        private void kanji_button1_Click(object sender, EventArgs e)
-        {
-            if (kanji_button1.Text == Cesky)
             {
-                kanji_button1.BackColor = Color.White;
-               
+                kanji_char.Text = Furigana;
+                kanji_hiragana.Text = "";
             }
             else
             {
-                kanji_button1.BackColor = Color.Black;
+                kanji_char.Text = Kanji;
+                kanji_hiragana.Text = Furigana;
+            }
+        }
+
+        public void ButtonDisable()
+        {
+            foreach (Control c in panel1.Controls)
+            {
+                Button b = c as Button;
+                if (b != null)
+                {
+                    b.Enabled = false;
+                }
             }
 
         }
 
-        private void kanji_button2_Click(object sender, EventArgs e)
-        {
-            if(kanji_button2.Text == Cesky)
-            {
-                kanji_button2.BackColor = Color.White;
-                
-            }
-            else
-            {
-                kanji_button2.BackColor = Color.Black;
-            }
-        }
 
-        private void kanji_button3_Click(object sender, EventArgs e)
+        public void ButtonDefault()
         {
-            if (kanji_button3.Text == Cesky)
+            foreach (Control c in panel1.Controls)
             {
-                kanji_button3.BackColor = Color.White;
-               
+                Button b = c as Button;
+                if (b != null)
+                {
+                    b.BackColor = Color.White;
+                    b.Enabled = true;
+                }
             }
-            else
-            {
-                kanji_button3.BackColor = Color.Black;
-            }
+
 
         }
 
-        private void kanji_button4_Click(object sender, EventArgs e)
+        public void ButtonColorCorrect(Button button)
         {
-            if (kanji_button4.Text == Cesky)
-            {
-                kanji_button4.BackColor = Color.White;
-                
-            }
-            else
-            {
-                kanji_button4.BackColor = Color.Black;
-            }
+            button.BackColor = Color.Green;
+        }
 
+        public void ButtonColorIncorrect(Button button)
+        {
+            button.BackColor = Color.FromArgb(188, 0, 45);
         }
 
 

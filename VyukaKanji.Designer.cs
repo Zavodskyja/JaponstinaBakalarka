@@ -36,12 +36,14 @@ namespace Japonstina
             this.kanji_button1 = new System.Windows.Forms.Button();
             this.kanji_hiragana = new System.Windows.Forms.Label();
             this.kanji_char = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(201)))), ((int)(((byte)(185)))));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.kanji_button4);
             this.panel1.Controls.Add(this.kanji_button3);
             this.panel1.Controls.Add(this.kanji_button2);
@@ -106,9 +108,9 @@ namespace Japonstina
             // 
             this.kanji_hiragana.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.kanji_hiragana.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.kanji_hiragana.Location = new System.Drawing.Point(435, 322);
+            this.kanji_hiragana.Location = new System.Drawing.Point(435, 221);
             this.kanji_hiragana.Name = "kanji_hiragana";
-            this.kanji_hiragana.Size = new System.Drawing.Size(200, 50);
+            this.kanji_hiragana.Size = new System.Drawing.Size(200, 55);
             this.kanji_hiragana.TabIndex = 1;
             this.kanji_hiragana.Text = "Furigana";
             this.kanji_hiragana.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,13 +120,23 @@ namespace Japonstina
             // 
             this.kanji_char.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.kanji_char.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.kanji_char.Location = new System.Drawing.Point(263, 172);
+            this.kanji_char.Location = new System.Drawing.Point(263, 76);
             this.kanji_char.Name = "kanji_char";
             this.kanji_char.Size = new System.Drawing.Size(550, 200);
             this.kanji_char.TabIndex = 0;
             this.kanji_char.Text = "Kanji";
             this.kanji_char.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.kanji_char.Click += new System.EventHandler(this.kanji_char_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(435, 286);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 41);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Spravna odpoved";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // VyukaKanji
             // 
@@ -150,5 +162,6 @@ namespace Japonstina
         private System.Windows.Forms.Button kanji_button3;
         private System.Windows.Forms.Button kanji_button2;
         private System.Windows.Forms.Button kanji_button1;
+        private System.Windows.Forms.Label label1;
     }
 }
