@@ -20,18 +20,19 @@ namespace Japonstina
             InitializeComponent();
         }
 
-        public bool Hiragana;
-        public bool Katakana;
-        public bool N5;
-        public bool N4;
-        public bool Ichidan;
-        public bool Godan;
-        public bool Irregular;
 
+        public static VyberCviceni Vyber { get; set; }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Vyber = new VyberCviceni();
+            Button clickedButton = (Button)sender;
+            if (clickedButton.Text == "Abecedy")
+            {
+                VyberCviceni.btn = "Abecedy";
+            }
+
             if (StavAplikace.ActiveForm != "HiraganaKatakana")
             {
                 Program.welcome.panel1.Controls.Clear();
@@ -50,6 +51,12 @@ namespace Japonstina
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Vyber = new VyberCviceni();
+            Button clickedButton = (Button)sender;
+            if (clickedButton.Text == "Kanji")
+            {
+                VyberCviceni.btn = "Kanji";
+            }
             if (StavAplikace.ActiveForm != "Kanji")  /*account.HiraganaProgress == 100 && account.KatakanaProgress == 100  doplnit podminky na splneni H+K pred vyukou kanji */
             {
                 Program.welcome.panel1.Controls.Clear();
@@ -68,11 +75,114 @@ namespace Japonstina
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Button clickedButton = (Button)sender;
+            if (clickedButton.Text == "Slovesa")
+            {
+                VyberCviceni.btn = "Slovesa";
+            }
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
+           
+        }
+
+    
+
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked == true)
+            {
+                VyberCviceni.Hiragana = true;
+                
+            }
+            else
+            {
+                VyberCviceni.Hiragana = false;
+               
+            }
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                VyberCviceni.Katakana = true;
+                
+            }
+            else
+            {
+                VyberCviceni.Katakana = false;
+                
+            }
+
+        }
+
+
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+                VyberCviceni.N5 = true;
+            }
+            else
+            {
+                VyberCviceni.N5 = false;
+            }
+
+        }
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked == true)
+            {
+                VyberCviceni.N4 = true;
+            }
+            else
+            {
+                VyberCviceni.N4 = false;
+            }
+
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked == true)
+            {
+                VyberCviceni.Ichidan = true;
+            }
+            else
+            {
+                VyberCviceni.Ichidan = false;
+            }
+
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked == true)
+            {
+                VyberCviceni.Godan = true;
+            }
+            else
+            {
+                VyberCviceni.Godan = false;
+            }
+
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked == true)
+            {
+                VyberCviceni.Irregular = true;
+            }
+            else
+            {
+                VyberCviceni.Irregular = false;
+            }
 
         }
     }

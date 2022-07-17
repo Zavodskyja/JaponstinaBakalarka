@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Japonstina.vyuka;
+using Japonstina.models;
 
 
 namespace Japonstina
@@ -16,9 +17,8 @@ namespace Japonstina
     {
 
 
-        
-        public int ZnakId { get; set; }
 
+        public int ZnakId { get; set; }
 
         string Kanji { get; set; }
 
@@ -28,8 +28,12 @@ namespace Japonstina
 
 
 
-       
-        public VyukaKanji()
+       int test = 0;
+
+
+
+
+    public VyukaKanji()
         {
             InitializeComponent();
             KanjiMain();
@@ -38,7 +42,7 @@ namespace Japonstina
         private void Kanji_Load(object sender, EventArgs e)
         {
 
-                    }
+         }
 
         public void KanjiMain()
 
@@ -150,8 +154,9 @@ namespace Japonstina
 
         public void KanjiRandomFunkce()
         {
-            var test = ProgressManager.KanjiLoadData.Data;
-            var slovnik = test;
+
+            VyukaTest();
+            var slovnik = ProgressManager.KanjiLoadData.Data;
             var random = new Random();
             var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList(); /*22.6. Predelat dle hiragany pro vetsi seznamy*/
             var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)]; /*TODO: Dodelat plneni tlacitek*/
@@ -222,6 +227,45 @@ namespace Japonstina
         public void ButtonColorIncorrect(Button button)
         {
             button.BackColor = Color.FromArgb(188, 0, 45);
+        }
+
+        public void VyukaTest()
+        {
+            if(VyberCviceni.btn == "Abecedy")
+            {
+                if (VyberCviceni.Hiragana == true && VyberCviceni.Katakana ==true)
+                {
+
+                }
+
+
+            }
+            else if (VyberCviceni.btn == "Kanji")
+            {
+                if (VyberCviceni.N5 == true && VyberCviceni.N4 == true)
+                {
+                    test = 1;
+                }
+                if (VyberCviceni.N5 == true && VyberCviceni.N4 == false)
+                {
+                    test = 2;
+                }
+                if (VyberCviceni.N5 == false && VyberCviceni.N4 == true)
+                {
+                    test = 3;
+                }
+                else
+                {
+                    test = 4;
+                }
+
+
+            }
+            else if (VyberCviceni.btn == "Slovesa")
+            {
+
+            }
+          
         }
 
 

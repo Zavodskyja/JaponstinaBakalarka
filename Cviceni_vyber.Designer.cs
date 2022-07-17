@@ -100,6 +100,7 @@ namespace Japonstina
             this.checkBox7.TabIndex = 10;
             this.checkBox7.Text = "Irregular";
             this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // checkBox6
             // 
@@ -110,6 +111,7 @@ namespace Japonstina
             this.checkBox6.TabIndex = 9;
             this.checkBox6.Text = "U - Godan";
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -120,6 +122,7 @@ namespace Japonstina
             this.checkBox5.TabIndex = 8;
             this.checkBox5.Text = "RU -Ichidan";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // button3
             // 
@@ -144,42 +147,46 @@ namespace Japonstina
             // checkBox4
             // 
             this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox4.Location = new System.Drawing.Point(165, 418);
+            this.checkBox4.Location = new System.Drawing.Point(455, 418);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(150, 40);
-            this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "Katakana";
+            this.checkBox4.TabIndex = 7;
+            this.checkBox4.Text = "N4";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox3
             // 
             this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.Location = new System.Drawing.Point(165, 372);
+            this.checkBox3.Location = new System.Drawing.Point(455, 372);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(150, 40);
-            this.checkBox3.TabIndex = 4;
-            this.checkBox3.Text = "Hiragana";
+            this.checkBox3.TabIndex = 6;
+            this.checkBox3.Text = "N5";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(455, 418);
+            this.checkBox2.Location = new System.Drawing.Point(165, 418);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(150, 40);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "N4";
+            this.checkBox2.TabIndex = 5;
+            this.checkBox2.Text = "Katakana";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(455, 372);
+            this.checkBox1.Location = new System.Drawing.Point(165, 372);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(150, 40);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "N5";
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Hiragana";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // button2
             // 
@@ -197,7 +204,7 @@ namespace Japonstina
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 40);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Hiragana a Katakana";
+            this.button1.Text = "Abecedy";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
