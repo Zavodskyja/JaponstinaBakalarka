@@ -30,6 +30,9 @@ namespace Japonstina
 
        int test = 0;
 
+       
+
+
 
 
 
@@ -39,8 +42,11 @@ namespace Japonstina
             KanjiMain();
         }
 
+
+
         private void Kanji_Load(object sender, EventArgs e)
         {
+            
 
          }
 
@@ -151,11 +157,12 @@ namespace Japonstina
 
         }
 
+        
 
         public void KanjiRandomFunkce()
         {
-
-            VyukaTest();
+            
+            
             var slovnik = ProgressManager.KanjiLoadData.Data;
             var random = new Random();
             var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList(); /*22.6. Predelat dle hiragany pro vetsi seznamy*/
@@ -166,18 +173,9 @@ namespace Japonstina
             Cesky = KanjiZnak.KanjiCZ;
             var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.KanjiId)).Select(x => x.KanjiCZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
-            /*Tlacitka - Zatim nastrel funkcionality*/
-            kanji_button1.Text = PrekladRandom[0].ToString();
-            kanji_button2.Text = PrekladRandom[1].ToString();
-            kanji_button3.Text = PrekladRandom[2].ToString();
-            kanji_button4.Text = PrekladRandom[3].ToString();
+            ButtonText(PrekladRandom);
             ButtonDefault();
             label1.Text = "";
-
-            /* --Zjednodusit
-            Dodelat funkci na tlacitka a posialt do ni pouze objekt daneho tlaticka ( button1, button2 atd.)
-            */
-
             if (String.IsNullOrEmpty(Kanji))
             {
                 kanji_char.Text = Furigana;
@@ -203,6 +201,14 @@ namespace Japonstina
 
         }
 
+        public void ButtonText(List<string> test)
+        {
+
+            Button[] buttons = { kanji_button1, kanji_button2, kanji_button3, kanji_button4 };
+            for (int i = 0; i < buttons.Count(); i++)
+                buttons[i].Text = test[i];
+            }
+
 
         public void ButtonDefault()
         {
@@ -213,6 +219,7 @@ namespace Japonstina
                 {
                     b.BackColor = Color.White;
                     b.Enabled = true;
+                    
                 }
             }
 
@@ -229,7 +236,7 @@ namespace Japonstina
             button.BackColor = Color.FromArgb(188, 0, 45);
         }
 
-        public void VyukaTest()
+        public void VyukaTest() /*Zatim test*/
         {
             if(VyberCviceni.btn == "Abecedy")
             {
