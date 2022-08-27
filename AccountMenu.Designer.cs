@@ -38,11 +38,11 @@
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.KanjiPanel = new System.Windows.Forms.Panel();
+            this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
             this.AbecedyPanel.SuspendLayout();
             this.KanjiPanel.SuspendLayout();
             this.SuspendLayout();
@@ -190,6 +190,39 @@
             this.KanjiPanel.Size = new System.Drawing.Size(1066, 380);
             this.KanjiPanel.TabIndex = 5;
             // 
+            // circularProgressBar2
+            // 
+            this.circularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.circularProgressBar2.AnimationSpeed = 500;
+            this.circularProgressBar2.BackColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.circularProgressBar2.ForeColor = System.Drawing.Color.White;
+            this.circularProgressBar2.InnerColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar2.InnerMargin = 0;
+            this.circularProgressBar2.InnerWidth = -1;
+            this.circularProgressBar2.Location = new System.Drawing.Point(776, 50);
+            this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
+            this.circularProgressBar2.Name = "circularProgressBar2";
+            this.circularProgressBar2.OuterColor = System.Drawing.Color.DimGray;
+            this.circularProgressBar2.OuterMargin = -25;
+            this.circularProgressBar2.OuterWidth = 26;
+            this.circularProgressBar2.ProgressColor = System.Drawing.Color.Salmon;
+            this.circularProgressBar2.ProgressWidth = 25;
+            this.circularProgressBar2.SecondaryFont = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.circularProgressBar2.Size = new System.Drawing.Size(200, 200);
+            this.circularProgressBar2.StartAngle = 270;
+            this.circularProgressBar2.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.circularProgressBar2.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar2.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.circularProgressBar2.SubscriptText = "";
+            this.circularProgressBar2.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar2.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.circularProgressBar2.SuperscriptText = "";
+            this.circularProgressBar2.TabIndex = 13;
+            this.circularProgressBar2.Text = "1";
+            this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(0);
+            this.circularProgressBar2.Value = 1;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -229,39 +262,6 @@
             this.label7.Size = new System.Drawing.Size(93, 28);
             this.label7.TabIndex = 10;
             this.label7.Text = "Splněno:";
-            // 
-            // circularProgressBar2
-            // 
-            this.circularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.circularProgressBar2.AnimationSpeed = 500;
-            this.circularProgressBar2.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.circularProgressBar2.ForeColor = System.Drawing.Color.White;
-            this.circularProgressBar2.InnerColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar2.InnerMargin = 0;
-            this.circularProgressBar2.InnerWidth = -1;
-            this.circularProgressBar2.Location = new System.Drawing.Point(776, 50);
-            this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
-            this.circularProgressBar2.Name = "circularProgressBar2";
-            this.circularProgressBar2.OuterColor = System.Drawing.Color.DimGray;
-            this.circularProgressBar2.OuterMargin = -25;
-            this.circularProgressBar2.OuterWidth = 26;
-            this.circularProgressBar2.ProgressColor = System.Drawing.Color.Salmon;
-            this.circularProgressBar2.ProgressWidth = 25;
-            this.circularProgressBar2.SecondaryFont = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.circularProgressBar2.Size = new System.Drawing.Size(200, 200);
-            this.circularProgressBar2.StartAngle = 270;
-            this.circularProgressBar2.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.circularProgressBar2.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar2.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.circularProgressBar2.SubscriptText = "";
-            this.circularProgressBar2.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar2.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.circularProgressBar2.SuperscriptText = "";
-            this.circularProgressBar2.TabIndex = 13;
-            this.circularProgressBar2.Text = "1";
-            this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(0);
-            this.circularProgressBar2.Value = 1;
             // 
             // AccountMenu
             // 

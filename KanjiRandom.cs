@@ -39,9 +39,6 @@ namespace Japonstina
             var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.KanjiId)).Select(x => x.KanjiCZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             /*Tlacitka - Zatim nastrel funkcionality*/
-            
-
-
         }
         
 

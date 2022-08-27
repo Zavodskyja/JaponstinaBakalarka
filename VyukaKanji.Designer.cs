@@ -30,13 +30,13 @@ namespace Japonstina
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kanji_button4 = new System.Windows.Forms.Button();
-            this.kanji_button3 = new System.Windows.Forms.Button();
-            this.kanji_button2 = new System.Windows.Forms.Button();
-            this.kanji_button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Vyuka_button4 = new System.Windows.Forms.Button();
+            this.Vyuka_button3 = new System.Windows.Forms.Button();
+            this.Vyuka_button2 = new System.Windows.Forms.Button();
+            this.Vyuka_button1 = new System.Windows.Forms.Button();
             this.kanji_hiragana = new System.Windows.Forms.Label();
             this.kanji_char = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,10 +44,10 @@ namespace Japonstina
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(201)))), ((int)(((byte)(185)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.kanji_button4);
-            this.panel1.Controls.Add(this.kanji_button3);
-            this.panel1.Controls.Add(this.kanji_button2);
-            this.panel1.Controls.Add(this.kanji_button1);
+            this.panel1.Controls.Add(this.Vyuka_button4);
+            this.panel1.Controls.Add(this.Vyuka_button3);
+            this.panel1.Controls.Add(this.Vyuka_button2);
+            this.panel1.Controls.Add(this.Vyuka_button1);
             this.panel1.Controls.Add(this.kanji_hiragana);
             this.panel1.Controls.Add(this.kanji_char);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -55,54 +55,64 @@ namespace Japonstina
             this.panel1.Size = new System.Drawing.Size(1066, 768);
             this.panel1.TabIndex = 0;
             // 
-            // kanji_button4
+            // label1
             // 
-            this.kanji_button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(143)))), ((int)(((byte)(144)))));
-            this.kanji_button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kanji_button4.Location = new System.Drawing.Point(563, 473);
-            this.kanji_button4.Name = "kanji_button4";
-            this.kanji_button4.Size = new System.Drawing.Size(250, 40);
-            this.kanji_button4.TabIndex = 5;
-            this.kanji_button4.Text = "Tlacitko";
-            this.kanji_button4.UseVisualStyleBackColor = false;
-            this.kanji_button4.Click += new System.EventHandler(this.kanji_button4_Click);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(435, 286);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 41);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Spravna odpoved";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // kanji_button3
+            // Vyuka_button4
             // 
-            this.kanji_button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(119)))), ((int)(((byte)(155)))));
-            this.kanji_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kanji_button3.Location = new System.Drawing.Point(263, 473);
-            this.kanji_button3.Name = "kanji_button3";
-            this.kanji_button3.Size = new System.Drawing.Size(250, 40);
-            this.kanji_button3.TabIndex = 4;
-            this.kanji_button3.Text = "mouseover? / vybrana";
-            this.kanji_button3.UseVisualStyleBackColor = false;
-            this.kanji_button3.Click += new System.EventHandler(this.kanji_button3_Click);
+            this.Vyuka_button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(143)))), ((int)(((byte)(144)))));
+            this.Vyuka_button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Vyuka_button4.Location = new System.Drawing.Point(563, 473);
+            this.Vyuka_button4.Name = "Vyuka_button4";
+            this.Vyuka_button4.Size = new System.Drawing.Size(250, 40);
+            this.Vyuka_button4.TabIndex = 5;
+            this.Vyuka_button4.Text = "Tlacitko";
+            this.Vyuka_button4.UseVisualStyleBackColor = false;
+            this.Vyuka_button4.Click += new System.EventHandler(this.kanji_button4_Click);
             // 
-            // kanji_button2
+            // Vyuka_button3
             // 
-            this.kanji_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(0)))), ((int)(((byte)(45)))));
-            this.kanji_button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.kanji_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kanji_button2.Location = new System.Drawing.Point(563, 401);
-            this.kanji_button2.Name = "kanji_button2";
-            this.kanji_button2.Size = new System.Drawing.Size(250, 40);
-            this.kanji_button2.TabIndex = 3;
-            this.kanji_button2.Text = "Zla odpoved";
-            this.kanji_button2.UseVisualStyleBackColor = false;
-            this.kanji_button2.Click += new System.EventHandler(this.kanji_button2_Click);
+            this.Vyuka_button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(119)))), ((int)(((byte)(155)))));
+            this.Vyuka_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Vyuka_button3.Location = new System.Drawing.Point(263, 473);
+            this.Vyuka_button3.Name = "Vyuka_button3";
+            this.Vyuka_button3.Size = new System.Drawing.Size(250, 40);
+            this.Vyuka_button3.TabIndex = 4;
+            this.Vyuka_button3.Text = "mouseover? / vybrana";
+            this.Vyuka_button3.UseVisualStyleBackColor = false;
+            this.Vyuka_button3.Click += new System.EventHandler(this.kanji_button3_Click);
             // 
-            // kanji_button1
+            // Vyuka_button2
             // 
-            this.kanji_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(186)))), ((int)(((byte)(147)))));
-            this.kanji_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kanji_button1.Location = new System.Drawing.Point(263, 401);
-            this.kanji_button1.Name = "kanji_button1";
-            this.kanji_button1.Size = new System.Drawing.Size(250, 40);
-            this.kanji_button1.TabIndex = 2;
-            this.kanji_button1.Text = "Spravne";
-            this.kanji_button1.UseVisualStyleBackColor = false;
-            this.kanji_button1.Click += new System.EventHandler(this.kanji_button1_Click);
+            this.Vyuka_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(0)))), ((int)(((byte)(45)))));
+            this.Vyuka_button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Vyuka_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Vyuka_button2.Location = new System.Drawing.Point(563, 401);
+            this.Vyuka_button2.Name = "Vyuka_button2";
+            this.Vyuka_button2.Size = new System.Drawing.Size(250, 40);
+            this.Vyuka_button2.TabIndex = 3;
+            this.Vyuka_button2.Text = "Zla odpoved";
+            this.Vyuka_button2.UseVisualStyleBackColor = false;
+            this.Vyuka_button2.Click += new System.EventHandler(this.kanji_button2_Click);
+            // 
+            // Vyuka_button1
+            // 
+            this.Vyuka_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(186)))), ((int)(((byte)(147)))));
+            this.Vyuka_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Vyuka_button1.Location = new System.Drawing.Point(263, 401);
+            this.Vyuka_button1.Name = "Vyuka_button1";
+            this.Vyuka_button1.Size = new System.Drawing.Size(250, 40);
+            this.Vyuka_button1.TabIndex = 2;
+            this.Vyuka_button1.Text = "Spravne";
+            this.Vyuka_button1.UseVisualStyleBackColor = false;
+            this.Vyuka_button1.Click += new System.EventHandler(this.kanji_button1_Click);
             // 
             // kanji_hiragana
             // 
@@ -128,16 +138,6 @@ namespace Japonstina
             this.kanji_char.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.kanji_char.Click += new System.EventHandler(this.kanji_char_Click);
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(435, 286);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 41);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Spravna odpoved";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // VyukaKanji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -158,10 +158,10 @@ namespace Japonstina
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label kanji_char;
         private System.Windows.Forms.Label kanji_hiragana;
-        private System.Windows.Forms.Button kanji_button4;
-        private System.Windows.Forms.Button kanji_button3;
-        private System.Windows.Forms.Button kanji_button2;
-        private System.Windows.Forms.Button kanji_button1;
+        private System.Windows.Forms.Button Vyuka_button4;
+        private System.Windows.Forms.Button Vyuka_button3;
+        private System.Windows.Forms.Button Vyuka_button2;
+        private System.Windows.Forms.Button Vyuka_button1;
         private System.Windows.Forms.Label label1;
     }
 }

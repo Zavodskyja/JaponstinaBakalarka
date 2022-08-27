@@ -35,7 +35,7 @@ namespace Japonstina
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Hiragana_button1 = new System.Windows.Forms.Button();
             this.znak = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,7 +68,7 @@ namespace Japonstina
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.Hiragana_button1);
             this.panel2.Location = new System.Drawing.Point(265, 424);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(510, 120);
@@ -104,16 +104,16 @@ namespace Japonstina
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // Hiragana_button1
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.Hiragana_button1.FlatAppearance.BorderSize = 0;
+            this.Hiragana_button1.Location = new System.Drawing.Point(0, 0);
+            this.Hiragana_button1.Name = "Hiragana_button1";
+            this.Hiragana_button1.Size = new System.Drawing.Size(200, 50);
+            this.Hiragana_button1.TabIndex = 0;
+            this.Hiragana_button1.Text = "button1";
+            this.Hiragana_button1.UseVisualStyleBackColor = true;
+            this.Hiragana_button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // znak
             // 
@@ -150,7 +150,7 @@ namespace Japonstina
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Hiragana_button1;
         private System.Windows.Forms.Label label1;
     }
 }

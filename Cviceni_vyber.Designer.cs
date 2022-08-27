@@ -44,12 +44,14 @@ namespace Japonstina
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(201)))), ((int)(((byte)(185)))));
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.checkBox8);
             this.panel1.Controls.Add(this.checkBox7);
@@ -219,6 +221,15 @@ namespace Japonstina
             this.label1.Text = "Výběr cvičení";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(353, 585);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(361, 36);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "Kombinace - TODO";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Cviceni_vyber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -251,5 +262,6 @@ namespace Japonstina
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -57,28 +57,19 @@ namespace Japonstina
             var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.Key.ID)).Select(x => x.Value.CZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             /*Pridat list a foreach? .. sjednotit pod jednu funkci vsechny buttony */
-            button1.Text = PrekladRandom[0].ToString();
+            Hiragana_button1.Text = PrekladRandom[0].ToString();
             button2.Text = PrekladRandom[1].ToString();
             button3.Text = PrekladRandom[2].ToString();
             button4.Text = PrekladRandom[3].ToString();
-            button1.BackColor = Color.White;
+            Hiragana_button1.BackColor = Color.White;
             button2.BackColor = Color.White;
             button3.BackColor = Color.White;
             button4.BackColor = Color.White;
-            button1.Enabled = true;
+            Hiragana_button1.Enabled = true;
             button2.Enabled = true;
             button3.Enabled = true;
             button4.Enabled = true;
             label1.Text = "";
-
-
-
-
-
-
-
-
-
 
 
         }
@@ -151,11 +142,11 @@ namespace Japonstina
         {
             
 
-            if (button1.Text == Cesky)
+            if (Hiragana_button1.Text == Cesky)
             {
                 
-                button1.BackColor = Color.Green;
-                button1.Enabled = false;
+                Hiragana_button1.BackColor = Color.Green;
+                Hiragana_button1.Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;
                 button4.Enabled = false;
@@ -166,8 +157,8 @@ namespace Japonstina
             }
             else
             {
-                button1.BackColor = Color.FromArgb(188, 0, 45);
-                button1.Enabled = false;
+                Hiragana_button1.BackColor = Color.FromArgb(188, 0, 45);
+                Hiragana_button1.Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;
                 button4.Enabled = false;
@@ -186,7 +177,7 @@ namespace Japonstina
             if (button2.Text == Cesky)
             {
                 button2.BackColor = Color.Green;
-                button1.Enabled = false;
+                Hiragana_button1.Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;
                 button4.Enabled = false;
@@ -198,7 +189,7 @@ namespace Japonstina
             else
             {
                 button2.BackColor = Color.FromArgb(188, 0, 45);
-                button1.Enabled = false;
+                Hiragana_button1.Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;
                 button4.Enabled = false;
@@ -217,7 +208,7 @@ namespace Japonstina
             if (button3.Text == Cesky)
             {
                 button3.BackColor = Color.Green;
-                button1.Enabled = false;
+                Hiragana_button1.Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;
                 button4.Enabled = false;
@@ -229,7 +220,7 @@ namespace Japonstina
             else
             {
                 button3.BackColor = Color.FromArgb(188, 0, 45);
-                button1.Enabled = false;
+                Hiragana_button1.Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;
                 button4.Enabled = false;
@@ -248,7 +239,7 @@ namespace Japonstina
             if (button4.Text == Cesky)
             {
                 button4.BackColor = Color.Green;
-                button1.Enabled = false;
+                Hiragana_button1.Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;
                 button4.Enabled = false;
@@ -260,7 +251,7 @@ namespace Japonstina
             else
             {
                 button4.BackColor = Color.FromArgb(188, 0, 45);
-                button1.Enabled = false;
+                Hiragana_button1.Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;
                 button4.Enabled = false;

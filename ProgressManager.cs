@@ -21,6 +21,8 @@ namespace Japonstina
 
         public static KanjiDataModel KanjiLoadData { get; set; }
 
+        public static ZnakModel HiraganaLoadData { get; set; } /*TODO Dodelat model ze sdileneho Jsonu*/
+
 
 
 

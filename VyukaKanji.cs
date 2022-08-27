@@ -75,9 +75,9 @@ namespace Japonstina
 
         private async void kanji_button1_Click(object sender, EventArgs e)
         {
-            if (kanji_button1.Text == Cesky)
+            if (Vyuka_button1.Text == Cesky)
             {
-                ButtonColorCorrect(kanji_button1);
+                ButtonColorCorrect(Vyuka_button1);
                 ButtonDisable();
                 await Task.Delay(1000);
                 KanjiMain();
@@ -85,7 +85,7 @@ namespace Japonstina
             }
             else
             {
-                ButtonColorIncorrect(kanji_button1);
+                ButtonColorIncorrect(Vyuka_button1);
                 ButtonDisable();
                 label1.Text = Cesky;
                 await Task.Delay(2000);
@@ -96,9 +96,9 @@ namespace Japonstina
 
         private async void kanji_button2_Click(object sender, EventArgs e)
         {
-            if(kanji_button2.Text == Cesky)
+            if(Vyuka_button2.Text == Cesky)
             {
-                ButtonColorCorrect(kanji_button2);
+                ButtonColorCorrect(Vyuka_button2);
                 ButtonDisable();
                 await Task.Delay(1000);
                 KanjiMain();
@@ -106,7 +106,7 @@ namespace Japonstina
             }
             else
             {
-                ButtonColorIncorrect(kanji_button2);
+                ButtonColorIncorrect(Vyuka_button2);
                 ButtonDisable();
                 label1.Text = Cesky;
                 await Task.Delay(2000);
@@ -116,9 +116,9 @@ namespace Japonstina
 
         private async void kanji_button3_Click(object sender, EventArgs e)
         {
-            if (kanji_button3.Text == Cesky)
+            if (Vyuka_button3.Text == Cesky)
             {
-                ButtonColorCorrect(kanji_button3);
+                ButtonColorCorrect(Vyuka_button3);
                 ButtonDisable();
                 await Task.Delay(1000);
                 KanjiMain();
@@ -126,7 +126,7 @@ namespace Japonstina
             }
             else
             {
-                ButtonColorIncorrect(kanji_button3);
+                ButtonColorIncorrect(Vyuka_button3);
                 ButtonDisable();    
                 label1.Text = Cesky;
                 await Task.Delay(2000);
@@ -137,10 +137,10 @@ namespace Japonstina
 
         private async void kanji_button4_Click(object sender, EventArgs e)
         {
-            if (kanji_button4.Text == Cesky)
+            if (Vyuka_button4.Text == Cesky)
             {
                 
-                ButtonColorCorrect(kanji_button4);
+                ButtonColorCorrect(Vyuka_button4);
                 ButtonDisable();
                 await Task.Delay(1000);
                 KanjiMain();
@@ -148,7 +148,7 @@ namespace Japonstina
             }
             else
             {
-                ButtonColorIncorrect(kanji_button4);
+                ButtonColorIncorrect(Vyuka_button4);
                 ButtonDisable();
                 label1.Text = Cesky;
                 await Task.Delay(2000);
@@ -165,8 +165,8 @@ namespace Japonstina
             
             var slovnik = ProgressManager.KanjiLoadData.Data;
             var random = new Random();
-            var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList(); /*22.6. Predelat dle hiragany pro vetsi seznamy*/
-            var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)]; /*TODO: Dodelat plneni tlacitek*/
+            var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList();
+            var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)]; 
             var KanjiZnak = slovnik.FirstOrDefault(i => i.KanjiId == RandomKanji);
             Kanji = KanjiZnak.KanjiZnak;
             Furigana = KanjiZnak.KanjiJp;
@@ -187,6 +187,37 @@ namespace Japonstina
                 kanji_hiragana.Text = Furigana;
             }
         }
+        /*Predelani na sdilenou komponentu .. jen posilat co se ma selectit a funkce bude sdilena..napr. Typ = 1 hiragana, 2 kanji, 3 slovesa..pripadne poslat array vybranych */
+        public void RandomZnak(int typ)
+        {
+            typ = 0;
+            var slovnikKanji = ProgressManager.KanjiLoadData.Data;
+            var slovnikHiragana = JP.Slovnik();
+            var random = new Random();
+            /*Zde rozdelit do solo funkce/ podminky.. přidat */
+            var SeznamZnaku = slovnikKanji.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList();
+            var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)];
+            var KanjiZnak = slovnikKanji.FirstOrDefault(i => i.KanjiId == RandomKanji);
+            Kanji = KanjiZnak.KanjiZnak;
+            Furigana = KanjiZnak.KanjiJp;
+            Cesky = KanjiZnak.KanjiCZ;
+            var Preklad = slovnikKanji.Where(i => SeznamZnaku.Contains(i.KanjiId)).Select(x => x.KanjiCZ).ToList();
+            var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
+            ButtonText(PrekladRandom);
+            ButtonDefault();
+            label1.Text = "";
+            if (String.IsNullOrEmpty(Kanji))
+            {
+                kanji_char.Text = Furigana;
+                kanji_hiragana.Text = "";
+            }
+            else
+            {
+                kanji_char.Text = Kanji;
+                kanji_hiragana.Text = Furigana;
+            }
+        }
+
 
         public void ButtonDisable()
         {
@@ -204,7 +235,7 @@ namespace Japonstina
         public void ButtonText(List<string> test)
         {
 
-            Button[] buttons = { kanji_button1, kanji_button2, kanji_button3, kanji_button4 };
+            Button[] buttons = { Vyuka_button1, Vyuka_button2, Vyuka_button3, Vyuka_button4 };
             for (int i = 0; i < buttons.Count(); i++)
                 buttons[i].Text = test[i];
             }
