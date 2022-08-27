@@ -26,6 +26,7 @@ namespace Japonstina
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Vybrano();
             Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;
             if (clickedButton.Text == "Abecedy")
@@ -92,7 +93,7 @@ namespace Japonstina
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked == true)
+            if(CheckBoxHiragana.Checked == true)
             {
                 VyberCviceni.Hiragana = true;
                 
@@ -107,7 +108,7 @@ namespace Japonstina
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked == true)
+            if (CheckBoxKatakana.Checked == true)
             {
                 VyberCviceni.Katakana = true;
                 
@@ -124,7 +125,7 @@ namespace Japonstina
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox3.Checked == true)
+            if (CheckBoxN5.Checked == true)
             {
                 VyberCviceni.N5 = true;
             }
@@ -136,7 +137,7 @@ namespace Japonstina
         }
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox4.Checked == true)
+            if (CheckBoxN4.Checked == true)
             {
                 VyberCviceni.N4 = true;
             }
@@ -149,7 +150,7 @@ namespace Japonstina
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox5.Checked == true)
+            if (CheckBoxIchidan.Checked == true)
             {
                 VyberCviceni.Ichidan = true;
             }
@@ -162,7 +163,7 @@ namespace Japonstina
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox6.Checked == true)
+            if (CheckBoxGodan.Checked == true)
             {
                 VyberCviceni.Godan = true;
             }
@@ -175,7 +176,7 @@ namespace Japonstina
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox4.Checked == true)
+            if (CheckBoxN4.Checked == true)
             {
                 VyberCviceni.Irregular = true;
             }
@@ -185,5 +186,25 @@ namespace Japonstina
             }
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        
+       public List<CheckBox> Vybrano()
+       {
+           List<CheckBox> ListVybranych = new List<CheckBox>();
+            foreach (Control cb in panel1.Controls.OfType<CheckBox>())
+           {
+               CheckBox c = cb as CheckBox;
+               if (c.Checked)
+               {
+                   ListVybranych.Add(c);
+               }
+           }
+           return ListVybranych;
+        }
+
     }
 }
