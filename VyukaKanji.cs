@@ -11,6 +11,7 @@ using Japonstina.vyuka;
 using Japonstina.models;
 
 
+
 namespace Japonstina
 {
     public partial class VyukaKanji : Form
@@ -26,9 +27,9 @@ namespace Japonstina
 
         string Cesky { get; set; }
 
+        List<String> Selected { get; set; }
 
-
-       int test = 0;
+        int test = 0;
 
        
 
@@ -40,6 +41,7 @@ namespace Japonstina
         {
             InitializeComponent();
             KanjiMain();
+            
         }
 
 
@@ -55,12 +57,15 @@ namespace Japonstina
         {
 
             KanjiRandomFunkce();
+            testhasd();
+
 
 
 
 
 
         }
+
        
 
             private void kanji_char_Click(object sender, EventArgs e)
@@ -161,8 +166,8 @@ namespace Japonstina
 
         public void KanjiRandomFunkce()
         {
-            
-            
+
+            testhasd();
             var slovnik = ProgressManager.KanjiLoadData.Data;
             var random = new Random();
             var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList();
@@ -194,7 +199,13 @@ namespace Japonstina
             var slovnikKanji = ProgressManager.KanjiLoadData.Data;
             var slovnikHiragana = JP.Slovnik();
             var random = new Random();
-            /*Zde rozdelit do solo funkce/ podminky.. přidat */
+            /*Rozdělení do solo funkce .. WIP
+             * 
+             * 
+             * 
+            var Selected = Cviceni_vyber.CheckBoxSelected;
+            var WordList = slovnikKanji.Where(i => Selected.Contains(i.KanjiUroven)).OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList();
+             */
             var SeznamZnaku = slovnikKanji.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList();
             var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)];
             var KanjiZnak = slovnikKanji.FirstOrDefault(i => i.KanjiId == RandomKanji);
@@ -217,6 +228,8 @@ namespace Japonstina
                 kanji_hiragana.Text = Furigana;
             }
         }
+
+
 
 
         public void ButtonDisable()

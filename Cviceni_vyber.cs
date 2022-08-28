@@ -18,15 +18,18 @@ namespace Japonstina
         public Cviceni_vyber()
         {
             InitializeComponent();
+            
         }
 
 
         public static VyberCviceni Vyber { get; set; }
 
+        public static List <String> CheckBoxSelected { get; set; }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Vybrano();
+            CheckBoxSelected = Vybrano();
             Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;
             if (clickedButton.Text == "Abecedy")
@@ -52,6 +55,7 @@ namespace Japonstina
 
         private void button2_Click(object sender, EventArgs e)
         {
+            CheckBoxSelected = Vybrano();
             Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;
             if (clickedButton.Text == "Kanji")
@@ -70,7 +74,7 @@ namespace Japonstina
             }
             else
             {
-                
+
             }
         }
 
@@ -85,23 +89,23 @@ namespace Japonstina
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
-    
+
 
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(CheckBoxHiragana.Checked == true)
+            if (CheckBoxHiragana.Checked == true)
             {
                 VyberCviceni.Hiragana = true;
-                
+
             }
             else
             {
                 VyberCviceni.Hiragana = false;
-               
+
             }
 
         }
@@ -111,12 +115,12 @@ namespace Japonstina
             if (CheckBoxKatakana.Checked == true)
             {
                 VyberCviceni.Katakana = true;
-                
+
             }
             else
             {
                 VyberCviceni.Katakana = false;
-                
+
             }
 
         }
@@ -192,19 +196,22 @@ namespace Japonstina
 
         }
         
-       public List<CheckBox> Vybrano()
-       {
-           List<CheckBox> ListVybranych = new List<CheckBox>();
-            foreach (Control cb in panel1.Controls.OfType<CheckBox>())
-           {
-               CheckBox c = cb as CheckBox;
-               if (c.Checked)
-               {
-                   ListVybranych.Add(c);
-               }
-           }
-           return ListVybranych;
+        
+        public List<String> Vybrano()
+        {
+            List<String> Selected = new List<String>();
+            Selected = panel1.Controls.OfType<CheckBox>().Where(x => x.Checked).ToList().Select(i => i.Text.ToString()).ToList();
+            return Selected;
         }
-
+        /*
+        public static List<String> Test()
+        {
+            var testa = new Cviceni_vyber();
+            List<String> list = new List<String>();
+            list = testa.Vybrano();
+            return list;
+        }
+        */
     }
+
 }

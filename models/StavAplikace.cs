@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace Japonstina.models
 {
     public static class StavAplikace /*Uklada ID otevrene formy*/
@@ -24,4 +26,5 @@ namespace Japonstina.models
         public static bool Irregular { get; set; }
 
     }
+
 }
