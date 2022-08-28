@@ -57,7 +57,7 @@ namespace Japonstina
         {
 
             KanjiRandomFunkce();
-            testhasd();
+            
 
 
 
@@ -167,7 +167,7 @@ namespace Japonstina
         public void KanjiRandomFunkce()
         {
 
-            testhasd();
+            
             var slovnik = ProgressManager.KanjiLoadData.Data;
             var random = new Random();
             var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList();
@@ -192,14 +192,14 @@ namespace Japonstina
                 kanji_hiragana.Text = Furigana;
             }
         }
-        /*Predelani na sdilenou komponentu .. jen posilat co se ma selectit a funkce bude sdilena..napr. Typ = 1 hiragana, 2 kanji, 3 slovesa..pripadne poslat array vybranych */
+       
         public void RandomZnak(int typ)
         {
             typ = 0;
             var slovnikKanji = ProgressManager.KanjiLoadData.Data;
             var slovnikHiragana = JP.Slovnik();
             var random = new Random();
-            /*Rozdělení do solo funkce .. WIP
+            /*Rozdělení do solo funkce .. WIP .. předělat Json strukturu
              * 
              * 
              * 
