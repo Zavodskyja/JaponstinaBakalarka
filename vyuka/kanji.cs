@@ -42,36 +42,3 @@ namespace Japonstina.vyuka
     }
 }
 
-/*
-
-{
-  "Znaky": [
-    {
-      "Id": 0,
-      "Uroven": "N5",
-      "Detail":[{
-        "Typ":"Sloveso",
-        "Tvar":"Ru"}],
-      "Kanji": "浴びる",
-      "JP":"あびる",
-      "CZ":"Sprchovat se"
-     }
-  ]
-    }
-
-{
-  "Znaky": [
-    {
-      "Id": 0,
-      "Uroven": "N5",
-      "Detail":{
-        "Typ1":"Sloveso",
-        "Typ2":"Ru"},
-      "Kanji": "浴びる",
-      "JP":"あびる",
-      "CZ":"Sprchovat se"
-     }
-  ]
-    }
-
- */

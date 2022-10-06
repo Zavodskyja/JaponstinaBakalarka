@@ -58,7 +58,8 @@ namespace Japonstina
                     KanjiTyp2 = kanji.Key.Typ2.ToString(),
                     KanjiZnak = kanji.Value.Kanji.ToString(),
                     KanjiJp = kanji.Value.JP.ToString(),
-                    KanjiCZ = kanji.Value.CZ.ToString()
+                    KanjiCZ = kanji.Value.CZ.ToString(),
+                    
                 }).ToList()
 
             };

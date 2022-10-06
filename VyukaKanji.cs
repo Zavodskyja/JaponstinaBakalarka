@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Japonstina.vyuka;
 using Japonstina.models;
+using System.Reflection;
+
+
 
 
 
@@ -26,6 +29,8 @@ namespace Japonstina
         string Furigana { get; set; }
 
         string Cesky { get; set; }
+
+        string Testa { get; set; }
 
         List<String> Selected { get; set; }
 
@@ -56,8 +61,10 @@ namespace Japonstina
 
         {
 
-            KanjiRandomFunkce();
-            
+            /*KanjiRandomFunkce();*/
+            RandomZnak();
+
+
 
 
 
@@ -192,26 +199,54 @@ namespace Japonstina
                 kanji_hiragana.Text = Furigana;
             }
         }
-       
-        public void RandomZnak(int typ)
+
+        public void RandomZnak()
         {
-            typ = 0;
+
+            
             var slovnikKanji = ProgressManager.KanjiLoadData.Data;
             var slovnikHiragana = JP.Slovnik();
             var random = new Random();
-            /*Rozdělení do solo funkce .. WIP .. předělat Json strukturu
-             * 
-             * 
-             * 
+            
+            /*Rozdělení do solo funkce .. WIP .. předělat Json strukturu*/
+
             var Selected = Cviceni_vyber.CheckBoxSelected;
             var WordList = slovnikKanji.Where(i => Selected.Contains(i.KanjiUroven)).OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList();
-             */
+
             var SeznamZnaku = slovnikKanji.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList();
             var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)];
             var KanjiZnak = slovnikKanji.FirstOrDefault(i => i.KanjiId == RandomKanji);
             Kanji = KanjiZnak.KanjiZnak;
             Furigana = KanjiZnak.KanjiJp;
             Cesky = KanjiZnak.KanjiCZ;
+            
+
+
+
+            /*Random vyber sklonovani slovesa ..dodelat selekci a trideni*/
+
+            var VerbList = slovnikKanji.Where(i => Selected.Contains(i.KanjiUroven)).OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(1).ToList();
+            int KID = VerbList.FirstOrDefault();
+            string[] VerbExerciseTypes = new string[] { "PresentPolite", "PresentPlain", "VolitionalPolite", "VolitionalPlain", "ImperativePolite", "ImperativePlain", "PastIndicativePolite", 
+                "PastIndivacativePlain", "PastPresumptivePolite", "PastPresumptivePlain", "PresentProgressivePlain", "PastProgressivePolite", "PastProgressivePlain", "ProvisionalConditionalPolite", 
+                "ProvisionalConditionalPlain", "ConditionalPolite", "ConditionalPlain", "PotentialPolite", "PotentialPlain", "CausativePolite", "CausativePlain" };
+
+            List<string> VerbExerciseTypesList = new List<string>(VerbExerciseTypes);
+            var RandomVerbTypes = VerbExerciseTypesList.OrderBy(x => random.Next()).Take(4).ToList();
+            var RandomVerbExerciseType = VerbExerciseTypes[random.Next(VerbExerciseTypesList.Count)];
+            var RandomVerb = slovnikKanji.Where(i => i.KanjiId == KID).OrderBy(x => random.Next()).Select(x => x).ToList();
+            var Verb = slovnikKanji.FirstOrDefault(i => i.KanjiId == KID);
+            var test2 = slovnikKanji.Where(test2 => test2.KanjiId == KID).Select(x => x.PresentPolite).ToList();
+
+
+
+
+
+
+
+
+
+            /*Pridat exercise list , do kterého psát typy ( abecedy,kanji,slovesa) - selekce dle typu přidat if podmínky do selekce*/
             var Preklad = slovnikKanji.Where(i => SeznamZnaku.Contains(i.KanjiId)).Select(x => x.KanjiCZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             ButtonText(PrekladRandom);

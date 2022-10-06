@@ -29,7 +29,7 @@ namespace Japonstina
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CheckBoxSelected = Vybrano();
+            CheckBoxSelected = Selected();
             Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;
             if (clickedButton.Text == "Abecedy")
@@ -55,7 +55,7 @@ namespace Japonstina
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CheckBoxSelected = Vybrano();
+            CheckBoxSelected = Selected();
             Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;
             if (clickedButton.Text == "Kanji")
@@ -197,7 +197,7 @@ namespace Japonstina
         }
         
         
-        public List<String> Vybrano()
+        public List<String> Selected()
         {
             List<String> Selected = new List<String>();
             Selected = panel1.Controls.OfType<CheckBox>().Where(x => x.Checked).ToList().Select(i => i.Text.ToString()).ToList();
