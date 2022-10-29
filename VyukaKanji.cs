@@ -222,6 +222,15 @@ namespace Japonstina
             Furigana = KanjiZnak.KanjiJp;
             Cesky = KanjiZnak.KanjiCZ;
 
+            if (Selected.Contains("hiragana"))
+            {
+                // SetHiragana();
+            }
+            
+            if (Selected.Contains("katanaga"))
+            {
+                // SetKatakana()
+            }
 
 
 
@@ -267,12 +276,21 @@ namespace Japonstina
             var Verb = slovnikKanji.FirstOrDefault(i => i.Id == KID);
             //var test2 = slovnikKanji.Where(test2 => test2.Id == KID).Select(x => x.PresentPolite).ToList();
 
-            foreach (var conjugation in randomConjugations)
+            var conjugationItem = slovnikKanji
+                .Where(test2 => test2.Id == KID)
+                .Select(kanji => kanji.Conjugations)
+                .FirstOrDefault();
+
+            var dictionary = new List<string>();
+            if (conjugationItem != null)
             {
-                var test = slovnikKanji
-                    .Where(test2 => test2.Id == KID)
-                    .Select(x => x.GetType().GetProperty(conjugation.Key).GetValue(x, null))
-                    .ToList();
+                foreach (var keyValuePair in randomConjugations)
+                {
+                    var value = (string)conjugationItem.GetType().GetProperty(keyValuePair.Key).GetValue(conjugationItem, null);
+                    dictionary.Add(!string.IsNullOrEmpty(value) 
+                        ? value 
+                        : string.Empty);
+                }
             }
 
 
