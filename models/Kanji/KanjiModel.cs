@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Japonstina.vyuka;
+using System.Collections.Specialized;
 
 namespace Japonstina.models
 {
@@ -40,6 +41,8 @@ namespace Japonstina.models
 
         [JsonProperty("Conjugations")]
         public ConjugationModel Conjugations { get; set; }
+
+        public SortedDictionary<string, string> ConjugationsCollection { get; set; }
     }
 }
 

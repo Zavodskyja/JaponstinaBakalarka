@@ -239,7 +239,7 @@ namespace Japonstina
                 "PastIndivacativePlain", "PastPresumptivePolite", "PastPresumptivePlain", "PresentProgressivePlain", "PastProgressivePolite", "PastProgressivePlain", "ProvisionalConditionalPolite",
                 "ProvisionalConditionalPlain", "ConditionalPolite", "ConditionalPlain", "PotentialPolite", "PotentialPlain", "CausativePolite", "CausativePlain" };
 
-            KanjiZnak.ConjugationsCollection = new NameValueCollection() 
+            KanjiZnak.ConjugationsCollection = new SortedDictionary<string, string>()
             {
                 { nameof(ConjugationModel.PresentPolite), KanjiZnak.Conjugations.PresentPolite },
                 { nameof(ConjugationModel.PresentPlain), KanjiZnak.Conjugations.PresentPlain },
@@ -249,7 +249,7 @@ namespace Japonstina
                 { nameof(ConjugationModel.ImperativePlain), KanjiZnak.Conjugations.ImperativePlain }
             };
 
-            NameValueCollection selectedConjugations = KanjiZnak.ConjugationsCollection
+            var randomConjugations = KanjiZnak.ConjugationsCollection
                 .OrderBy(x => random.Next())
                 .Take(4);
 
@@ -258,13 +258,13 @@ namespace Japonstina
             var RandomVerbExerciseType = VerbExerciseTypes[random.Next(VerbExerciseTypesList.Count)];
             var RandomVerb = slovnikKanji.Where(i => i.Id == KID).OrderBy(x => random.Next()).Select(x => x).ToList();
             var Verb = slovnikKanji.FirstOrDefault(i => i.Id == KID);
-             var test2 = slovnikKanji.Where(test2 => test2.Id == KID).Select(x => x.PresentPolite).ToList();
-            
-            foreach (string key in selectedConjugations)
+            //var test2 = slovnikKanji.Where(test2 => test2.Id == KID).Select(x => x.PresentPolite).ToList();
+
+            foreach (var conjugation in randomConjugations)
             {
                 var test = slovnikKanji
                     .Where(test2 => test2.Id == KID)
-                    .Select(x => x.GetType().GetProperty(key).GetValue(x, null))
+                    .Select(x => x.GetType().GetProperty(conjugation.Key).GetValue(x, null))
                     .ToList();
             }
 
