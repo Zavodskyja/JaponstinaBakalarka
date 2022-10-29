@@ -239,6 +239,13 @@ namespace Japonstina
                 "PastIndivacativePlain", "PastPresumptivePolite", "PastPresumptivePlain", "PresentProgressivePlain", "PastProgressivePolite", "PastProgressivePlain", "ProvisionalConditionalPolite",
                 "ProvisionalConditionalPlain", "ConditionalPolite", "ConditionalPlain", "PotentialPolite", "PotentialPlain", "CausativePolite", "CausativePlain" };
 
+            KanjiZnak.Conjugations.PresentPolite = nameof(ConjugationModel.PresentPolite);
+            KanjiZnak.Conjugations.PresentPlain = nameof(ConjugationModel.PresentPlain);
+            KanjiZnak.Conjugations.VolitionalPolite = nameof(ConjugationModel.VolitionalPolite);
+            KanjiZnak.Conjugations.VolitionalPlain = nameof(ConjugationModel.VolitionalPlain);
+            KanjiZnak.Conjugations.ImperativePolite = nameof(ConjugationModel.ImperativePolite);
+            KanjiZnak.Conjugations.ImperativePlain = nameof(ConjugationModel.ImperativePlain);
+
             KanjiZnak.ConjugationsCollection = new SortedDictionary<string, string>()
             {
                 { nameof(ConjugationModel.PresentPolite), KanjiZnak.Conjugations.PresentPolite },

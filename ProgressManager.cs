@@ -59,7 +59,7 @@ namespace Japonstina
                     KanjiZnak = kanji.Value.Kanji.ToString(),
                     KanjiJp = kanji.Value.JP.ToString(),
                     KanjiCZ = kanji.Value.CZ.ToString(),
-                    
+                    Conjugations = new ConjugationModel()
                 }).ToList()
 
             };

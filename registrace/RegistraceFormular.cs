@@ -46,11 +46,11 @@ namespace Japonstina
                 RegistrationError.Text = "Nevyplněn login";
             }
 
-            else if
-                (!ValidaceLogin.IsMatch(RegistrationLoginBox.Text))
-            {
-                RegistrationError.Text = "Nevalidní Login";
-            }
+            //else if
+            //    (!ValidaceLogin.IsMatch(RegistrationLoginBox.Text))
+            //{
+            //    RegistrationError.Text = "Nevalidní Login";
+            //}
 
             else if
                  (RegistrationPasswordBox1.Text != RegistrationPasswordBox2.Text)
@@ -58,11 +58,11 @@ namespace Japonstina
                 RegistrationError.Text = "Hesla se neshodují";
             }
 
-            else if
-                (!validace.IsMatch(RegistrationPasswordBox1.Text))
-            {
-                RegistrationError.Text = "Heslo neodpovídá požadavkům";
-            }
+            //else if
+            //    (!validace.IsMatch(RegistrationPasswordBox1.Text))
+            //{
+            //    RegistrationError.Text = "Heslo neodpovídá požadavkům";
+            //}
 
 
             //else if (RegistrationPasswordBox1.Text.Length < 5)
