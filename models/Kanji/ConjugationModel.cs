@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,36 +8,8 @@ using Japonstina.vyuka;
 
 namespace Japonstina.models
 {
-
-    public class KanjiModel
+    public class ConjugationModel
     {
-        [JsonProperty("Id")]
-        public int KanjiId { get; set; }
-
-        [JsonProperty("Uroven")]
-        public string KanjiUroven { get; set; }
-
-        [JsonProperty("Typ1")]
-        public string KanjiTyp1 { get; set; }
-
-        [JsonProperty("Typ2")]
-        public string KanjiTyp2 { get; set; }
-
-        [JsonProperty("Kanji")]
-        public string KanjiZnak { get; set; }
-
-        [JsonProperty("JP")]
-        public string KanjiJp { get; set; }
-
-        [JsonProperty("CZ")]
-        public string KanjiCZ { get; set; }
-
-        [JsonProperty("Type")]
-        public string Type { get; set; }
-
-        [JsonProperty("Difficulty")]
-        public string Difficulty { get; set; }
-
         [JsonProperty("Present Polite")]
         public string PresentPolite { get; set; }
 
@@ -100,9 +72,5 @@ namespace Japonstina.models
 
         [JsonProperty("Causative Plain")]
         public string CausativePlain { get; set; }
-
-
-
     }
 }
-

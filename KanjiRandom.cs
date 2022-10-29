@@ -30,13 +30,13 @@ namespace Japonstina
         {
             var slovnik = ProgressManager.KanjiLoadData.Data;
             var random = new Random();
-            var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.KanjiId).Take(4).ToList(); /*22.6. Predelat dle hiragany pro vetsi seznamy*/
+            var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.Id).Take(4).ToList(); /*22.6. Predelat dle hiragany pro vetsi seznamy*/
             var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)]; /*TODO: Dodelat plneni tlacitek*/
-            var KanjiZnak = slovnik.FirstOrDefault(i => i.KanjiId == RandomKanji);
+            var KanjiZnak = slovnik.FirstOrDefault(i => i.Id == RandomKanji);
             Kanji = KanjiZnak.KanjiZnak;
             Furigana = KanjiZnak.KanjiJp;
             Cesky = KanjiZnak.KanjiCZ;
-            var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.KanjiId)).Select(x => x.KanjiCZ).ToList();
+            var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.Id)).Select(x => x.KanjiCZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             /*Tlacitka - Zatim nastrel funkcionality*/
         }

@@ -52,7 +52,7 @@ namespace Japonstina
             {
                 Data = KanjiSlovnik.Select(kanji => new KanjiModel() /*TODO dodelat korektni vyhledani*/
                 {
-                    KanjiId = kanji.Key.ID,
+                    Id = kanji.Key.ID,
                     KanjiUroven = kanji.Key.Uroven.ToString(),
                     KanjiTyp1 = kanji.Key.Typ1.ToString(),
                     KanjiTyp2 = kanji.Key.Typ2.ToString(),
