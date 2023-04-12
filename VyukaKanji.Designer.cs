@@ -138,7 +138,7 @@ namespace Japonstina
             kanji_hiragana.TabIndex = 1;
             kanji_hiragana.Text = "Furigana";
             kanji_hiragana.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            kanji_hiragana.Click += kanji_hiragana_Click;
+          
             // 
             // kanji_char
             // 
@@ -150,7 +150,7 @@ namespace Japonstina
             kanji_char.TabIndex = 0;
             kanji_char.Text = "Kanji";
             kanji_char.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            kanji_char.Click += kanji_char_Click;
+            
             // 
             // VyukaKanji
             // 

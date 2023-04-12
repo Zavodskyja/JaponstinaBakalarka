@@ -33,7 +33,6 @@ namespace Japonstina
 
         string CorrectAnswer { get; set; }
 
-        //string ConjugationType { get; set; }
 
         string CurrentSet { get; set; }
 
@@ -85,7 +84,7 @@ namespace Japonstina
         {
 
             PickSet();
-            
+
 
 
         }
@@ -127,7 +126,6 @@ namespace Japonstina
             Kanji = KanjiZnak.KanjiZnak;
             Furigana = KanjiZnak.KanjiJp;
             CorrectAnswer = KanjiZnak.KanjiCZ;
-
             var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.Id)).Select(x => x.KanjiCZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             ButtonText(PrekladRandom);
@@ -161,13 +159,13 @@ namespace Japonstina
             ClearText();
             var slovnik = ProgressManager.KanjiLoadData.Data;
             var random = new Random();
-            var verbs = slovnik.Where(i => i.Typ2 == CurrentSet).OrderBy(x => random.Next()).ToList();
+            var verbs = slovnik.Where(i => i.Typ2 == CurrentSet).OrderBy(x => random.Next()).Take(4).ToList();
             var randomVerb = verbs[random.Next(verbs.Count)];
             Kanji = randomVerb.KanjiZnak;
             Furigana = randomVerb.KanjiJp;
             var conjugations = randomVerb.Conjugation.ToList();
             var shuffledConjugationPairs = conjugations.OrderBy(a => random.Next()).ToList();
-            var shuffledConjugations = shuffledConjugationPairs.Select(pair => pair.Value).ToList();
+            var shuffledConjugations = shuffledConjugationPairs.OrderBy(a => random.Next()).Select(pair => pair.Value).ToList();
             ButtonText(shuffledConjugations);
             string correctConjugationType = shuffledConjugationPairs[0].Key;
             string correctConjugationForm = shuffledConjugationPairs[0].Value;
@@ -201,8 +199,6 @@ namespace Japonstina
         {
 
             ClearText();
-
-
             if (!Enum.TryParse(typeof(abeceda), CurrentSet, out object abecedaValue))
             {
                 throw new ArgumentException("Invalid value for CurrentSet.");
@@ -225,20 +221,9 @@ namespace Japonstina
             {
                 timer10Seconds.Start();
             }
-
         }
 
 
-
-        private void kanji_char_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kanji_hiragana_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         //Pridat logiku na kontrolu odpovedi a né porovnání button.text
@@ -317,22 +302,12 @@ namespace Japonstina
 
         }
 
-        public void ButtonColorCorrect(Button button)
-        {
-            button.BackColor = Color.Green;
-        }
 
-        public void ButtonColorIncorrect(Button button)
-        {
-            button.BackColor = Color.FromArgb(188, 0, 45);
-        }
-
-
-
-        public async void ButtonAnswer(Button button,string answer)
+        public async void ButtonAnswer(Button button, string buttonText)
         {
             ButtonDisable();
-            if (answer == CorrectAnswer)
+            //pridat logiku na save progressu pro correct X incorrect
+            if (buttonText == CorrectAnswer)
             {
                 button.BackColor = Color.Green;
                 await Task.Delay(1000);
@@ -344,22 +319,15 @@ namespace Japonstina
                 DisplayCorrectAnswer();
                 await Task.Delay(2000);
                 KanjiMain();
-                
+
             }
         }
 
-        public void AnswerIncorrect()
-        {
-            //Pridat funkci na volání funkce zlé odpovědi
-        }
 
 
 
-       /* private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-       */
+
+
         private void Timer10Seconds_Tick(object sender, EventArgs e)
         {
             timer10Seconds.Stop();
@@ -371,7 +339,6 @@ namespace Japonstina
         private void Timer2Seconds_Tick(object sender, EventArgs e)
         {
             timer2Seconds.Stop();
-            //ClearText();
             KanjiMain();
         }
 

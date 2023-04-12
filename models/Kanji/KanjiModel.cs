@@ -33,16 +33,9 @@ namespace Japonstina.models
         [JsonProperty("CZ")]
         public string KanjiCZ { get; set; }
 
-        [JsonProperty("Type")]
-        public string Type { get; set; }
-
-        [JsonProperty("Difficulty")]
-        public string Difficulty { get; set; }
 
         [JsonProperty("Conjugations")]
         public ConjugationModel Conjugations { get; set; }
-
-        public SortedDictionary<string, string> ConjugationsCollection { get; set; }
 
         public Dictionary<string, string> Conjugation { get; set; }
     }
