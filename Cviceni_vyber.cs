@@ -15,10 +15,14 @@ namespace Japonstina
 {
     public partial class Cviceni_vyber : Form
     {
+       
+
+
+
         public Cviceni_vyber()
         {
             InitializeComponent();
-
+            
         }
 
 
@@ -232,37 +236,54 @@ namespace Japonstina
 
         private void button4_Click(object sender, EventArgs e)
         {
-            CheckBoxSelected = Selected();
-            CheckBoxTimeLimit = TimeLimit();
 
 
-            if (CheckBoxSelected.Any() != true)
+
+            try
             {
-                label4.Visible = true;
+                CheckBoxSelected = Selected();
+                CheckBoxTimeLimit = TimeLimit();
+
+
+                if (CheckBoxSelected.Any() != true)
+                {
+                    label4.Visible = true;
+                }
+                else
+                {
+                    Vyber = new VyberCviceni();
+                    Button clickedButton = (Button)sender;
+                    if (clickedButton.Text == "Kombinace")
+                    {
+                        VyberCviceni.btn = "Kombinace";
+                    }
+                    if (StavAplikace.ActiveForm != "Kombinace")
+                    {
+                        Program.welcome.panel1.Controls.Clear();
+                        VyukaKanji k = new VyukaKanji();
+                        k.TopLevel = false;
+                        Program.welcome.panel1.Controls.Add(k);
+                        k.Dock = DockStyle.Fill;
+                        k.Show();
+                        StavAplikace.ActiveForm = "Kombinace";
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Vyber = new VyberCviceni();
-                Button clickedButton = (Button)sender;
-                if (clickedButton.Text == "Kombinace")
-                {
-                    VyberCviceni.btn = "Kombinace";
-                }
-                if (StavAplikace.ActiveForm != "Kombinace")
-                {
-                    Program.welcome.panel1.Controls.Clear();
-                    VyukaKanji k = new VyukaKanji();
-                    k.TopLevel = false;
-                    Program.welcome.panel1.Controls.Add(k);
-                    k.Dock = DockStyle.Fill;
-                    k.Show();
-                    StavAplikace.ActiveForm = "Kombinace";
-                }
+                MessageBox.Show($"Naskytla se Chyba. Zkuste akci opakovat.", "Chyba aplikace", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                StavAplikace.ActiveForm = "";
             }
-            
+
 
 
         }
+
+
+
+
+
+
 
 
 

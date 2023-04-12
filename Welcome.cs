@@ -18,8 +18,11 @@ namespace Japonstina
 {
     public partial class Welcome : Form
     {
+
         public static string PrihlasenyUzivatel { get; set; }
-        
+
+
+
 
         public Welcome()
         {
@@ -248,6 +251,11 @@ namespace Japonstina
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }

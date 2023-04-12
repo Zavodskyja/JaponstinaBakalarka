@@ -30,6 +30,7 @@ namespace Japonstina
         private void InitializeComponent()
         {
             panel1 = new System.Windows.Forms.Panel();
+            label4 = new System.Windows.Forms.Label();
             button4 = new System.Windows.Forms.Button();
             label3 = new System.Windows.Forms.Label();
             CheckBoxTimed = new System.Windows.Forms.CheckBox();
@@ -45,7 +46,6 @@ namespace Japonstina
             button2 = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -72,6 +72,16 @@ namespace Japonstina
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(1066, 768);
             panel1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(435, 567);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(190, 15);
+            label4.TabIndex = 14;
+            label4.Text = "Je potřeba vybrat alespoň 1 cvičení";
+            label4.Visible = false;
             // 
             // button4
             // 
@@ -232,16 +242,6 @@ namespace Japonstina
             label1.Text = "Výběr cvičení";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(435, 567);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(190, 15);
-            label4.TabIndex = 14;
-            label4.Text = "Je potřeba vybrat alespoň 1 cvičení";
-            label4.Visible = false;
-            // 
             // Cviceni_vyber
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -255,6 +255,7 @@ namespace Japonstina
             panel1.PerformLayout();
             ResumeLayout(false);
         }
+
 
         #endregion
 

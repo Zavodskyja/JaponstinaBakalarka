@@ -90,6 +90,17 @@ namespace Japonstina
         }
 
 
+        private void KanjiInHiragana(string kanji, string furigana, string correctConjugationType)
+        {
+            kanji_char.Text = string.IsNullOrEmpty(kanji) ? furigana : kanji;
+            kanji_hiragana.Text = string.IsNullOrEmpty(kanji) ? "" : furigana;
+            if (CurrentSet is "RU - Ichidan" or "U - Godan" or "Nepravidelná")
+            {
+                label2.Text = correctConjugationType;
+            }
+        }
+
+
         public void PickSet()
         {
             var random = new Random();
@@ -130,18 +141,8 @@ namespace Japonstina
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             ButtonText(PrekladRandom);
             ButtonDefault();
-
-            if (String.IsNullOrEmpty(Kanji))
-            {
-                kanji_char.Text = Furigana;
-                kanji_hiragana.Text = "";
-            }
-            else
-            {
-                kanji_char.Text = Kanji;
-                kanji_hiragana.Text = Furigana;
-            }
-
+            KanjiInHiragana(Kanji, Furigana,null);
+            
 
             if (Cviceni_vyber.CheckBoxTimeLimit)
             {
@@ -149,9 +150,6 @@ namespace Japonstina
             }
 
         }
-
-
-
 
 
         public void ConjugationRandomFunction()
@@ -171,27 +169,8 @@ namespace Japonstina
             string correctConjugationForm = shuffledConjugationPairs[0].Value;
             CorrectAnswer = correctConjugationForm;
             ButtonDefault();
-
-
-
-            if (String.IsNullOrEmpty(Kanji))
-            {
-                kanji_char.Text = Furigana;
-                kanji_hiragana.Text = "";
-                label2.Text = correctConjugationType;
-
-            }
-            else
-            {
-                kanji_char.Text = Kanji;
-                kanji_hiragana.Text = Furigana;
-                label2.Text = correctConjugationType;
-            }
-            if (Cviceni_vyber.CheckBoxTimeLimit)
-            {
-                timer10Seconds.Start();
-            }
-
+            KanjiInHiragana(Kanji, Furigana, correctConjugationType);
+            
         }
 
 

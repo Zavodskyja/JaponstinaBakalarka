@@ -12,19 +12,19 @@ using Japonstina.models;
 
 namespace Japonstina
 {
-    
+
     public partial class MainMenu : Form
     {
         
         public MainMenu()
         {
-            
+
             InitializeComponent();
             
         }
 
-        public static string ActiveForma ;
- 
+        public static string ActiveForma;
+
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
@@ -69,8 +69,8 @@ namespace Japonstina
 
             }
 
-            
- 
+
+
 
         }
 
