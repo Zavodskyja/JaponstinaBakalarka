@@ -30,13 +30,13 @@ namespace Japonstina
 
         string Furigana { get; set; }
 
-        string Cesky { get; set; }
+        string CorrectAnswer { get; set; }
 
-        string Testa { get; set; }
+        string ConjugationType { get; set; }
+
+
 
         List<String> Selected { get; set; }
-
-        int test = 0;
 
 
 
@@ -64,13 +64,7 @@ namespace Japonstina
         {
 
             /*KanjiRandomFunkce();*/
-            RandomZnak();
-
-
-
-
-
-
+            ConjugationRandomFunction();
 
 
         }
@@ -89,7 +83,7 @@ namespace Japonstina
 
         private async void kanji_button1_Click(object sender, EventArgs e)
         {
-            if (Vyuka_button1.Text == Cesky)
+            if (Vyuka_button1.Text == CorrectAnswer)
             {
                 ButtonColorCorrect(Vyuka_button1);
                 ButtonDisable();
@@ -101,7 +95,7 @@ namespace Japonstina
             {
                 ButtonColorIncorrect(Vyuka_button1);
                 ButtonDisable();
-                label1.Text = Cesky;
+                label1.Text = CorrectAnswer;
                 await Task.Delay(2000);
                 KanjiMain();
             }
@@ -110,7 +104,7 @@ namespace Japonstina
 
         private async void kanji_button2_Click(object sender, EventArgs e)
         {
-            if (Vyuka_button2.Text == Cesky)
+            if (Vyuka_button2.Text == CorrectAnswer)
             {
                 ButtonColorCorrect(Vyuka_button2);
                 ButtonDisable();
@@ -122,7 +116,7 @@ namespace Japonstina
             {
                 ButtonColorIncorrect(Vyuka_button2);
                 ButtonDisable();
-                label1.Text = Cesky;
+                label1.Text = CorrectAnswer;
                 await Task.Delay(2000);
                 KanjiMain();
             }
@@ -130,7 +124,7 @@ namespace Japonstina
 
         private async void kanji_button3_Click(object sender, EventArgs e)
         {
-            if (Vyuka_button3.Text == Cesky)
+            if (Vyuka_button3.Text == CorrectAnswer)
             {
                 ButtonColorCorrect(Vyuka_button3);
                 ButtonDisable();
@@ -142,7 +136,7 @@ namespace Japonstina
             {
                 ButtonColorIncorrect(Vyuka_button3);
                 ButtonDisable();
-                label1.Text = Cesky;
+                label1.Text = CorrectAnswer;
                 await Task.Delay(2000);
                 KanjiMain();
             }
@@ -151,7 +145,7 @@ namespace Japonstina
 
         private async void kanji_button4_Click(object sender, EventArgs e)
         {
-            if (Vyuka_button4.Text == Cesky)
+            if (Vyuka_button4.Text == CorrectAnswer)
             {
 
                 ButtonColorCorrect(Vyuka_button4);
@@ -164,7 +158,7 @@ namespace Japonstina
             {
                 ButtonColorIncorrect(Vyuka_button4);
                 ButtonDisable();
-                label1.Text = Cesky;
+                label1.Text = CorrectAnswer;
                 await Task.Delay(2000);
                 KanjiMain();
             }
@@ -175,8 +169,6 @@ namespace Japonstina
 
         public void KanjiRandomFunkce()
         {
-
-
             var slovnik = ProgressManager.KanjiLoadData.Data;
             var random = new Random();
             var SeznamZnaku = slovnik.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.Id).Take(4).ToList();
@@ -184,7 +176,8 @@ namespace Japonstina
             var KanjiZnak = slovnik.FirstOrDefault(i => i.Id == RandomKanji);
             Kanji = KanjiZnak.KanjiZnak;
             Furigana = KanjiZnak.KanjiJp;
-            Cesky = KanjiZnak.KanjiCZ;
+            CorrectAnswer = KanjiZnak.KanjiCZ;
+
             var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.Id)).Select(x => x.KanjiCZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             ButtonText(PrekladRandom);
@@ -206,117 +199,55 @@ namespace Japonstina
         {
 
 
-            var slovnikKanji = ProgressManager.KanjiLoadData.Data;
-            var slovnikHiragana = JP.Slovnik();
+
+            /*  Použít selected do conjugation
+
+                var Selected = Cviceni_vyber.CheckBoxSelected;
+                var WordList = slovnikKanji.Where(i => Selected.Contains(i.KanjiUroven)).OrderBy(x => random.Next()).Select(x => x.Id).Take(4).ToList();
+            */
+        }
+
+
+        //Pridat promennou do ktere -> selected , a pri spusteni skrze tlacitka se do ni doplni dane veci -> vzdy se bude brat ze selected 
+        public void ConjugationRandomFunction() 
+        {
+            var slovnik = ProgressManager.KanjiLoadData.Data;
             var random = new Random();
+            var verbs = slovnik.Where(i => i.Typ1 == "Sloveso").OrderBy(x => random.Next()).ToList();
+            var randomVerb = verbs[random.Next(verbs.Count)];
+            Kanji = randomVerb.KanjiZnak;
+            Furigana = randomVerb.KanjiJp;
 
-            /*Rozdělení do solo funkce .. WIP .. předělat Json strukturu*/
-
-            var Selected = Cviceni_vyber.CheckBoxSelected;
-            var WordList = slovnikKanji.Where(i => Selected.Contains(i.KanjiUroven)).OrderBy(x => random.Next()).Select(x => x.Id).Take(4).ToList();
-
-            var SeznamZnaku = slovnikKanji.Where(i => i.KanjiUroven == "N5" || i.KanjiUroven == "N4").OrderBy(x => random.Next()).Select(x => x.Id).Take(4).ToList();
-            var RandomKanji = SeznamZnaku[random.Next(SeznamZnaku.Count)];
-            var KanjiZnak = slovnikKanji.FirstOrDefault(i => i.Id == RandomKanji);
-            Kanji = KanjiZnak.KanjiZnak;
-            Furigana = KanjiZnak.KanjiJp;
-            Cesky = KanjiZnak.KanjiCZ;
-
-            if (Selected.Contains("hiragana"))
-            {
-                // SetHiragana();
-            }
-            
-            if (Selected.Contains("katanaga"))
-            {
-                // SetKatakana()
-            }
-
-
-
-            /*Random vyber sklonovani slovesa ..dodelat selekci a trideni*/
-
-            var VerbList = slovnikKanji
-             .Where(i => Selected.Contains(i.KanjiUroven))
-             .OrderBy(x => random.Next())
-             .Select(x => x.Id)
-             .Take(1)
-             .ToList();
-
-            int KID = VerbList.FirstOrDefault();
-            string[] VerbExerciseTypes = new string[] { "PresentPolite", "PresentPlain", "VolitionalPolite", "VolitionalPlain", "ImperativePolite", "ImperativePlain", "PastIndicativePolite",
-                "PastIndivacativePlain", "PastPresumptivePolite", "PastPresumptivePlain", "PresentProgressivePlain", "PastProgressivePolite", "PastProgressivePlain", "ProvisionalConditionalPolite",
-                "ProvisionalConditionalPlain", "ConditionalPolite", "ConditionalPlain", "PotentialPolite", "PotentialPlain", "CausativePolite", "CausativePlain" };
-
-            KanjiZnak.Conjugations.PresentPolite = nameof(ConjugationModel.PresentPolite);
-            KanjiZnak.Conjugations.PresentPlain = nameof(ConjugationModel.PresentPlain);
-            KanjiZnak.Conjugations.VolitionalPolite = nameof(ConjugationModel.VolitionalPolite);
-            KanjiZnak.Conjugations.VolitionalPlain = nameof(ConjugationModel.VolitionalPlain);
-            KanjiZnak.Conjugations.ImperativePolite = nameof(ConjugationModel.ImperativePolite);
-            KanjiZnak.Conjugations.ImperativePlain = nameof(ConjugationModel.ImperativePlain);
-
-            KanjiZnak.ConjugationsCollection = new SortedDictionary<string, string>()
-            {
-                { nameof(ConjugationModel.PresentPolite), KanjiZnak.Conjugations.PresentPolite },
-                { nameof(ConjugationModel.PresentPlain), KanjiZnak.Conjugations.PresentPlain },
-                { nameof(ConjugationModel.VolitionalPolite), KanjiZnak.Conjugations.VolitionalPolite },
-                { nameof(ConjugationModel.VolitionalPlain), KanjiZnak.Conjugations.VolitionalPlain },
-                { nameof(ConjugationModel.ImperativePolite), KanjiZnak.Conjugations.ImperativePolite },
-                { nameof(ConjugationModel.ImperativePlain), KanjiZnak.Conjugations.ImperativePlain }
-            };
-
-            var randomConjugations = KanjiZnak.ConjugationsCollection
-                .OrderBy(x => random.Next())
-                .Take(4);
-
-            List<string> VerbExerciseTypesList = new List<string>(VerbExerciseTypes);
-            var RandomVerbTypes = VerbExerciseTypesList.OrderBy(x => random.Next()).Take(4).ToList();
-            var RandomVerbExerciseType = VerbExerciseTypes[random.Next(VerbExerciseTypesList.Count)];
-            var RandomVerb = slovnikKanji.Where(i => i.Id == KID).OrderBy(x => random.Next()).Select(x => x).ToList();
-            var Verb = slovnikKanji.FirstOrDefault(i => i.Id == KID);
-            //var test2 = slovnikKanji.Where(test2 => test2.Id == KID).Select(x => x.PresentPolite).ToList();
-
-            var conjugationItem = slovnikKanji
-                .Where(test2 => test2.Id == KID)
-                .Select(kanji => kanji.Conjugations)
-                .FirstOrDefault();
-
-            var dictionary = new List<string>();
-            if (conjugationItem != null)
-            {
-                foreach (var keyValuePair in randomConjugations)
-                {
-                    var value = (string)conjugationItem.GetType().GetProperty(keyValuePair.Key).GetValue(conjugationItem, null);
-                    dictionary.Add(!string.IsNullOrEmpty(value) 
-                        ? value 
-                        : string.Empty);
-                }
-            }
-
-
-
-
-
-
-
-
-
-            /*Pridat exercise list , do kterého psát typy ( abecedy,kanji,slovesa) - selekce dle typu přidat if podmínky do selekce*/
-            var Preklad = slovnikKanji.Where(i => SeznamZnaku.Contains(i.Id)).Select(x => x.KanjiCZ).ToList();
-            var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
-            ButtonText(PrekladRandom);
+            var conjugations = randomVerb.Conjugation.ToList();
+            var shuffledConjugationPairs = conjugations.OrderBy(a => random.Next()).ToList();
+            var shuffledConjugations = shuffledConjugationPairs.Select(pair => pair.Value).ToList();
+            ButtonText(shuffledConjugations);
+            string correctConjugationType = shuffledConjugationPairs[0].Key;
+            string correctConjugationForm = shuffledConjugationPairs[0].Value;
+            CorrectAnswer = correctConjugationForm;
             ButtonDefault();
             label1.Text = "";
+
+
             if (String.IsNullOrEmpty(Kanji))
             {
                 kanji_char.Text = Furigana;
                 kanji_hiragana.Text = "";
+                label2.Text = correctConjugationType;
+
             }
             else
             {
                 kanji_char.Text = Kanji;
                 kanji_hiragana.Text = Furigana;
+                label2.Text = correctConjugationType;
             }
+
+
+
+
+
+
         }
 
 
@@ -335,12 +266,12 @@ namespace Japonstina
 
         }
 
-        public void ButtonText(List<string> test)
+        public void ButtonText(List<string> buttonText)
         {
 
             Button[] buttons = { Vyuka_button1, Vyuka_button2, Vyuka_button3, Vyuka_button4 };
             for (int i = 0; i < buttons.Count(); i++)
-                buttons[i].Text = test[i];
+                buttons[i].Text = buttonText[i];
         }
 
 
@@ -385,19 +316,19 @@ namespace Japonstina
             {
                 if (VyberCviceni.N5 == true && VyberCviceni.N4 == true)
                 {
-                    test = 1;
+
                 }
                 if (VyberCviceni.N5 == true && VyberCviceni.N4 == false)
                 {
-                    test = 2;
+
                 }
                 if (VyberCviceni.N5 == false && VyberCviceni.N4 == true)
                 {
-                    test = 3;
+
                 }
                 else
                 {
-                    test = 4;
+
                 }
 
 
@@ -409,6 +340,9 @@ namespace Japonstina
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

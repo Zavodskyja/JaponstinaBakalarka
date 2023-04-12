@@ -54,8 +54,8 @@ namespace Japonstina
                 {
                     Id = kanji.Key.ID,
                     KanjiUroven = kanji.Key.Uroven.ToString(),
-                    KanjiTyp1 = kanji.Key.Typ1.ToString(),
-                    KanjiTyp2 = kanji.Key.Typ2.ToString(),
+                    Typ1 = kanji.Key.Typ1.ToString(),
+                    Typ2 = kanji.Key.Typ2.ToString(),
                     KanjiZnak = kanji.Value.Kanji.ToString(),
                     KanjiJp = kanji.Value.JP.ToString(),
                     KanjiCZ = kanji.Value.CZ.ToString(),

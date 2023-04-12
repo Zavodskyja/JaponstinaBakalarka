@@ -19,10 +19,10 @@ namespace Japonstina.models
         public string KanjiUroven { get; set; }
 
         [JsonProperty("Typ1")]
-        public string KanjiTyp1 { get; set; }
+        public string Typ1 { get; set; }
 
         [JsonProperty("Typ2")]
-        public string KanjiTyp2 { get; set; }
+        public string Typ2 { get; set; }
 
         [JsonProperty("Kanji")]
         public string KanjiZnak { get; set; }
@@ -43,6 +43,8 @@ namespace Japonstina.models
         public ConjugationModel Conjugations { get; set; }
 
         public SortedDictionary<string, string> ConjugationsCollection { get; set; }
+
+        public Dictionary<string, string> Conjugation { get; set; }
     }
 }
 

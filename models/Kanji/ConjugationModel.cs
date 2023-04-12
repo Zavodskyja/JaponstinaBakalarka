@@ -10,67 +10,20 @@ namespace Japonstina.models
 {
     public class ConjugationModel
     {
-        [JsonProperty("Present Polite")]
+        //[JsonProperty("Present Polite")]
+        //public string PresentPolite { get; set; }
+        [System.Text.Json.Serialization.JsonPropertyName("PresentPolite")]
         public string PresentPolite { get; set; }
 
-        [JsonProperty("Present Plain")]
+        [System.Text.Json.Serialization.JsonPropertyName("PresentPlain")]
         public string PresentPlain { get; set; }
 
-        [JsonProperty("Volitional Polite")]
+        [System.Text.Json.Serialization.JsonPropertyName("VolitionalPolite")]
         public string VolitionalPolite { get; set; }
 
-        [JsonProperty("Volitional Plain")]
+        [System.Text.Json.Serialization.JsonPropertyName("VolitionalPlain")]
         public string VolitionalPlain { get; set; }
-
-        [JsonProperty("Imperative Polite")]
-        public string ImperativePolite { get; set; }
-
-        [JsonProperty("Imperative Plain")]
-        public string ImperativePlain { get; set; }
-
-        [JsonProperty("Past Indicative Polite")]
-        public string PastIndicativePolite { get; set; }
-
-        [JsonProperty("Past Indivacative Plain")]
-        public string PastIndivacativePlain { get; set; }
-
-        [JsonProperty("Past Presumptive Polite")]
-        public string PastPresumptivePolite { get; set; }
-
-        [JsonProperty("Past Presumptive Plain")]
-        public string PastPresumptivePlain { get; set; }
-
-        [JsonProperty("Present Progressive Plain")]
-        public string PresentProgressivePlain { get; set; }
-
-        [JsonProperty("Past Progressive Polite")]
-        public string PastProgressivePolite { get; set; }
-
-        [JsonProperty("Past Progressive Plain")]
-        public string PastProgressivePlain { get; set; }
-
-        [JsonProperty("Provisional Conditional Polite")]
-        public string ProvisionalConditionalPolite { get; set; }
-
-        [JsonProperty("Provisional Conditional Plain")]
-        public string ProvisionalConditionalPlain { get; set; }
-
-        [JsonProperty("Conditional Polite")]
-        public string ConditionalPolite { get; set; }
-
-        [JsonProperty("Conditional Plain")]
-        public string ConditionalPlain { get; set; }
-
-        [JsonProperty("Potential Polite")]
-        public string PotentialPolite { get; set; }
-
-        [JsonProperty("Potential Plain")]
-        public string PotentialPlain { get; set; }
-
-        [JsonProperty("Causative Polite")]
-        public string CausativePolite { get; set; }
-
-        [JsonProperty("Causative Plain")]
-        public string CausativePlain { get; set; }
     }
 }
+//Predelat na 1 json. Predelat logiku ze se vezme 1 prvek c oje spravny, k nemu 3 spatne ( kontrola na duplicitu).
+//nameof se použiej pouze u spravneho pokud se jedna o slovesa. jinak nameof list nepouzit ( zlobi).
