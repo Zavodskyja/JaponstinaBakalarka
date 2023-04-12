@@ -116,104 +116,6 @@ namespace Japonstina
 
         }
 
-
-
-        private void kanji_char_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kanji_hiragana_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void kanji_button1_Click(object sender, EventArgs e)
-        {
-            if (Vyuka_button1.Text == CorrectAnswer)
-            {
-                ButtonColorCorrect(Vyuka_button1);
-                ButtonDisable();
-                await Task.Delay(1000);
-                KanjiMain();
-
-            }
-            else
-            {
-                ButtonColorIncorrect(Vyuka_button1);
-                ButtonDisable();
-                DisplayCorrectAnswer();
-                await Task.Delay(2000);
-                KanjiMain();
-            }
-
-        }
-
-        private async void kanji_button2_Click(object sender, EventArgs e)
-        {
-            if (Vyuka_button2.Text == CorrectAnswer)
-            {
-                ButtonColorCorrect(Vyuka_button2);
-                ButtonDisable();
-                await Task.Delay(1000);
-                KanjiMain();
-
-            }
-            else
-            {
-                ButtonColorIncorrect(Vyuka_button2);
-                ButtonDisable();
-                DisplayCorrectAnswer();
-                await Task.Delay(2000);
-                KanjiMain();
-            }
-        }
-
-        private async void kanji_button3_Click(object sender, EventArgs e)
-        {
-            if (Vyuka_button3.Text == CorrectAnswer)
-            {
-                ButtonColorCorrect(Vyuka_button3);
-                ButtonDisable();
-                await Task.Delay(1000);
-                KanjiMain();
-
-            }
-            else
-            {
-                ButtonColorIncorrect(Vyuka_button3);
-                ButtonDisable();
-                DisplayCorrectAnswer();
-                await Task.Delay(2000);
-                KanjiMain();
-            }
-
-        }
-
-        private async void kanji_button4_Click(object sender, EventArgs e)
-        {
-            if (Vyuka_button4.Text == CorrectAnswer)
-            {
-
-                ButtonColorCorrect(Vyuka_button4);
-                ButtonDisable();
-                await Task.Delay(1000);
-                KanjiMain();
-
-            }
-            else
-            {
-                ButtonColorIncorrect(Vyuka_button4);
-                ButtonDisable();
-                DisplayCorrectAnswer();
-                await Task.Delay(2000);
-                KanjiMain();
-            }
-
-        }
-
-
-
         public void KanjiRandomFunction()
         {
             ClearText();
@@ -243,7 +145,6 @@ namespace Japonstina
             }
 
 
-
             if (Cviceni_vyber.CheckBoxTimeLimit)
             {
                 timer10Seconds.Start();
@@ -254,7 +155,7 @@ namespace Japonstina
 
 
 
-        //Pridat promennou do ktere -> selected , a pri spusteni skrze tlacitka se do ni doplni dane veci -> vzdy se bude brat ze selected 
+
         public void ConjugationRandomFunction()
         {
             ClearText();
@@ -295,7 +196,7 @@ namespace Japonstina
 
         }
 
-        //
+
         public void AlphabetRandomFunction()
         {
 
@@ -329,6 +230,45 @@ namespace Japonstina
 
 
 
+        private void kanji_char_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kanji_hiragana_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Pridat logiku na kontrolu odpovedi a né porovnání button.text
+        private void kanji_button1_Click(object sender, EventArgs e)
+        {
+
+            Button clickedButton = sender as Button;
+            ButtonAnswer(clickedButton, clickedButton.Text);
+        }
+
+        private void kanji_button2_Click(object sender, EventArgs e)
+        {
+
+            Button clickedButton = sender as Button;
+            ButtonAnswer(clickedButton, clickedButton.Text);
+        }
+
+        private void kanji_button3_Click(object sender, EventArgs e)
+        {
+
+            Button clickedButton = sender as Button;
+            ButtonAnswer(clickedButton, clickedButton.Text);
+        }
+
+        private void kanji_button4_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            ButtonAnswer(clickedButton, clickedButton.Text);
+
+        }
 
 
 
@@ -389,11 +329,37 @@ namespace Japonstina
 
 
 
-        private void label1_Click(object sender, EventArgs e)
+        public async void ButtonAnswer(Button button,string answer)
+        {
+            ButtonDisable();
+            if (answer == CorrectAnswer)
+            {
+                button.BackColor = Color.Green;
+                await Task.Delay(1000);
+                KanjiMain();
+            }
+            else
+            {
+                button.BackColor = Color.FromArgb(188, 0, 45);
+                DisplayCorrectAnswer();
+                await Task.Delay(2000);
+                KanjiMain();
+                
+            }
+        }
+
+        public void AnswerIncorrect()
+        {
+            //Pridat funkci na volání funkce zlé odpovědi
+        }
+
+
+
+       /* private void label1_Click(object sender, EventArgs e)
         {
             
         }
-
+       */
         private void Timer10Seconds_Tick(object sender, EventArgs e)
         {
             timer10Seconds.Stop();

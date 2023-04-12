@@ -77,7 +77,7 @@ namespace Japonstina
             label1.TabIndex = 6;
             label1.Text = "Spravna odpoved";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
+            //label1.Click += label1_Click;
             // 
             // Vyuka_button4
             // 
