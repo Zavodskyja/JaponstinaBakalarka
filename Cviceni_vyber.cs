@@ -18,18 +18,21 @@ namespace Japonstina
         public Cviceni_vyber()
         {
             InitializeComponent();
-            
+
         }
 
 
         public static VyberCviceni Vyber { get; set; }
 
-        public static List <String> CheckBoxSelected { get; set; }
+        public static List<String> CheckBoxSelected { get; set; }
+
+        public static bool CheckBoxTimeLimit { get; set; }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CheckBoxSelected = Selected();
+            CheckBoxSelected = CheckBoxSelected = new List<string> { "Hiragana", "Katakana" };
+            CheckBoxTimeLimit = TimeLimit();
             Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;
             if (clickedButton.Text == "Abecedy")
@@ -55,7 +58,8 @@ namespace Japonstina
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CheckBoxSelected = Selected();
+            CheckBoxSelected = new List<string> { "N5", "N4" };
+            CheckBoxTimeLimit = TimeLimit();
             Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;
             if (clickedButton.Text == "Kanji")
@@ -80,10 +84,27 @@ namespace Japonstina
 
         private void button3_Click(object sender, EventArgs e)
         {
+            CheckBoxSelected = new List<string> { "RU - Ichidan", "U - Godan", "Nepravidelná" };
+            CheckBoxTimeLimit = TimeLimit();
+            Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;
             if (clickedButton.Text == "Slovesa")
             {
                 VyberCviceni.btn = "Slovesa";
+            }
+            if (StavAplikace.ActiveForm != "Slovesa")  /*account.HiraganaProgress == 100 && account.KatakanaProgress == 100  doplnit podminky na splneni H+K pred vyukou kanji */
+            {
+                Program.welcome.panel1.Controls.Clear();
+                VyukaKanji k = new VyukaKanji();
+                k.TopLevel = false;
+                Program.welcome.panel1.Controls.Add(k);
+                k.Dock = DockStyle.Fill;
+                k.Show();
+                StavAplikace.ActiveForm = "Slovesa";
+            }
+            else
+            {
+
             }
         }
 
@@ -195,23 +216,56 @@ namespace Japonstina
         {
 
         }
-        
-        
+
+
         public List<String> Selected()
         {
-            List<String> Selected = new List<String>();
-            Selected = panel1.Controls.OfType<CheckBox>().Where(x => x.Checked).ToList().Select(i => i.Text.ToString()).ToList();
-            return Selected;
+            List<string> selected = panel1.Controls.OfType<CheckBox>().Where(x => x.Checked && x.Name != "CheckBoxTimed").ToList().Select(i => i.Text).ToList();
+            return selected;
+
         }
-        /*
-        public static List<String> Test()
+
+        public bool TimeLimit()
         {
-            var testa = new Cviceni_vyber();
-            List<String> list = new List<String>();
-            list = testa.Vybrano();
-            return list;
+            return CheckBoxTimed.Checked;
         }
-        */
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CheckBoxSelected = Selected();
+            CheckBoxTimeLimit = TimeLimit();
+
+
+            if (CheckBoxSelected.Any() != true)
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                Vyber = new VyberCviceni();
+                Button clickedButton = (Button)sender;
+                if (clickedButton.Text == "Kombinace")
+                {
+                    VyberCviceni.btn = "Kombinace";
+                }
+                if (StavAplikace.ActiveForm != "Kombinace")
+                {
+                    Program.welcome.panel1.Controls.Clear();
+                    VyukaKanji k = new VyukaKanji();
+                    k.TopLevel = false;
+                    Program.welcome.panel1.Controls.Add(k);
+                    k.Dock = DockStyle.Fill;
+                    k.Show();
+                    StavAplikace.ActiveForm = "Kombinace";
+                }
+            }
+            
+
+
+        }
+
+
+
     }
 
 }

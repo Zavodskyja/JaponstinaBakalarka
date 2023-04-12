@@ -42,10 +42,9 @@ namespace Japonstina
 
 
         }
-
+        
         public void VyukaMain()
         {
-            
             var slovnik = JP.Slovnik();
             var random = new Random();
             var SeznamZnaku = slovnik.Where(i => i.Key.znaky == abeceda.Katakana || i.Key.znaky == abeceda.Hiragana).OrderBy(x => random.Next()).Select(x => x.Key.ID).Take(4).ToList();
@@ -70,7 +69,6 @@ namespace Japonstina
             button3.Enabled = true;
             button4.Enabled = true;
             label1.Text = "";
-
 
         }
 

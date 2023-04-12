@@ -61,7 +61,7 @@ namespace Japonstina
             // 
             label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(451, 276);
+            label2.Location = new System.Drawing.Point(435, 276);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(200, 55);
             label2.TabIndex = 7;
@@ -71,9 +71,9 @@ namespace Japonstina
             // label1
             // 
             label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(435, 337);
+            label1.Location = new System.Drawing.Point(263, 331);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(253, 41);
+            label1.Size = new System.Drawing.Size(550, 41);
             label1.TabIndex = 6;
             label1.Text = "Spravna odpoved";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
