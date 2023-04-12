@@ -15,14 +15,14 @@ namespace Japonstina
 {
     public partial class Cviceni_vyber : Form
     {
-       
+
 
 
 
         public Cviceni_vyber()
         {
             InitializeComponent();
-            
+
         }
 
 
@@ -39,19 +39,19 @@ namespace Japonstina
             CheckBoxTimeLimit = TimeLimit();
             Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;
-            if (clickedButton.Text == "Abecedy")
+            if (clickedButton.Text == "HiraganaKatakana")
             {
-                VyberCviceni.btn = "Abecedy";
+                VyberCviceni.btn = "HiraganaKatakana";
             }
 
             if (StavAplikace.ActiveForm != "HiraganaKatakana")
             {
                 Program.welcome.panel1.Controls.Clear();
-                Vyuka v = new Vyuka();
-                v.TopLevel = false;
-                Program.welcome.panel1.Controls.Add(v);
-                v.Dock = DockStyle.Fill;
-                v.Show();
+                VyukaKanji k = new VyukaKanji();
+                k.TopLevel = false;
+                Program.welcome.panel1.Controls.Add(k);
+                k.Dock = DockStyle.Fill;
+                k.Show();
                 StavAplikace.ActiveForm = "HiraganaKatakana";
             }
             else
@@ -88,7 +88,7 @@ namespace Japonstina
 
         private void button3_Click(object sender, EventArgs e)
         {
-            CheckBoxSelected = new List<string> { "RU - Ichidan", "U - Godan", "Nepravidelná" };
+            CheckBoxSelected = new List<string> { "RU - Ichidan", "U - Godan", "Nepravidelné" };
             CheckBoxTimeLimit = TimeLimit();
             Vyber = new VyberCviceni();
             Button clickedButton = (Button)sender;

@@ -122,7 +122,7 @@ namespace Japonstina
             CheckBoxIrregular.Name = "CheckBoxIrregular";
             CheckBoxIrregular.Size = new System.Drawing.Size(150, 40);
             CheckBoxIrregular.TabIndex = 10;
-            CheckBoxIrregular.Text = "Nepravidelná";
+            CheckBoxIrregular.Text = "Nepravidelné";
             CheckBoxIrregular.UseVisualStyleBackColor = true;
             CheckBoxIrregular.CheckedChanged += checkBox7_CheckedChanged;
             // 

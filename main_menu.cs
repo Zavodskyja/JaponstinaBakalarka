@@ -15,12 +15,12 @@ namespace Japonstina
 
     public partial class MainMenu : Form
     {
-        
+
         public MainMenu()
         {
 
             InitializeComponent();
-            
+
         }
 
         public static string ActiveForma;
@@ -118,5 +118,7 @@ namespace Japonstina
 
 
         }
+
+   
     }
 }

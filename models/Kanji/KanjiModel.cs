@@ -15,13 +15,13 @@ namespace Japonstina.models
         [JsonProperty("Id")]
         public int Id { get; set; }
 
-        [JsonProperty("Uroven")]
+        [JsonProperty("Level")]
         public string KanjiUroven { get; set; }
 
-        [JsonProperty("Typ1")]
+        [JsonProperty("Type1")]
         public string Typ1 { get; set; }
 
-        [JsonProperty("Typ2")]
+        [JsonProperty("Type2")]
         public string Typ2 { get; set; }
 
         [JsonProperty("Kanji")]
@@ -34,9 +34,9 @@ namespace Japonstina.models
         public string KanjiCZ { get; set; }
 
 
-        [JsonProperty("Conjugations")]
-        public ConjugationModel Conjugations { get; set; }
-
+        
+       // public ConjugationModel Conjugations { get; set; }
+        [JsonProperty("Conjugation")]
         public Dictionary<string, string> Conjugation { get; set; }
     }
 }

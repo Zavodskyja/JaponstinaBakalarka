@@ -61,9 +61,9 @@ namespace Japonstina
             // 
             label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(435, 276);
+            label2.Location = new System.Drawing.Point(263, 276);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(200, 55);
+            label2.Size = new System.Drawing.Size(550, 55);
             label2.TabIndex = 7;
             label2.Text = "Tvar slovesa";
             label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,7 +77,6 @@ namespace Japonstina
             label1.TabIndex = 6;
             label1.Text = "Spravna odpoved";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //label1.Click += label1_Click;
             // 
             // Vyuka_button4
             // 
@@ -132,13 +131,12 @@ namespace Japonstina
             // 
             kanji_hiragana.Anchor = System.Windows.Forms.AnchorStyles.None;
             kanji_hiragana.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            kanji_hiragana.Location = new System.Drawing.Point(435, 221);
+            kanji_hiragana.Location = new System.Drawing.Point(263, 221);
             kanji_hiragana.Name = "kanji_hiragana";
-            kanji_hiragana.Size = new System.Drawing.Size(200, 55);
+            kanji_hiragana.Size = new System.Drawing.Size(550, 55);
             kanji_hiragana.TabIndex = 1;
             kanji_hiragana.Text = "Furigana";
             kanji_hiragana.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-          
             // 
             // kanji_char
             // 
@@ -150,7 +148,6 @@ namespace Japonstina
             kanji_char.TabIndex = 0;
             kanji_char.Text = "Kanji";
             kanji_char.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
             // 
             // VyukaKanji
             // 

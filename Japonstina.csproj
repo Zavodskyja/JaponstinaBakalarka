@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="bin\Debug\net6.0-windows\Data\Vocabulary.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="bin\Debug\net5.0-windows\Data\Kanji" />
+    <None Include="bin\Debug\net6.0-windows\Data\Kanji" />
   </ItemGroup>
 
   <ItemGroup>

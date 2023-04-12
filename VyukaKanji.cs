@@ -119,7 +119,7 @@ namespace Japonstina
                 KanjiRandomFunction();
             }
 
-            if (CurrentSet is "RU - Ichidan" or "U - Godan" or "Nepravidelná")
+            if (CurrentSet is "RU - Ichidan" or "U - Godan" or "Nepravidelné")
             {
                 ConjugationRandomFunction();
             }
@@ -141,8 +141,8 @@ namespace Japonstina
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             ButtonText(PrekladRandom);
             ButtonDefault();
-            KanjiInHiragana(Kanji, Furigana,null);
-            
+            KanjiInHiragana(Kanji, Furigana, null);
+
 
             if (Cviceni_vyber.CheckBoxTimeLimit)
             {
@@ -170,7 +170,11 @@ namespace Japonstina
             CorrectAnswer = correctConjugationForm;
             ButtonDefault();
             KanjiInHiragana(Kanji, Furigana, correctConjugationType);
-            
+            if (Cviceni_vyber.CheckBoxTimeLimit)
+            {
+                timer10Seconds.Start();
+            }
+
         }
 
 
@@ -239,6 +243,7 @@ namespace Japonstina
 
         public void ClearText()
         {
+            
             Label[] labels = { label1, label2, kanji_char, kanji_hiragana };
             for (int i = 0; i < labels.Count(); i++)
                 labels[i].Text = "";
@@ -273,8 +278,9 @@ namespace Japonstina
                 Button b = c as Button;
                 if (b != null)
                 {
-                    b.BackColor = Color.White;
+                    b.BackColor = Color.FromArgb(240, 143, 144);
                     b.Enabled = true;
+                    //240, 143, 144
                 }
             }
 
@@ -285,6 +291,7 @@ namespace Japonstina
         public async void ButtonAnswer(Button button, string buttonText)
         {
             ButtonDisable();
+            timer10Seconds.Stop();
             //pridat logiku na save progressu pro correct X incorrect
             if (buttonText == CorrectAnswer)
             {

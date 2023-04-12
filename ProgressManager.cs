@@ -5,13 +5,8 @@ using Japonstina.vyuka;
 using Japonstina.Models;
 using Japonstina.models;
 using System.IO;
-
-
-
-
-
-
-
+using Japonstina.Properties;
+using System.Text;
 
 namespace Japonstina
 {
@@ -24,7 +19,7 @@ namespace Japonstina
         public static ZnakModel HiraganaLoadData { get; set; } /*TODO Dodelat model ze sdileneho Jsonu*/
 
 
-
+       
 
 
 
@@ -59,7 +54,7 @@ namespace Japonstina
                     KanjiZnak = kanji.Value.Kanji.ToString(),
                     KanjiJp = kanji.Value.JP.ToString(),
                     KanjiCZ = kanji.Value.CZ.ToString(),
-                    Conjugations = new ConjugationModel()
+                   //Conjugations = new ConjugationModel()
                 }).ToList()
 
             };
@@ -144,11 +139,13 @@ namespace Japonstina
 
         public static void LoadKanji()
         {
-            var path = $"Data/Kanji";
-            string jsonFile = File.ReadAllText(path);
+
+            string jsonFile = Resources.Vocabulary; 
             KanjiLoadData = JsonConvert.DeserializeObject<KanjiDataModel>(jsonFile);
 
         }
+
+
 
     }
 

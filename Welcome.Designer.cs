@@ -237,18 +237,7 @@ namespace Japonstina
             ResumeLayout(false);
         }
 
-        private void InitializeErrorLabel()
-        {
-            this.errorLabel = new System.Windows.Forms.Label();
-            this.errorLabel.AutoSize = true;
-            this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(12, 250); // Change the location as needed
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(0, 13);
-            this.errorLabel.TabIndex = 0;
-            this.errorLabel.Text = "";
-            this.Controls.Add(this.errorLabel);
-        }
+
 
         #endregion
         private System.Windows.Forms.Panel PanelLogin;

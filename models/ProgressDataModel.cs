@@ -19,7 +19,7 @@ namespace Japonstina.Models
 
          public class KanjiDataModel
         {
-        [JsonProperty("Znaky")]
+        [JsonProperty("Japanese")]
         public List<KanjiModel> Data { get; set; }
          }
 
