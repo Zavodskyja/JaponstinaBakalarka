@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,85 +34,8 @@ namespace Japonstina
         public static bool CheckBoxTimeLimit { get; set; }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CheckBoxSelected = CheckBoxSelected = new List<string> { "Hiragana", "Katakana" };
-            CheckBoxTimeLimit = TimeLimit();
-            Vyber = new VyberCviceni();
-            Button clickedButton = (Button)sender;
-            if (clickedButton.Text == "HiraganaKatakana")
-            {
-                VyberCviceni.btn = "HiraganaKatakana";
-            }
 
-            if (StavAplikace.ActiveForm != "HiraganaKatakana")
-            {
-                Program.welcome.panel1.Controls.Clear();
-                VyukaKanji k = new VyukaKanji();
-                k.TopLevel = false;
-                Program.welcome.panel1.Controls.Add(k);
-                k.Dock = DockStyle.Fill;
-                k.Show();
-                StavAplikace.ActiveForm = "HiraganaKatakana";
-            }
-            else
-            {
-
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            CheckBoxSelected = new List<string> { "N5", "N4" };
-            CheckBoxTimeLimit = TimeLimit();
-            Vyber = new VyberCviceni();
-            Button clickedButton = (Button)sender;
-            if (clickedButton.Text == "Kanji")
-            {
-                VyberCviceni.btn = "Kanji";
-            }
-            if (StavAplikace.ActiveForm != "Kanji")  /*account.HiraganaProgress == 100 && account.KatakanaProgress == 100  doplnit podminky na splneni H+K pred vyukou kanji */
-            {
-                Program.welcome.panel1.Controls.Clear();
-                VyukaKanji k = new VyukaKanji();
-                k.TopLevel = false;
-                Program.welcome.panel1.Controls.Add(k);
-                k.Dock = DockStyle.Fill;
-                k.Show();
-                StavAplikace.ActiveForm = "Kanji";
-            }
-            else
-            {
-
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            CheckBoxSelected = new List<string> { "RU - Ichidan", "U - Godan", "Nepravidelné" };
-            CheckBoxTimeLimit = TimeLimit();
-            Vyber = new VyberCviceni();
-            Button clickedButton = (Button)sender;
-            if (clickedButton.Text == "Slovesa")
-            {
-                VyberCviceni.btn = "Slovesa";
-            }
-            if (StavAplikace.ActiveForm != "Slovesa")  /*account.HiraganaProgress == 100 && account.KatakanaProgress == 100  doplnit podminky na splneni H+K pred vyukou kanji */
-            {
-                Program.welcome.panel1.Controls.Clear();
-                VyukaKanji k = new VyukaKanji();
-                k.TopLevel = false;
-                Program.welcome.panel1.Controls.Add(k);
-                k.Dock = DockStyle.Fill;
-                k.Show();
-                StavAplikace.ActiveForm = "Slovesa";
-            }
-            else
-            {
-
-            }
-        }
-
+        //TODO - promazat nepoužívané funkce z designeru
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -122,31 +46,11 @@ namespace Japonstina
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxHiragana.Checked == true)
-            {
-                VyberCviceni.Hiragana = true;
-
-            }
-            else
-            {
-                VyberCviceni.Hiragana = false;
-
-            }
 
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxKatakana.Checked == true)
-            {
-                VyberCviceni.Katakana = true;
-
-            }
-            else
-            {
-                VyberCviceni.Katakana = false;
-
-            }
 
         }
 
@@ -154,65 +58,26 @@ namespace Japonstina
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxN5.Checked == true)
-            {
-                VyberCviceni.N5 = true;
-            }
-            else
-            {
-                VyberCviceni.N5 = false;
-            }
 
         }
+
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxN4.Checked == true)
-            {
-                VyberCviceni.N4 = true;
-            }
-            else
-            {
-                VyberCviceni.N4 = false;
-            }
 
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxIchidan.Checked == true)
-            {
-                VyberCviceni.Ichidan = true;
-            }
-            else
-            {
-                VyberCviceni.Ichidan = false;
-            }
 
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxGodan.Checked == true)
-            {
-                VyberCviceni.Godan = true;
-            }
-            else
-            {
-                VyberCviceni.Godan = false;
-            }
 
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxN4.Checked == true)
-            {
-                VyberCviceni.Irregular = true;
-            }
-            else
-            {
-                VyberCviceni.Irregular = false;
-            }
 
         }
 
@@ -222,11 +87,46 @@ namespace Japonstina
         }
 
 
-        public List<String> Selected()
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            HandleButtonClick("Kombinace", sender);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HandleButtonClick("HiraganaKatakana", sender, "Hiragana", "Katakana");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HandleButtonClick("Kanji", sender, "N5", "N4");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            HandleButtonClick("Slovesa", sender, "RU - Ichidan", "U - Godan", "Nepravidelné");
+
+        }
+
+        private void Exercise(string activeForm)
+        {
+            Program.welcome.panel1.Controls.Clear();
+            VyukaKanji k = new VyukaKanji();
+            k.TopLevel = false;
+            Program.welcome.panel1.Controls.Add(k);
+            k.Dock = DockStyle.Fill;
+            k.Show();
+            StavAplikace.ActiveForm = activeForm;
+        }
+
+
+        public List<String> SelectedCheckBoxes()
         {
             List<string> selected = panel1.Controls.OfType<CheckBox>().Where(x => x.Checked && x.Name != "CheckBoxTimed").ToList().Select(i => i.Text).ToList();
             return selected;
-
         }
 
         public bool TimeLimit()
@@ -234,49 +134,45 @@ namespace Japonstina
             return CheckBoxTimed.Checked;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void HandleButtonClick(string activeForm, object sender, params string[] exercises)
         {
-
-
-
             try
             {
-                CheckBoxSelected = Selected();
                 CheckBoxTimeLimit = TimeLimit();
 
-
-                if (CheckBoxSelected.Any() != true)
+                if (activeForm == "Kombinace")
                 {
-                    label4.Visible = true;
+                    CheckBoxSelected = SelectedCheckBoxes();
+
+                    if (!CheckBoxSelected.Any())
+                    {
+                        label4.Visible = true;
+                        return;
+                    }
                 }
                 else
                 {
-                    Vyber = new VyberCviceni();
-                    Button clickedButton = (Button)sender;
-                    if (clickedButton.Text == "Kombinace")
-                    {
-                        VyberCviceni.btn = "Kombinace";
-                    }
-                    if (StavAplikace.ActiveForm != "Kombinace")
-                    {
-                        Program.welcome.panel1.Controls.Clear();
-                        VyukaKanji k = new VyukaKanji();
-                        k.TopLevel = false;
-                        Program.welcome.panel1.Controls.Add(k);
-                        k.Dock = DockStyle.Fill;
-                        k.Show();
-                        StavAplikace.ActiveForm = "Kombinace";
-                    }
+                    CheckBoxSelected = new List<string>(exercises);
+                }
+
+                Vyber = new VyberCviceni();
+                var clickedButton = (Button)sender;
+
+                if (string.Equals(clickedButton.Text, activeForm))
+                {
+                    VyberCviceni.btn = activeForm;
+                }
+
+                if (!string.Equals(StavAplikace.ActiveForm, activeForm))
+                {
+                    Exercise(activeForm);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Naskytla se Chyba. Zkuste akci opakovat.", "Chyba aplikace", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Naskytla se Chyba. Zkuste akci opakovat.", "Chyba aplikace", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 StavAplikace.ActiveForm = "";
             }
-
-
-
         }
 
 

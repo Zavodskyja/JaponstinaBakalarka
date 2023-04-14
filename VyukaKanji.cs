@@ -23,8 +23,6 @@ namespace Japonstina
     public partial class VyukaKanji : Form
     {
 
-
-
         public int ZnakId { get; set; }
 
         string Kanji { get; set; }
@@ -308,8 +306,6 @@ namespace Japonstina
 
             }
         }
-
-
 
 
 
