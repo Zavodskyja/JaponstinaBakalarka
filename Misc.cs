@@ -22,7 +22,6 @@ namespace Japonstina
             this.Value = 0;
             this.Maximum = 100;
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            this.SetStyle(ControlStyles.Opaque, false);
             this.BackColor = Color.Transparent;
         }
 
