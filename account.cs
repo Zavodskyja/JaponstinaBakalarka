@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Japonstina.Models;
 using Japonstina.vyuka;
 using Newtonsoft.Json;
 
@@ -40,7 +41,8 @@ namespace Japonstina
             var ZnakSplnenoK = ProgressManager.ProgressData.ProgressZnaku.Where(a => a.ZnakSplneno == true && a.Abeceda == "Katakana").Select(i => i.ZnakId).ToList();
             var SplnenoH = ZnakSplnenoH.Count();
             var SplnenoK = ZnakSplnenoK.Count();
-
+           
+            
 
             ProgressManager.ProgressAccount(HiraganaCount, SplnenoH, KatakanaCount, SplnenoK);
 

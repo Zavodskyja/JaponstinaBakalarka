@@ -9,7 +9,6 @@ using System.Collections.Specialized;
 
 namespace Japonstina.models
 {
-
     public class KanjiModel
     {
         [JsonProperty("Id")]
@@ -33,9 +32,6 @@ namespace Japonstina.models
         [JsonProperty("CZ")]
         public string KanjiCZ { get; set; }
 
-
-        
-       // public ConjugationModel Conjugations { get; set; }
         [JsonProperty("Conjugation")]
         public Dictionary<string, string> Conjugation { get; set; }
     }

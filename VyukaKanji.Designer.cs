@@ -148,6 +148,7 @@ namespace Japonstina
             kanji_char.TabIndex = 0;
             kanji_char.Text = "Kanji";
             kanji_char.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            kanji_char.Click += kanji_char_Click;
             // 
             // VyukaKanji
             // 

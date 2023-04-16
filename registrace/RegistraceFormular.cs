@@ -31,8 +31,8 @@ namespace Japonstina
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var validace = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,15}$");
-            var ValidaceLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$"); /*Dodělat kontroly*/
+            var validatePassword = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,15}$");
+            var validateLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$"); 
 
             if (userstorage.exist(RegistrationLoginBox.Text))
             {
@@ -46,11 +46,6 @@ namespace Japonstina
                 RegistrationError.Text = "Nevyplněn login";
             }
 
-            //else if
-            //    (!ValidaceLogin.IsMatch(RegistrationLoginBox.Text))
-            //{
-            //    RegistrationError.Text = "Nevalidní Login";
-            //}
 
             else if
                  (RegistrationPasswordBox1.Text != RegistrationPasswordBox2.Text)
@@ -58,21 +53,6 @@ namespace Japonstina
                 RegistrationError.Text = "Hesla se neshodují";
             }
 
-            //else if
-            //    (!validace.IsMatch(RegistrationPasswordBox1.Text))
-            //{
-            //    RegistrationError.Text = "Heslo neodpovídá požadavkům";
-            //}
-
-
-            //else if (RegistrationPasswordBox1.Text.Length < 5)
-            //{
-            //    RegistrationError.Text = "Heslo musí být delší nez 5 znaků";
-            //}
-            //else if (RegistrationPasswordBox1.Text.Length >= 15)
-            //{
-            //    RegistrationError.Text = "Heslo musí být kratší než 15 znaků";
-            //}
             else
                 using (StreamWriter writetext = new StreamWriter("login", append: true))
                 {

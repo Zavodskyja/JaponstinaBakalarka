@@ -16,10 +16,18 @@ namespace Japonstina
 
         public static KanjiDataModel KanjiLoadData { get; set; }
 
-        public static ZnakModel HiraganaLoadData { get; set; } /*TODO Dodelat model ze sdileneho Jsonu*/
+        public static ZnakModel HiraganaLoadData { get; set; }
+
+        public static Japanese KatakanaProgress { get; set; }
+
+        public static ProgressDataModel VocabularyProgress { get; set; }
 
 
-       
+
+
+
+
+
 
 
 
@@ -27,25 +35,45 @@ namespace Japonstina
 
         public static void Init()
         {
-            
+            LoadKanji();
             var slovnik = JP.Slovnik();
-
+            var slovnikKanji = KanjiLoadData.Data;
             var KanjiSlovnik = Kanji.Slovnik();
+            var japanese = new Japanese
+
+            {
+                Katakana = slovnik.Select(polozka =>new Katakana()
+                {
+                    KatakanaId = polozka.Key.ID,
+                    Alphabet = polozka.Key.znaky.ToString(),
+                }).ToList()
+                ,
+                Vocabulary = slovnikKanji.Select(kanji => new VocabularyModel()
+            {
+                Id = kanji.Id,
+                Level = kanji.KanjiUroven,
+                Type = kanji.Typ2.ToString(),
+            }).ToList() ,
+            };
+
+            VocabularyProgress = new ProgressDataModel { JapaneseProgress = japanese };
+
 
             ProgressData = new ProgressDataModel()
             {
                 ProgressZnaku = slovnik.Select(polozka => new ZnakModel()
                 {
                     ZnakId = polozka.Key.ID,
-                    Abeceda = polozka.Key.znaky.ToString()
-                    
-
-                }).ToList()
+                    Abeceda = polozka.Key.znaky.ToString(),
+                       }).ToList()
             };
 
-            KanjiLoadData = new KanjiDataModel()
+
+
+
+            /*KanjiLoadData = new KanjiDataModel()
             {
-                Data = KanjiSlovnik.Select(kanji => new KanjiModel() /*TODO dodelat korektni vyhledani*/
+                Data = KanjiSlovnik.Select(kanji => new KanjiModel() 
                 {
                     Id = kanji.Key.ID,
                     KanjiUroven = kanji.Key.Uroven.ToString(),
@@ -54,12 +82,16 @@ namespace Japonstina
                     KanjiZnak = kanji.Value.Kanji.ToString(),
                     KanjiJp = kanji.Value.JP.ToString(),
                     KanjiCZ = kanji.Value.CZ.ToString(),
-                   //Conjugations = new ConjugationModel()
                 }).ToList()
 
             };
+            */
+
 
         }
+
+        /*TODO predelat ukladani udaju*/
+    
 
         public static void ProgressAccountZnaky()
         {
@@ -89,7 +121,6 @@ namespace Japonstina
         public static void SaveProgress()
         {
             string json = JsonConvert.SerializeObject(ProgressData, Formatting.Indented);
-
             var username = Welcome.PrihlasenyUzivatel;
             File.WriteAllText($"Data/{username}", json);
         }
@@ -106,7 +137,7 @@ namespace Japonstina
         public static void FirstLoginRun(string user)
         {
             var username = user;
-            string json = JsonConvert.SerializeObject(ProgressData, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(VocabularyProgress, Formatting.Indented);
             var filename = $"Data/{username}";
             if (!File.Exists(filename))
             { File.WriteAllText(filename, json); }
@@ -139,14 +170,17 @@ namespace Japonstina
 
         public static void LoadKanji()
         {
-
             string jsonFile = Resources.Vocabulary; 
             KanjiLoadData = JsonConvert.DeserializeObject<KanjiDataModel>(jsonFile);
-
         }
 
 
 
+
+
+
     }
+
+
 
 }

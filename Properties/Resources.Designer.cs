@@ -132,27 +132,30 @@ namespace Japonstina.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;Japanese&quot;: [
-        ///    {
-        ///      &quot;Id&quot;: 0,
-        ///      &quot;Level&quot;: &quot;N5&quot;,
-        ///      &quot;Type1&quot;: &quot;Sloveso&quot;,
-        ///      &quot;Type2&quot;: &quot;RU - Ichidan&quot;,
-        ///      &quot;Kanji&quot;: &quot;浴びる&quot;,
-        ///      &quot;JP&quot;: &quot;あびる&quot;,
-        ///      &quot;CZ&quot;: &quot;Sprchovat se&quot;,
-        ///      &quot;Conjugation&quot;: {
-        ///        &quot;Přítomný zdvořilý kladný&quot;: &quot;浴びます&quot;,
-        ///        &quot;Přítomný krátký kladný&quot;: &quot;浴びる&quot;,
-        ///        &quot;Přítomný zdvořilý záporný&quot;: &quot;浴びません&quot;,
-        ///        &quot;Přítomný krátký záporný&quot;: &quot;浴びない&quot;
-        ///      }
-        ///    },
-        ///    {
-        ///      &quot;Id&quot;: 1,
-        ///      &quot;Level&quot;: &quot;N4&quot;,
-        ///      &quot;Type1&quot;: &quot;Sloveso&quot;,
-        ///      &quot;Type2&quot;: &quot;U - Godan&quot; [rest of string was truncated]&quot;;.
+        ///	&quot;Japanese&quot;: [{
+        ///			&quot;Id&quot;: 0,
+        ///			&quot;Level&quot;: &quot;N5&quot;,
+        ///			&quot;Type1&quot;: &quot;Sloveso&quot;,
+        ///			&quot;Type2&quot;: &quot;RU - Ichidan&quot;,
+        ///			&quot;Kanji&quot;: &quot;浴びる&quot;,
+        ///			&quot;JP&quot;: &quot;あびる&quot;,
+        ///			&quot;CZ&quot;: &quot;Sprchovat se&quot;,
+        ///			&quot;Conjugation&quot;: {
+        ///				&quot;Přítomný zdvořilý kladný&quot;: &quot;浴びます&quot;,
+        ///				&quot;Přítomný krátký kladný&quot;: &quot;浴びる&quot;,
+        ///				&quot;Přítomný zdvořilý záporný&quot;: &quot;浴びません&quot;,
+        ///				&quot;Přítomný krátký záporný&quot;: &quot;浴びない&quot;
+        ///			}
+        ///		},
+        ///		{
+        ///			&quot;Id&quot;: 1,
+        ///			&quot;Level&quot;: &quot;N4&quot;,
+        ///			&quot;Type1&quot;: &quot;Sloveso&quot;,
+        ///			&quot;Type2&quot;: &quot;U - Godan&quot;,
+        ///			&quot;Kanji&quot;: &quot;泳ぐ&quot;,
+        ///			&quot;JP&quot;: &quot;およぐ&quot;,
+        ///			&quot;CZ&quot;: &quot;Plavat&quot;,
+        ///			&quot;Con [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Vocabulary {
             get {

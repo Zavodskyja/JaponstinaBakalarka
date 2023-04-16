@@ -1,0 +1,707 @@
+{
+	"Japanese": [{
+			"Id": 0,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "浴びる",
+			"JP": "あびる",
+			"CZ": "Sprchovat se",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "浴びます",
+				"Přítomný krátký kladný": "浴びる",
+				"Přítomný zdvořilý záporný": "浴びません",
+				"Přítomný krátký záporný": "浴びない"
+			}
+		},
+		{
+			"Id": 1,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "泳ぐ",
+			"JP": "およぐ",
+			"CZ": "Plavat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "泳ぎます",
+				"Přítomný krátký kladný": "泳ぐ",
+				"Přítomný zdvořilý záporný": "泳ぎません",
+				"Přítomný krátký záporný": "泳がない"
+			}
+		},
+		{
+			"Id": 2,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "Nepravidelné",
+			"Kanji": "来る",
+			"JP": "くる",
+			"CZ": "Přijít",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "来ます",
+				"Přítomný krátký kladný": "来る",
+				"Přítomný zdvořilý záporný": "来ません",
+				"Přítomný krátký záporný": "来ない"
+			}
+		},
+		{
+			"Id": 3,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "話す",
+			"JP": "はなす",
+			"CZ": "Mluvit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "話します",
+				"Přítomný krátký kladný": "話す",
+				"Přítomný zdvořilý záporný": "話しません",
+				"Přítomný krátký záporný": "話さない"
+			}
+		},
+		{
+			"Id": 4,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "食べる",
+			"JP": "たべる",
+			"CZ": "Jíst",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "食べます",
+				"Přítomný krátký kladný": "食べる",
+				"Přítomný zdvořilý záporný": "食べません",
+				"Přítomný krátký záporný": "食べない"
+			}
+		},
+		{
+			"Id": 5,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "書く",
+			"JP": "かく",
+			"CZ": "Psát",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "書きます",
+				"Přítomný krátký kladný": "書く",
+				"Přítomný zdvořilý záporný": "書きません",
+				"Přítomný krátký záporný": "書かない"
+			}
+		},
+		{
+			"Id": 6,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "Nepravidelné",
+			"Kanji": "する",
+			"JP": "する",
+			"CZ": "Dělat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "します",
+				"Přítomný krátký kladný": "する",
+				"Přítomný zdvořilý záporný": "しません",
+				"Přítomný krátký záporný": "しない"
+			}
+		},
+		{
+			"Id": 7,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "歩く",
+			"JP": "あるく",
+			"CZ": "Chodit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "歩きます",
+				"Přítomný krátký kladný": "歩く",
+				"Přítomný zdvořilý záporný": "歩きません",
+				"Přítomný krátký záporný": "歩かない"
+			}
+		},
+		{
+			"Id": 8,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "寝る",
+			"JP": "ねる",
+			"CZ": "Spát",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "寝ます",
+				"Přítomný krátký kladný": "寝る",
+				"Přítomný zdvořilý záporný": "寝ません",
+				"Přítomný krátký záporný": "寝ない"
+			}
+		},
+		{
+			"Id": 9,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "聞く",
+			"JP": "きく",
+			"CZ": "Poslouchat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "聞きます",
+				"Přítomný krátký kladný": "聞く",
+				"Přítomný zdvořilý záporný": "聞きません",
+				"Přítomný krátký záporný": "聞かない"
+			}
+		},
+		{
+			"Id": 10,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "泣く",
+			"JP": "なく",
+			"CZ": "Plakat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "泣きます",
+				"Přítomný krátký kladný": "泣く",
+				"Přítomný zdvořilý záporný": "泣きません",
+				"Přítomný krátký záporný": "泣かない"
+			}
+		},
+		{
+			"Id": 11,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "閉める",
+			"JP": "しめる",
+			"CZ": "Zavřít",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "閉めます",
+				"Přítomný krátký kladný": "閉める",
+				"Přítomný zdvořilý záporný": "閉めません",
+				"Přítomný krátký záporný": "閉めない"
+			}
+		},
+		{
+			"Id": 12,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "待つ",
+			"JP": "まつ",
+			"CZ": "Čekat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "待ちます",
+				"Přítomný krátký kladný": "待つ",
+				"Přítomný zdvořilý záporný": "待ちません",
+				"Přítomný krátký záporný": "待たない"
+			}
+		},
+		{
+			"Id": 13,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "立つ",
+			"JP": "たつ",
+			"CZ": "Stát",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "立ちます",
+				"Přítomný krátký kladný": "立つ",
+				"Přítomný zdvořilý záporný": "立ちません",
+				"Přítomný krátký záporný": "立たない"
+			}
+		},
+		{
+			"Id": 14,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "見る",
+			"JP": "みる",
+			"CZ": "Vidět",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "見ます",
+				"Přítomný krátký kladný": "見る",
+				"Přítomný zdvořilý záporný": "見ません",
+				"Přítomný krátký záporný": "見ない"
+			}
+		},
+		{
+			"Id": 15,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "買う",
+			"JP": "かう",
+			"CZ": "Koupit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "買います",
+				"Přítomný krátký kladný": "買う",
+				"Přítomný zdvořilý záporný": "買いません",
+				"Přítomný krátký záporný": "買わない"
+			}
+		},
+		{
+			"Id": 16,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "使う",
+			"JP": "つかう",
+			"CZ": "Použít",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "使います",
+				"Přítomný krátký kladný": "使う",
+				"Přítomný zdvořilý záporný": "使いません",
+				"Přítomný krátký záporný": "使わない"
+			}
+		},
+		{
+			"Id": 17,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "行く",
+			"JP": "いく",
+			"CZ": "Jít",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "行きます",
+				"Přítomný krátký kladný": "行く",
+				"Přítomný zdvořilý záporný": "行きません",
+				"Přítomný krátký záporný": "行かない"
+			}
+		},
+		{
+			"Id": 18,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "着る",
+			"JP": "きる",
+			"CZ": "Oblečení",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "着ます",
+				"Přítomný krátký kladný": "着る",
+				"Přítomný zdvořilý záporný": "着ません",
+				"Přítomný krátký záporný": "着ない"
+			}
+		},
+		{
+			"Id": 19,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "思う",
+			"JP": "おもう",
+			"CZ": "Myslet",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "思います",
+				"Přítomný krátký kladný": "思う",
+				"Přítomný zdvořilý záporný": "思いません",
+				"Přítomný krátký záporný": "思わない"
+			}
+		}, {
+			"Id": 20,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "続く",
+			"JP": "つづく",
+			"CZ": "Pokračovat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "続きます",
+				"Přítomný krátký kladný": "続く",
+				"Přítomný zdvořilý záporný": "続きません",
+				"Přítomný krátký záporný": "続かない"
+			}
+		},
+		{
+			"Id": 21,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "変える",
+			"JP": "かえる",
+			"CZ": "Změnit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "変えます",
+				"Přítomný krátký kladný": "変える",
+				"Přítomný zdvořilý záporný": "変えません",
+				"Přítomný krátký záporný": "変えない"
+			}
+		},
+		{
+			"Id": 22,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "話す",
+			"JP": "はなす",
+			"CZ": "Mluvit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "話します",
+				"Přítomný krátký kladný": "話す",
+				"Přítomný zdvořilý záporný": "話しません",
+				"Přítomný krátký záporný": "話さない"
+			}
+		},
+		{
+			"Id": 23,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "選ぶ",
+			"JP": "えらぶ",
+			"CZ": "Vybrat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "選びます",
+				"Přítomný krátký kladný": "選ぶ",
+				"Přítomný zdvořilý záporný": "選びません",
+				"Přítomný krátký záporný": "選ばない"
+			}
+		},
+		{
+			"Id": 24,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "出る",
+			"JP": "でる",
+			"CZ": "Vyjít",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "出ます",
+				"Přítomný krátký kladný": "出る",
+				"Přítomný zdvořilý záporný": "出ません",
+				"Přítomný krátký záporný": "出ない"
+			}
+		},
+		{
+			"Id": 25,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "飲む",
+			"JP": "のむ",
+			"CZ": "Pít",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "飲みます",
+				"Přítomný krátký kladný": "飲む",
+				"Přítomný zdvořilý záporný": "飲みません",
+				"Přítomný krátký záporný": "飲まない"
+			}
+		},
+		{
+			"Id": 26,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "考える",
+			"JP": "かんがえる",
+			"CZ": "Přemýšlet",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "考えます",
+				"Přítomný krátký kladný": "考える",
+				"Přítomný zdvořilý záporný": "考えません",
+				"Přítomný krátký záporný": "考えない"
+			}
+		},
+		{
+			"Id": 27,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "送る",
+			"JP": "おくる",
+			"CZ": "Poslat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "送ります",
+				"Přítomný krátký kladný": "送る",
+				"Přítomný zdvořilý záporný": "送りません",
+				"Přítomný krátký záporný": "送らない"
+			}
+		},
+		{
+			"Id": 28,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "覚える",
+			"JP": "おぼえる",
+			"CZ": "Pamatovat si",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "覚えます",
+				"Přítomný krátký kladný": "覚える",
+				"Přítomný zdvořilý záporný": "覚えません",
+				"Přítomný krátký záporný": "覚えない"
+			}
+		},
+		{
+			"Id": 29,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "泳ぐ",
+			"JP": "およぐ",
+			"CZ": "Plavat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "泳ぎます",
+				"Přítomný krátký kladný": "泳ぐ",
+				"Přítomný zdvořilý záporný": "泳ぎません",
+				"Přítomný krátký záporný": "泳がない"
+			}
+		},
+		{
+			"Id": 30,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "始める",
+			"JP": "はじめる",
+			"CZ": "Začít",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "始めます",
+				"Přítomný krátký kladný": "始める",
+				"Přítomný zdvořilý záporný": "始めません",
+				"Přítomný krátký záporný": "始めない"
+			}
+		},
+		{
+			"Id": 31,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "閉める",
+			"JP": "しめる",
+			"CZ": "Zavřít",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "閉めます",
+				"Přítomný krátký kladný": "閉める",
+				"Přítomný zdvořilý záporný": "閉めません",
+				"Přítomný krátký záporný": "閉めない"
+			}
+		},
+		{
+			"Id": 32,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "降る",
+			"JP": "ふる",
+			"CZ": "Padat (déšť, sníh)",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "降ります",
+				"Přítomný krátký kladný": "降る",
+				"Přítomný zdvořilý záporný": "降りません",
+				"Přítomný krátký záporný": "降らない"
+			}
+		},
+		{
+			"Id": 33,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "終わる",
+			"JP": "おわる",
+			"CZ": "Skončit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "終わります",
+				"Přítomný krátký kladný": "終わる",
+				"Přítomný zdvořilý záporný": "終わりません",
+				"Přítomný krátký záporný": "終わらない"
+			}
+		},
+		{
+			"Id": 34,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "乗る",
+			"JP": "のる",
+			"CZ": "Nastoupit, jet",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "乗ります",
+				"Přítomný krátký kladný": "乗る",
+				"Přítomný zdvořilý záporný": "乗りません",
+				"Přítomný krátký záporný": "乗らない"
+			}
+		},
+		{
+			"Id": 35,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "売る",
+			"JP": "うる",
+			"CZ": "Prodat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "売ります",
+				"Přítomný krátký kladný": "売る",
+				"Přítomný zdvořilý záporný": "売りません",
+				"Přítomný krátký záporný": "売らない"
+			}
+		},
+		{
+			"Id": 36,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "歩く",
+			"JP": "あるく",
+			"CZ": "Chodit, jít",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "歩きます",
+				"Přítomný krátký kladný": "歩く",
+				"Přítomný zdvořilý záporný": "歩きません",
+				"Přítomný krátký záporný": "歩かない"
+			}
+		},
+		{
+			"Id": 37,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "脱ぐ",
+			"JP": "ぬぐ",
+			"CZ": "Svléknout se",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "脱ぎます",
+				"Přítomný krátký kladný": "脱ぐ",
+				"Přítomný zdvořilý záporný": "脱ぎません",
+				"Přítomný krátký záporný": "脱がない"
+			}
+		},
+		{
+			"Id": 38,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "泣く",
+			"JP": "なく",
+			"CZ": "Plakat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "泣きます",
+				"Přítomný krátký kladný": "泣く",
+				"Přítomný zdvořilý záporný": "泣きません",
+				"Přítomný krátký záporný": "泣かない"
+			}
+		},
+		{
+			"Id": 39,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "折る",
+			"JP": "おる",
+			"CZ": "Složit, zlomit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "折ります",
+				"Přítomný krátký kladný": "折る",
+				"Přítomný zdvořilý záporný": "折りません",
+				"Přítomný krátký záporný": "折らない"
+			}
+		},
+		{
+			"Id": 40,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "出る",
+			"JP": "でる",
+			"CZ": "Vyjít, opustit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "出ます",
+				"Přítomný krátký kladný": "出る",
+				"Přítomný zdvořilý záporný": "出ません",
+				"Přítomný krátký záporný": "出ない"
+			}
+		},
+		{
+			"Id": 41,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "分かる",
+			"JP": "わかる",
+			"CZ": "Rozumět",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "分かります",
+				"Přítomný krátký kladný": "分かる",
+				"Přítomný zdvořilý záporný": "分かりません",
+				"Přítomný krátký záporný": "分からない"
+			}
+		},
+		{
+			"Id": 42,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "曲がる",
+			"JP": "まがる",
+			"CZ": "Zahnout, zatočit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "曲がります",
+				"Přítomný krátký kladný": "曲がる",
+				"Přítomný zdvořilý záporný": "曲がりません",
+				"Přítomný krátký záporný": "曲がらない"
+			}
+		},
+		{
+			"Id": 43,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "探す",
+			"JP": "さがす",
+			"CZ": "Hledat",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "探します",
+				"Přítomný krátký kladný": "探す",
+				"Přítomný zdvořilý záporný": "探しません",
+				"Přítomný krátký záporný": "探さない"
+			}
+		},
+		{
+			"Id": 44,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "飛ぶ",
+			"JP": "とぶ",
+			"CZ": "Letět, skočit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "飛びます",
+				"Přítomný krátký kladný": "飛ぶ",
+				"Přítomný zdvořilý záporný": "飛びません",
+				"Přítomný krátký záporný": "飛ばない"
+			}
+		},
+		{
+			"Id": 45,
+			"Level": "N4",
+			"Type1": "Sloveso",
+			"Type2": "RU - Ichidan",
+			"Kanji": "決める",
+			"JP": "きめる",
+			"CZ": "Rozhodnout, určit",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "決めます",
+				"Přítomný krátký kladný": "決める",
+				"Přítomný zdvořilý záporný": "決めません",
+				"Přítomný krátký záporný": "決めない"
+			}
+		},
+		{
+			"Id": 46,
+			"Level": "N5",
+			"Type1": "Sloveso",
+			"Type2": "U - Godan",
+			"Kanji": "立つ",
+			"JP": "たつ",
+			"CZ": "Stát",
+			"Conjugation": {
+				"Přítomný zdvořilý kladný": "立ちます",
+				"Přítomný krátký kladný": "立つ",
+				"Přítomný zdvořilý záporný": "立ちません",
+				"Přítomný krátký záporný": "立たない"
+			}
+		}
+	]
+}

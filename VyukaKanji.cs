@@ -241,7 +241,7 @@ namespace Japonstina
 
         public void ClearText()
         {
-            
+
             Label[] labels = { label1, label2, kanji_char, kanji_hiragana };
             for (int i = 0; i < labels.Count(); i++)
                 labels[i].Text = "";
@@ -303,7 +303,6 @@ namespace Japonstina
                 DisplayCorrectAnswer();
                 await Task.Delay(2000);
                 KanjiMain();
-
             }
         }
 
@@ -337,5 +336,9 @@ namespace Japonstina
 
         }
 
+        private void kanji_char_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
