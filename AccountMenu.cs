@@ -13,16 +13,37 @@ namespace Japonstina
 {
     public partial class AccountMenu : Form
     {
+
+       // private TransparentProgressBar blueProgressBar;
         public AccountMenu()
         {
             InitializeComponent();
-            this.circularProgressBar1.MouseHover += new System.EventHandler(this.circularProgressBar1_MouseHover);
-            this.circularProgressBar1.MouseLeave += new System.EventHandler(this.circularProgressBar1_MouseLeave);
-            this.circularProgressBar2.MouseHover += new System.EventHandler(this.circularProgressBar2_MouseHover);
-            this.circularProgressBar2.MouseLeave += new System.EventHandler(this.circularProgressBar2_MouseLeave);
+            /*
+            blueProgressBar = new TransparentProgressBar
+            {
+                Name = "blueProgressBar",
+                Location = new Point(230, 169),
+                Size = new Size(965, 35),
+                Maximum = 100,
+                Value = 100,
+                ForeColor = SystemColors.Highlight,
+                BackColor = Color.Blue
+                
+            };
+
+            Controls.Add(blueProgressBar);
+            blueProgressBar.BringToFront();
+            */
+            progressBar1.Value = 50;
+            progressBar1.ForeColor = Color.Orange;
+            progressBar2.Value = 20;
+            progressBar2.ForeColor = Color.Red;
+            progressBar3.ForeColor = Color.Green;
+            progressBar3.Value = 90;
+
         }
 
-        
+
 
         private void MenuHiragana_Click(object sender, EventArgs e)
         {
@@ -49,10 +70,19 @@ namespace Japonstina
 
         }
 
-        private void circularProgressBar1_Click(object sender, EventArgs e )
-        {
-            /*Doplnit globalni activeformu*/
 
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KatakanaGraf_Click(object sender, EventArgs e)
+        {
+        }
+
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
             if (StavAplikace.ActiveForm != "Abecedy")
             {
                 StavAplikace.ActiveForm = "Abecedy";
@@ -63,49 +93,15 @@ namespace Japonstina
                 a.Dock = DockStyle.Fill;
                 a.Show();
             }
-                
         }
 
-        private void circularProgressBar1_MouseHover(object sender, EventArgs e)
-        {
-            circularProgressBar1.Size = new Size(250, 250);
-            
-
-        }
-
-        private void circularProgressBar1_MouseLeave(object sender, EventArgs e)
-        {
-            circularProgressBar1.Size = new Size(200, 200);
-
-        }
-
-        private void circularProgressBar2_MouseHover(object sender, EventArgs e)
-        {
-            circularProgressBar2.Size = new Size(250, 250);
-            
-
-        }
-
-        private void circularProgressBar2_MouseLeave(object sender, EventArgs e)
-        {
-            circularProgressBar2.Size = new Size(200, 200);
-
-        }
-
-        private void circularProgressBar2_Click(object sender, EventArgs e)
+        private void AbecedyPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-  
 
-        private void label11_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void KatakanaGraf_Click(object sender, EventArgs e)
-        {
-                    }
     }
+
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CircularProgressBar;
 using Japonstina.Models;
 using Japonstina.vyuka;
 using Newtonsoft.Json;
@@ -19,7 +20,7 @@ namespace Japonstina
         public static int HiraganaProgress { get; set; }
         public static int KatakanaProgress { get; set; }
 
-
+        private CircularProgressBar2 circularProgressBar;
 
         public account()
         {
@@ -27,10 +28,24 @@ namespace Japonstina
             InitializeComponent();
             //TODO:Dodělat logiku na plnění checkboxu
 
-            
+            circularProgressBar = new CircularProgressBar2
+            {
+                Name = "circularProgressBar",
+                Location = new Point(400, 400),
+                Size = new Size(100, 100),
+                Maximum = 100,
+                Value = 50,
+                ForeColor = Color.Red,
+                BackColor = Color.Transparent
+            };
+
+            Controls.Add(circularProgressBar);
+            circularProgressBar.BringToFront();
+
+
 
             //TODO: Předělat na classu mimo formu
-            
+            /*
             var slovnik = JP.Slovnik();
             var ProgressHiragana = slovnik.Where(i => i.Key.znaky == abeceda.Hiragana).Select(x => x.Value.JP).ToList();
             var HiraganaCount = ProgressHiragana.Count();
@@ -74,9 +89,9 @@ namespace Japonstina
                 KatakanaList.SetItemChecked(ID, true);
 
             }
-
+            */
         }
-
+            
 
 
 

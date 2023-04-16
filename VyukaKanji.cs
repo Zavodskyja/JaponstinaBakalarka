@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,8 +41,11 @@ namespace Japonstina
 
         private Timer timer2Seconds;
 
+        private Timer progressBarTimer;
 
+        private int timeRemaining;
 
+                
 
 
 
@@ -64,6 +68,15 @@ namespace Japonstina
                 Interval = 2000 // 2 sekundy
             };
             timer2Seconds.Tick += Timer2Seconds_Tick;
+
+            progressBarTimer = new Timer
+            {
+                Interval = 100 // 100 milliseconds
+            };
+            progressBarTimer.Tick += ProgressBarTimer_Tick;
+
+            timeRemaining = 90;
+
 
             KanjiMain();
 
@@ -144,7 +157,7 @@ namespace Japonstina
 
             if (Cviceni_vyber.CheckBoxTimeLimit)
             {
-                timer10Seconds.Start();
+                TimersStart();
             }
 
         }
@@ -170,7 +183,7 @@ namespace Japonstina
             KanjiInHiragana(Kanji, Furigana, correctConjugationType);
             if (Cviceni_vyber.CheckBoxTimeLimit)
             {
-                timer10Seconds.Start();
+                TimersStart();
             }
 
         }
@@ -200,7 +213,7 @@ namespace Japonstina
 
             if (Cviceni_vyber.CheckBoxTimeLimit)
             {
-                timer10Seconds.Start();
+                TimersStart();
             }
         }
 
@@ -245,6 +258,7 @@ namespace Japonstina
             Label[] labels = { label1, label2, kanji_char, kanji_hiragana };
             for (int i = 0; i < labels.Count(); i++)
                 labels[i].Text = "";
+            progressBar.Visible = false;
         }
 
         public void ButtonDisable()
@@ -290,6 +304,7 @@ namespace Japonstina
         {
             ButtonDisable();
             timer10Seconds.Stop();
+            progressBarTimer.Stop();
             //pridat logiku na save progressu pro correct X incorrect
             if (buttonText == CorrectAnswer)
             {
@@ -312,6 +327,7 @@ namespace Japonstina
         private void Timer10Seconds_Tick(object sender, EventArgs e)
         {
             timer10Seconds.Stop();
+            progressBarTimer.Stop();
             ButtonDisable();
             DisplayCorrectAnswer();
             timer2Seconds.Start();
@@ -323,6 +339,37 @@ namespace Japonstina
             KanjiMain();
         }
 
+        private void TimersStart()
+        {
+            progressBar.Visible = true;
+            timeRemaining = 90;
+            progressBar.Value = timeRemaining;
+            progressBar.ForeColor = Color.FromArgb(165, 186, 147);
+            timer10Seconds.Start();
+            progressBarTimer.Start();
+        }
+
+        private void ProgressBarTimer_Tick(object sender, EventArgs e)
+        {
+
+            timeRemaining--;
+            progressBar.Value = timeRemaining;
+
+
+             if (timeRemaining <= 60)
+             {
+                 progressBar.ForeColor = Color.FromArgb(240, 143, 144);
+             }
+             if (timeRemaining <= 30)
+             {
+                 progressBar.ForeColor = Color.FromArgb(188, 0, 45);
+             }
+            
+        }
+
+
+
+
         private void DisplayCorrectAnswer()
         {
             label1.Text = CorrectAnswer; //120, 119, 155 barva 
@@ -332,13 +379,21 @@ namespace Japonstina
                 {
                     buttons[i].BackColor = Color.FromArgb(120, 119, 155);
                 }
-
-
         }
+
 
         private void kanji_char_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void progressBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
+
+    
 }
+
