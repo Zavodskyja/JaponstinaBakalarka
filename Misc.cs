@@ -77,13 +77,17 @@ namespace Japonstina
 
         public CircularProgressBar2()
         {
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+            this.SetStyle(ControlStyles.Opaque, false);
             this.DoubleBuffered = true;
             this.Value = 0;
             this.Maximum = 100;
             this.Width = 100;
             this.Height = 100;
             this.ForeColor = Color.Red;
-            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.BackColor = Color.Transparent;
             
         }

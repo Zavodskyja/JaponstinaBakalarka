@@ -14,13 +14,8 @@ namespace Japonstina.Models
 {
     public class ProgressDataModel
     {
-       [JsonProperty("Japanesee")]
-        public List<ZnakModel> ProgressZnaku { get; set; }
-        
         [JsonProperty("Japanese")]
         public Japanese JapaneseProgress { get; set; }
-
-
     };
 
 

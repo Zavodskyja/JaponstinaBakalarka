@@ -100,9 +100,9 @@
             label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label6.Location = new System.Drawing.Point(156, 117);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(34, 28);
+            label6.Size = new System.Drawing.Size(45, 28);
             label6.TabIndex = 9;
-            label6.Text = "90";
+            label6.Text = "100";
             label6.Click += label6_Click;
             // 
             // label5
@@ -111,9 +111,9 @@
             label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label5.Location = new System.Drawing.Point(167, 79);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(23, 28);
+            label5.Size = new System.Drawing.Size(34, 28);
             label5.TabIndex = 8;
-            label5.Text = "1";
+            label5.Text = "50";
             // 
             // label4
             // 
@@ -197,9 +197,9 @@
             label10.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label10.Location = new System.Drawing.Point(156, 106);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(34, 28);
+            label10.Size = new System.Drawing.Size(45, 28);
             label10.TabIndex = 12;
-            label10.Text = "90";
+            label10.Text = "100";
             // 
             // label9
             // 
@@ -207,9 +207,9 @@
             label9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label9.Location = new System.Drawing.Point(167, 67);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(23, 28);
+            label9.Size = new System.Drawing.Size(34, 28);
             label9.TabIndex = 10;
-            label9.Text = "5";
+            label9.Text = "20";
             // 
             // label8
             // 
@@ -251,9 +251,9 @@
             label12.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label12.Location = new System.Drawing.Point(156, 106);
             label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(34, 28);
+            label12.Size = new System.Drawing.Size(45, 28);
             label12.TabIndex = 12;
-            label12.Text = "90";
+            label12.Text = "100";
             // 
             // label13
             // 
@@ -261,9 +261,9 @@
             label13.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label13.Location = new System.Drawing.Point(167, 67);
             label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(23, 28);
+            label13.Size = new System.Drawing.Size(34, 28);
             label13.TabIndex = 10;
-            label13.Text = "5";
+            label13.Text = "90";
             // 
             // label14
             // 

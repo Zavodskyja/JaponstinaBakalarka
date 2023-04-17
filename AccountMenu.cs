@@ -14,7 +14,7 @@ namespace Japonstina
     public partial class AccountMenu : Form
     {
 
-       // private TransparentProgressBar blueProgressBar;
+        // private TransparentProgressBar blueProgressBar;
         public AccountMenu()
         {
             InitializeComponent();
@@ -35,10 +35,10 @@ namespace Japonstina
             blueProgressBar.BringToFront();
             */
             progressBar1.Value = 50;
-            progressBar1.ForeColor = Color.Orange;
+            progressBar1.ForeColor = Color.FromArgb(240, 134, 144);
             progressBar2.Value = 20;
-            progressBar2.ForeColor = Color.Red;
-            progressBar3.ForeColor = Color.Green;
+            progressBar2.ForeColor = Color.FromArgb(195, 39, 43);
+            progressBar3.ForeColor = Color.FromArgb(165, 186, 147);
             progressBar3.Value = 90;
 
         }
