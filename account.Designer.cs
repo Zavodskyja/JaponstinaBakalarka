@@ -29,194 +29,114 @@ namespace Japonstina
         /// </summary>
         public void InitializeComponent()
         {
-            KatakanaList = new System.Windows.Forms.CheckedListBox();
             panel3 = new System.Windows.Forms.Panel();
-            HiraganaProgressBar = new CircularProgressBar2();
-            label4 = new System.Windows.Forms.Label();
-            HiraganaList = new System.Windows.Forms.CheckedListBox();
-            panel5 = new System.Windows.Forms.Panel();
-            label1 = new System.Windows.Forms.Label();
+            labelNesplnenoValue = new System.Windows.Forms.Label();
+            labelSplnenoValue = new System.Windows.Forms.Label();
+            labelNesplneno = new System.Windows.Forms.Label();
+            labelSplneno = new System.Windows.Forms.Label();
+            progressBarCircle = new CircularProgressBar2();
+            ItemList = new System.Windows.Forms.CheckedListBox();
             panel7 = new System.Windows.Forms.Panel();
-            panel4 = new System.Windows.Forms.Panel();
-            KatakanaProgressBar = new CircularProgressBar2();
-            label5 = new System.Windows.Forms.Label();
-            panel6 = new System.Windows.Forms.Panel();
-            label2 = new System.Windows.Forms.Label();
-            panel2 = new System.Windows.Forms.Panel();
             panel1 = new System.Windows.Forms.Panel();
             label3 = new System.Windows.Forms.Label();
             panel3.SuspendLayout();
-            panel5.SuspendLayout();
-            panel4.SuspendLayout();
-            panel6.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // KatakanaList
-            // 
-            KatakanaList.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
-            KatakanaList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            KatakanaList.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            KatakanaList.ForeColor = System.Drawing.Color.White;
-            KatakanaList.FormattingEnabled = true;
-            KatakanaList.Location = new System.Drawing.Point(0, 334);
-            KatakanaList.MaximumSize = new System.Drawing.Size(508, 342);
-            KatakanaList.MultiColumn = true;
-            KatakanaList.Name = "KatakanaList";
-            KatakanaList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            KatakanaList.ScrollAlwaysVisible = true;
-            KatakanaList.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            KatakanaList.Size = new System.Drawing.Size(508, 342);
-            KatakanaList.TabIndex = 0;
-            KatakanaList.SelectedIndexChanged += KatakanaList_SelectedIndexChanged;
-            // 
             // panel3
             // 
-            panel3.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
-            panel3.Controls.Add(HiraganaProgressBar);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(HiraganaList);
-            panel3.Controls.Add(panel5);
+            panel3.BackColor = System.Drawing.Color.FromArgb(252, 201, 185);
+            panel3.Controls.Add(labelNesplnenoValue);
+            panel3.Controls.Add(labelSplnenoValue);
+            panel3.Controls.Add(labelNesplneno);
+            panel3.Controls.Add(labelSplneno);
+            panel3.Controls.Add(progressBarCircle);
+            panel3.Controls.Add(ItemList);
             panel3.Controls.Add(panel7);
             panel3.Location = new System.Drawing.Point(0, 54);
             panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(508, 711);
+            panel3.Size = new System.Drawing.Size(1066, 676);
             panel3.TabIndex = 2;
             panel3.Paint += panel3_Paint;
             // 
-            // HiraganaProgressBar
+            // labelNesplnenoValue
             // 
-            HiraganaProgressBar.BackColor = System.Drawing.Color.Transparent;
-            HiraganaProgressBar.ForeColor = System.Drawing.Color.FromArgb(120, 119, 155);
-            HiraganaProgressBar.Location = new System.Drawing.Point(132, 46);
-            HiraganaProgressBar.Maximum = 100;
-            HiraganaProgressBar.Name = "HiraganaProgressBar";
-            HiraganaProgressBar.Size = new System.Drawing.Size(200, 200);
-            HiraganaProgressBar.TabIndex = 3;
-            HiraganaProgressBar.Value = 100;
+            labelNesplnenoValue.AutoSize = true;
+            labelNesplnenoValue.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelNesplnenoValue.Location = new System.Drawing.Point(404, 119);
+            labelNesplnenoValue.Name = "labelNesplnenoValue";
+            labelNesplnenoValue.Size = new System.Drawing.Size(32, 37);
+            labelNesplnenoValue.TabIndex = 8;
+            labelNesplnenoValue.Text = "5";
             // 
-            // label4
+            // labelSplnenoValue
             // 
-            label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label4.ForeColor = System.Drawing.Color.White;
-            label4.Location = new System.Drawing.Point(102, 288);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(200, 43);
-            label4.TabIndex = 2;
-            label4.Text = "Detailní pohled";
-            label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelSplnenoValue.AutoSize = true;
+            labelSplnenoValue.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelSplnenoValue.Location = new System.Drawing.Point(404, 46);
+            labelSplnenoValue.Name = "labelSplnenoValue";
+            labelSplnenoValue.Size = new System.Drawing.Size(32, 37);
+            labelSplnenoValue.TabIndex = 7;
+            labelSplnenoValue.Text = "1";
             // 
-            // HiraganaList
+            // labelNesplneno
             // 
-            HiraganaList.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
-            HiraganaList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            HiraganaList.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            HiraganaList.ForeColor = System.Drawing.Color.White;
-            HiraganaList.FormattingEnabled = true;
-            HiraganaList.Location = new System.Drawing.Point(0, 334);
-            HiraganaList.MaximumSize = new System.Drawing.Size(508, 342);
-            HiraganaList.MultiColumn = true;
-            HiraganaList.Name = "HiraganaList";
-            HiraganaList.ScrollAlwaysVisible = true;
-            HiraganaList.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            HiraganaList.Size = new System.Drawing.Size(508, 342);
-            HiraganaList.TabIndex = 0;
-            HiraganaList.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged_1;
+            labelNesplneno.AutoSize = true;
+            labelNesplneno.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelNesplneno.Location = new System.Drawing.Point(218, 119);
+            labelNesplneno.Name = "labelNesplneno";
+            labelNesplneno.Size = new System.Drawing.Size(151, 37);
+            labelNesplneno.TabIndex = 6;
+            labelNesplneno.Text = "Nesplněno:";
             // 
-            // panel5
+            // labelSplneno
             // 
-            panel5.Controls.Add(label1);
-            panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            panel5.Location = new System.Drawing.Point(0, 0);
-            panel5.Name = "panel5";
-            panel5.Size = new System.Drawing.Size(508, 40);
-            panel5.TabIndex = 0;
+            labelSplneno.AutoSize = true;
+            labelSplneno.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelSplneno.Location = new System.Drawing.Point(218, 46);
+            labelSplneno.Name = "labelSplneno";
+            labelSplneno.Size = new System.Drawing.Size(120, 37);
+            labelSplneno.TabIndex = 5;
+            labelSplneno.Text = "Splněno:";
             // 
-            // label1
+            // progressBarCircle
             // 
-            label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(132, 3);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(200, 37);
-            label1.TabIndex = 0;
-            label1.Text = "Hiragana";
-            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            progressBarCircle.BackColor = System.Drawing.Color.FromArgb(195, 39, 43);
+            progressBarCircle.ForeColor = System.Drawing.Color.FromArgb(165, 186, 147);
+            progressBarCircle.Location = new System.Drawing.Point(12, 46);
+            progressBarCircle.Maximum = 100;
+            progressBarCircle.Name = "progressBarCircle";
+            progressBarCircle.Size = new System.Drawing.Size(200, 200);
+            progressBarCircle.TabIndex = 3;
+            progressBarCircle.Value = 40;
+            // 
+            // ItemList
+            // 
+            ItemList.BackColor = System.Drawing.Color.FromArgb(252, 201, 185);
+            ItemList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            ItemList.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            ItemList.ForeColor = System.Drawing.Color.White;
+            ItemList.FormattingEnabled = true;
+            ItemList.Location = new System.Drawing.Point(0, 293);
+            ItemList.MultiColumn = true;
+            ItemList.Name = "ItemList";
+            ItemList.ScrollAlwaysVisible = true;
+            ItemList.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            ItemList.Size = new System.Drawing.Size(1040, 380);
+            ItemList.TabIndex = 0;
+            ItemList.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged_1;
             // 
             // panel7
             // 
-            panel7.Location = new System.Drawing.Point(132, 46);
+            panel7.Location = new System.Drawing.Point(12, 46);
             panel7.Name = "panel7";
             panel7.Size = new System.Drawing.Size(200, 200);
             panel7.TabIndex = 4;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
-            panel4.Controls.Add(KatakanaProgressBar);
-            panel4.Controls.Add(label5);
-            panel4.Controls.Add(panel6);
-            panel4.Controls.Add(KatakanaList);
-            panel4.Controls.Add(panel2);
-            panel4.Location = new System.Drawing.Point(558, 54);
-            panel4.Name = "panel4";
-            panel4.Size = new System.Drawing.Size(508, 711);
-            panel4.TabIndex = 3;
-            // 
-            // KatakanaProgressBar
-            // 
-            KatakanaProgressBar.BackColor = System.Drawing.Color.Transparent;
-            KatakanaProgressBar.ForeColor = System.Drawing.Color.FromArgb(120, 119, 155);
-            KatakanaProgressBar.Location = new System.Drawing.Point(147, 46);
-            KatakanaProgressBar.Maximum = 100;
-            KatakanaProgressBar.Name = "KatakanaProgressBar";
-            KatakanaProgressBar.Size = new System.Drawing.Size(200, 200);
-            KatakanaProgressBar.TabIndex = 4;
-            KatakanaProgressBar.Value = 40;
-            // 
-            // label5
-            // 
-            label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label5.ForeColor = System.Drawing.Color.White;
-            label5.Location = new System.Drawing.Point(147, 288);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(200, 43);
-            label5.TabIndex = 3;
-            label5.Text = "Detailní pohled";
-            label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(label2);
-            panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            panel6.Location = new System.Drawing.Point(0, 0);
-            panel6.Name = "panel6";
-            panel6.Size = new System.Drawing.Size(508, 40);
-            panel6.TabIndex = 0;
-            // 
-            // label2
-            // 
-            label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.ForeColor = System.Drawing.Color.White;
-            label2.Location = new System.Drawing.Point(147, 3);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(200, 37);
-            label2.TabIndex = 1;
-            label2.Text = "Katakana";
-            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            panel2.Location = new System.Drawing.Point(147, 43);
-            panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(200, 203);
-            panel2.TabIndex = 5;
             // 
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(252, 201, 185);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
@@ -231,7 +151,7 @@ namespace Japonstina
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(1066, 57);
             label3.TabIndex = 4;
-            label3.Text = "Progres Hiragany a Katakany";
+            label3.Text = "Detail ";
             label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // account
@@ -244,29 +164,21 @@ namespace Japonstina
             Name = "account";
             Text = "account";
             panel3.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel6.ResumeLayout(false);
+            panel3.PerformLayout();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
         public System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.CheckedListBox KatakanaList;
-        public System.Windows.Forms.CheckedListBox HiraganaList;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.CheckedListBox ItemList;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private CircularProgressBar2 HiraganaProgressBar;
-        private CircularProgressBar2 KatakanaProgressBar;
+        private CircularProgressBar2 progressBarCircle;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelNesplnenoValue;
+        private System.Windows.Forms.Label labelSplnenoValue;
+        private System.Windows.Forms.Label labelNesplneno;
+        private System.Windows.Forms.Label labelSplneno;
     }
 }

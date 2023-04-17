@@ -34,12 +34,12 @@ namespace Japonstina
             Controls.Add(blueProgressBar);
             blueProgressBar.BringToFront();
             */
-            progressBar1.Value = 50;
-            progressBar1.ForeColor = Color.FromArgb(240, 134, 144);
-            progressBar2.Value = 20;
-            progressBar2.ForeColor = Color.FromArgb(195, 39, 43);
-            progressBar3.ForeColor = Color.FromArgb(165, 186, 147);
-            progressBar3.Value = 90;
+            progressBarKatakana.Value = 50;
+            progressBarKatakana.ForeColor = Color.FromArgb(240, 134, 144);
+            progressBarKanji.Value = 20;
+            progressBarKanji.ForeColor = Color.FromArgb(195, 39, 43);
+            progressBarVerbs.ForeColor = Color.FromArgb(165, 186, 147);
+            progressBarVerbs.Value = 90;
 
         }
 
@@ -87,7 +87,7 @@ namespace Japonstina
             {
                 StavAplikace.ActiveForm = "DetailKatakana";
                 Program.welcome.panel1.Controls.Clear();
-                account a = new account();
+                AccountDetail2 a = new AccountDetail2();
                 a.TopLevel = false;
                 Program.welcome.panel1.Controls.Add(a);
                 a.Dock = DockStyle.Fill;
@@ -107,6 +107,16 @@ namespace Japonstina
 
         private void progressBar2_Click(object sender, EventArgs e)
         {
+            if (StavAplikace.ActiveForm != "DetailKanji")
+            {
+                StavAplikace.ActiveForm = "DetailKanji";
+                Program.welcome.panel1.Controls.Clear();
+                AccountDetail2 a = new AccountDetail2();
+                a.TopLevel = false;
+                Program.welcome.panel1.Controls.Add(a);
+                a.Dock = DockStyle.Fill;
+                a.Show();
+            }
 
         }
 

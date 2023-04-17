@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Japonstina.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Japonstina;
 
 namespace Japonstina
 {
@@ -15,6 +17,11 @@ namespace Japonstina
         public AccountDetail2()
         {
             InitializeComponent();
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+            AccountFormDetail.SetAccountForm("Hiragana");
         }
     }
 }

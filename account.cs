@@ -21,16 +21,13 @@ namespace Japonstina
         public static int HiraganaProgress { get; set; }
         public static int KatakanaProgress { get; set; }
 
-        private TransparentProgressBar progressBar;
-
-        List<CircularProgressBar2> progressBars;
 
         AccountDataSetup Instance = new AccountDataSetup();
 
         public account()
         {
             InitializeComponent();
-            SetCheckedState("Hiragana", "Katakana");
+            SetCheckedState("Hiragana");
         }
 
 
@@ -79,20 +76,35 @@ namespace Japonstina
 
         public List<int> ProgressData(string requestedData)
         {
+            ProgressDataModel progressDataKatakana = ProgressManager.ProgressData;
+            List<int> completedIds = new List<int>();
 
-            ProgressDataModel progressData = ProgressManager.ProgressData;
-            KanjiDataModel kanjiLoadData = ProgressManager.KanjiLoadData;
+            if (requestedData is "Hiragana" or "Katakana")
+            {
+                completedIds = progressDataKatakana.JapaneseProgress.Katakana
+                    .Where(a => a.KatakanaCompletion == true && a.Alphabet == requestedData)
+                    .Select(i => i.KatakanaId)
+                    .ToList();
+            }
+            if (requestedData is "N4" or "N5")
+            {
+                completedIds = progressDataKatakana.JapaneseProgress.Vocabulary
+                    .Where(a => a.KanjiCompletion == true && a.Level == requestedData)
+                    .Select(i => i.Id)
+                    .ToList();
+            }
 
-
-            var completedKatakana = progressData.JapaneseProgress.Katakana
-                .Where(a => a.KatakanaCompletion == true && a.Alphabet == requestedData)
-                .Select(i => i.KatakanaId)
-                .ToList();
-
-            return completedKatakana;
+            if (requestedData is "RU - Verbs" or "U - Verbs" or "Nepravidelné")
+            {
+                completedIds = progressDataKatakana.JapaneseProgress.Vocabulary
+                    .Where(a => a.ConjugationCompletion == true && a.Type == requestedData)
+                    .Select(i => i.Id)
+                    .ToList();
+            }
+            return completedIds;
         }
 
-        public void SetCheckedState(params string[] setTypes)
+        public void SetCheckedState(string detailType)
         {
 
             var slovnik = vyuka.JP.Slovnik();
@@ -107,15 +119,15 @@ namespace Japonstina
             List<int> ZnakSplnenoK = new List<int>();
             List<int> ZnakSplnenoH = new List<int>();
 
+            ZnakSplnenoH = ProgressData(detailType);
+            SplnenoH = ZnakSplnenoH.Count();
+            // ProgressManager.ProgressAccountZnaky();
 
-           // ProgressManager.ProgressAccountZnaky();
-
-            foreach (string setType in setTypes)
+            /*foreach (string setType in setTypes)
             {
                 if (setType == "Hiragana")
                 {
-                    ZnakSplnenoH = ProgressData(setType);
-                    SplnenoH = ZnakSplnenoH.Count();
+
                 }
                 else if (setType == "Katakana")
                 {
@@ -127,32 +139,32 @@ namespace Japonstina
 
                 }
             }
-
-            Instance.SetProgressBar(SplnenoH, SplnenoK, HiraganaProgressBar, KatakanaProgressBar);
+            */
+            // Instance.SetProgressBar(SplnenoH, SplnenoK, HiraganaProgressBar);
 
             ProgressManager.ProgressAccount(HiraganaCount, SplnenoH, KatakanaCount, SplnenoK);
 
             foreach (string znak in ProgressHiragana)
             {
-                HiraganaList.Items.Add(znak);
+                ItemList.Items.Add(znak);
 
             }
-            foreach (string znak in ProgressKatakana)
+            /*foreach (string znak in ProgressKatakana)
             {
                 KatakanaList.Items.Add(znak);
             }
-
+            */
             foreach (int ID in ZnakSplnenoH)
             {
                 string znak = GetZnakID(ID);
-                int index = HiraganaList.FindStringExact(znak);
+                int index = ItemList.FindStringExact(znak);
                 if (index != -1)
                 {
-                    HiraganaList.SetItemChecked(index, true);
+                    ItemList.SetItemChecked(index, true);
                 }
             }
 
-            foreach (int ID in ZnakSplnenoK)
+            /*foreach (int ID in ZnakSplnenoK)
             {
                 string znak = GetZnakID(ID);
                 int index = KatakanaList.FindStringExact(znak);
@@ -161,7 +173,7 @@ namespace Japonstina
                     KatakanaList.SetItemChecked(index, true);
                 }
             }
-
+            */
 
         }
         public string GetZnakID(int id)
@@ -171,6 +183,16 @@ namespace Japonstina
             var JpZnak = Znak.Value.JP;
 
             return JpZnak;
+        }
+
+        private void KatakanaProgressBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
