@@ -108,7 +108,7 @@ namespace Japonstina
             List<int> ZnakSplnenoH = new List<int>();
 
 
-            ProgressManager.ProgressAccountZnaky();
+           // ProgressManager.ProgressAccountZnaky();
 
             foreach (string setType in setTypes)
             {
