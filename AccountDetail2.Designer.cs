@@ -30,14 +30,14 @@
         {
             panel1 = new System.Windows.Forms.Panel();
             panel3 = new System.Windows.Forms.Panel();
-            transparentProgressBar2 = new TransparentProgressBar();
+            progressBar3 = new TransparentProgressBar();
             labelBotMissingNumber = new System.Windows.Forms.Label();
             labelBotCompleteNumber = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
             labelBot = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
-            transparentProgressBar1 = new TransparentProgressBar();
+            progressBar2 = new TransparentProgressBar();
             labelMidMissingNumber = new System.Windows.Forms.Label();
             labelMidCompleteNumber = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             // panel3
             // 
             panel3.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            panel3.Controls.Add(transparentProgressBar2);
+            panel3.Controls.Add(progressBar3);
             panel3.Controls.Add(labelBotMissingNumber);
             panel3.Controls.Add(labelBotCompleteNumber);
             panel3.Controls.Add(label16);
@@ -82,17 +82,17 @@
             panel3.Size = new System.Drawing.Size(1066, 250);
             panel3.TabIndex = 16;
             // 
-            // transparentProgressBar2
+            // progressBar3
             // 
-            transparentProgressBar2.BackColor = System.Drawing.Color.FromArgb(224, 224, 224);
-            transparentProgressBar2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            transparentProgressBar2.Location = new System.Drawing.Point(23, 169);
-            transparentProgressBar2.Maximum = 100;
-            transparentProgressBar2.Name = "transparentProgressBar2";
-            transparentProgressBar2.Size = new System.Drawing.Size(965, 35);
-            transparentProgressBar2.TabIndex = 14;
-            transparentProgressBar2.Value = 0;
-            transparentProgressBar2.Click += transparentProgressBar2_Click;
+            progressBar3.BackColor = System.Drawing.Color.FromArgb(224, 224, 224);
+            progressBar3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            progressBar3.Location = new System.Drawing.Point(23, 169);
+            progressBar3.Maximum = 100;
+            progressBar3.Name = "progressBar3";
+            progressBar3.Size = new System.Drawing.Size(965, 35);
+            progressBar3.TabIndex = 14;
+            progressBar3.Value = 100;
+            progressBar3.Click += transparentProgressBar2_Click;
             // 
             // labelBotMissingNumber
             // 
@@ -147,7 +147,7 @@
             // panel2
             // 
             panel2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            panel2.Controls.Add(transparentProgressBar1);
+            panel2.Controls.Add(progressBar2);
             panel2.Controls.Add(labelMidMissingNumber);
             panel2.Controls.Add(labelMidCompleteNumber);
             panel2.Controls.Add(label10);
@@ -158,17 +158,17 @@
             panel2.Size = new System.Drawing.Size(1066, 250);
             panel2.TabIndex = 15;
             // 
-            // transparentProgressBar1
+            // progressBar2
             // 
-            transparentProgressBar1.BackColor = System.Drawing.Color.FromArgb(224, 224, 224);
-            transparentProgressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            transparentProgressBar1.Location = new System.Drawing.Point(23, 169);
-            transparentProgressBar1.Maximum = 100;
-            transparentProgressBar1.Name = "transparentProgressBar1";
-            transparentProgressBar1.Size = new System.Drawing.Size(965, 35);
-            transparentProgressBar1.TabIndex = 14;
-            transparentProgressBar1.Value = 0;
-            transparentProgressBar1.Click += transparentProgressBar1_Click;
+            progressBar2.BackColor = System.Drawing.Color.FromArgb(224, 224, 224);
+            progressBar2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            progressBar2.Location = new System.Drawing.Point(23, 169);
+            progressBar2.Maximum = 100;
+            progressBar2.Name = "progressBar2";
+            progressBar2.Size = new System.Drawing.Size(965, 35);
+            progressBar2.TabIndex = 14;
+            progressBar2.Value = 100;
+            progressBar2.Click += transparentProgressBar1_Click;
             // 
             // labelMidMissingNumber
             // 
@@ -244,7 +244,7 @@
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new System.Drawing.Size(965, 35);
             progressBar1.TabIndex = 14;
-            progressBar1.Value = 0;
+            progressBar1.Value = 100;
             progressBar1.Click += progressBar1_Click;
             // 
             // label11
@@ -339,9 +339,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        public TransparentProgressBar transparentProgressBar1;
+        public TransparentProgressBar progressBar2;
         public TransparentProgressBar progressBar1;
-        public TransparentProgressBar transparentProgressBar2;
+        public TransparentProgressBar progressBar3;
         public System.Windows.Forms.Label labelMidMissingNumber;
         public System.Windows.Forms.Label labelMidCompleteNumber;
         public System.Windows.Forms.Label labelMid;

@@ -47,6 +47,9 @@ namespace Japonstina
                 accountDetailInstance.labelTop.Text = "Hiragana";
                 accountDetailInstance.labelMid.Text = "Katakana";
                 accountDetailInstance.panel3.Visible = false;
+                accountDetailInstance.progressBar1.Name = "Hiragana";
+                accountDetailInstance.progressBar2.Name = "Katakana";
+
             }
 
             if (form == "DetailKanji")
@@ -54,12 +57,17 @@ namespace Japonstina
                 accountDetailInstance.labelTop.Text = "N5";
                 accountDetailInstance.labelMid.Text = "N4";
                 accountDetailInstance.panel3.Visible = false;
+                accountDetailInstance.progressBar1.Name = "N5";
+                accountDetailInstance.progressBar2.Name = "N4";
             }
             if (form == "DetailSlovesa")
             {
                 accountDetailInstance.labelTop.Text = "RU - Ichidan";
                 accountDetailInstance.labelMid.Text = "U - Godan";
                 accountDetailInstance.labelBot.Text = "Nepravidelná";
+                accountDetailInstance.progressBar1.Name = "Hiragana";
+                accountDetailInstance.progressBar2.Name = "Katakana";
+                accountDetailInstance.progressBar3.Name = "Hiragana";
             }
         }
 

@@ -48,7 +48,7 @@ namespace Japonstina
                     .ToList();
         }
 
-        public void SetProgressData()
+        public void SetProgressData(string buttonClicked)
         {
             if(StavAplikace.ActiveForm == "DetailKatakana")
             {
