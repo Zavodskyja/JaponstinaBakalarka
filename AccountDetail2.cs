@@ -21,7 +21,29 @@ namespace Japonstina
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
-            AccountFormDetail.SetAccountForm("Hiragana");
+            AccountFormDetail accountFormDetailInstance = new AccountFormDetail();
+            accountFormDetailInstance.SetAccountForm("Hiragana");
+
         }
+
+        private void transparentProgressBar1_Click(object sender, EventArgs e)
+        {
+            AccountFormDetail accountFormDetailInstance = new AccountFormDetail();
+            accountFormDetailInstance.SetAccountForm("Hiragana");
+        }
+
+        private void transparentProgressBar2_Click(object sender, EventArgs e)
+        {
+            AccountFormDetail accountFormDetailInstance = new AccountFormDetail();
+            accountFormDetailInstance.SetAccountForm("Hiragana");
+        }
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

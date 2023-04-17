@@ -31,28 +31,26 @@
             panel1 = new System.Windows.Forms.Panel();
             panel3 = new System.Windows.Forms.Panel();
             transparentProgressBar2 = new TransparentProgressBar();
-            label3 = new System.Windows.Forms.Label();
-            label14 = new System.Windows.Forms.Label();
-            label15 = new System.Windows.Forms.Label();
+            labelBotMissingNumber = new System.Windows.Forms.Label();
+            labelBotCompleteNumber = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
-            label18 = new System.Windows.Forms.Label();
+            labelBot = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
             transparentProgressBar1 = new TransparentProgressBar();
-            label7 = new System.Windows.Forms.Label();
-            label8 = new System.Windows.Forms.Label();
-            label9 = new System.Windows.Forms.Label();
+            labelMidMissingNumber = new System.Windows.Forms.Label();
+            labelMidCompleteNumber = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
-            label13 = new System.Windows.Forms.Label();
+            labelMid = new System.Windows.Forms.Label();
             AbecedyPanel = new System.Windows.Forms.Panel();
             progressBar1 = new TransparentProgressBar();
             label11 = new System.Windows.Forms.Label();
-            label6 = new System.Windows.Forms.Label();
-            label5 = new System.Windows.Forms.Label();
+            labelTopMissingNumber = new System.Windows.Forms.Label();
+            labelTopCompleteNumber = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
+            labelTop = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -74,12 +72,11 @@
             // 
             panel3.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             panel3.Controls.Add(transparentProgressBar2);
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(label14);
-            panel3.Controls.Add(label15);
+            panel3.Controls.Add(labelBotMissingNumber);
+            panel3.Controls.Add(labelBotCompleteNumber);
             panel3.Controls.Add(label16);
             panel3.Controls.Add(label17);
-            panel3.Controls.Add(label18);
+            panel3.Controls.Add(labelBot);
             panel3.Location = new System.Drawing.Point(0, 508);
             panel3.Name = "panel3";
             panel3.Size = new System.Drawing.Size(1066, 250);
@@ -95,36 +92,27 @@
             transparentProgressBar2.Size = new System.Drawing.Size(965, 35);
             transparentProgressBar2.TabIndex = 14;
             transparentProgressBar2.Value = 0;
+            transparentProgressBar2.Click += transparentProgressBar2_Click;
             // 
-            // label3
+            // labelBotMissingNumber
             // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(329, 9);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(285, 28);
-            label3.TabIndex = 13;
-            label3.Text = "Pro více detailů klikněte na graf";
+            labelBotMissingNumber.AutoSize = true;
+            labelBotMissingNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelBotMissingNumber.Location = new System.Drawing.Point(156, 117);
+            labelBotMissingNumber.Name = "labelBotMissingNumber";
+            labelBotMissingNumber.Size = new System.Drawing.Size(45, 28);
+            labelBotMissingNumber.TabIndex = 9;
+            labelBotMissingNumber.Text = "100";
             // 
-            // label14
+            // labelBotCompleteNumber
             // 
-            label14.AutoSize = true;
-            label14.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label14.Location = new System.Drawing.Point(156, 117);
-            label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(45, 28);
-            label14.TabIndex = 9;
-            label14.Text = "100";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label15.Location = new System.Drawing.Point(167, 79);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(34, 28);
-            label15.TabIndex = 8;
-            label15.Text = "50";
+            labelBotCompleteNumber.AutoSize = true;
+            labelBotCompleteNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelBotCompleteNumber.Location = new System.Drawing.Point(167, 79);
+            labelBotCompleteNumber.Name = "labelBotCompleteNumber";
+            labelBotCompleteNumber.Size = new System.Drawing.Size(34, 28);
+            labelBotCompleteNumber.TabIndex = 8;
+            labelBotCompleteNumber.Text = "50";
             // 
             // label16
             // 
@@ -146,26 +134,25 @@
             label17.TabIndex = 6;
             label17.Text = "Splněno:";
             // 
-            // label18
+            // labelBot
             // 
-            label18.AutoSize = true;
-            label18.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label18.Location = new System.Drawing.Point(14, 25);
-            label18.Name = "label18";
-            label18.Size = new System.Drawing.Size(259, 54);
-            label18.TabIndex = 6;
-            label18.Text = "Nepravidelná";
+            labelBot.AutoSize = true;
+            labelBot.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelBot.Location = new System.Drawing.Point(14, 25);
+            labelBot.Name = "labelBot";
+            labelBot.Size = new System.Drawing.Size(259, 54);
+            labelBot.TabIndex = 6;
+            labelBot.Text = "Nepravidelná";
             // 
             // panel2
             // 
             panel2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             panel2.Controls.Add(transparentProgressBar1);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(label9);
+            panel2.Controls.Add(labelMidMissingNumber);
+            panel2.Controls.Add(labelMidCompleteNumber);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(label12);
-            panel2.Controls.Add(label13);
+            panel2.Controls.Add(labelMid);
             panel2.Location = new System.Drawing.Point(0, 252);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(1066, 250);
@@ -181,36 +168,27 @@
             transparentProgressBar1.Size = new System.Drawing.Size(965, 35);
             transparentProgressBar1.TabIndex = 14;
             transparentProgressBar1.Value = 0;
+            transparentProgressBar1.Click += transparentProgressBar1_Click;
             // 
-            // label7
+            // labelMidMissingNumber
             // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label7.Location = new System.Drawing.Point(329, 9);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(285, 28);
-            label7.TabIndex = 13;
-            label7.Text = "Pro více detailů klikněte na graf";
+            labelMidMissingNumber.AutoSize = true;
+            labelMidMissingNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelMidMissingNumber.Location = new System.Drawing.Point(156, 117);
+            labelMidMissingNumber.Name = "labelMidMissingNumber";
+            labelMidMissingNumber.Size = new System.Drawing.Size(45, 28);
+            labelMidMissingNumber.TabIndex = 9;
+            labelMidMissingNumber.Text = "100";
             // 
-            // label8
+            // labelMidCompleteNumber
             // 
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label8.Location = new System.Drawing.Point(156, 117);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(45, 28);
-            label8.TabIndex = 9;
-            label8.Text = "100";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label9.Location = new System.Drawing.Point(167, 79);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(34, 28);
-            label9.TabIndex = 8;
-            label9.Text = "50";
+            labelMidCompleteNumber.AutoSize = true;
+            labelMidCompleteNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelMidCompleteNumber.Location = new System.Drawing.Point(167, 79);
+            labelMidCompleteNumber.Name = "labelMidCompleteNumber";
+            labelMidCompleteNumber.Size = new System.Drawing.Size(34, 28);
+            labelMidCompleteNumber.TabIndex = 8;
+            labelMidCompleteNumber.Text = "50";
             // 
             // label10
             // 
@@ -232,26 +210,26 @@
             label12.TabIndex = 6;
             label12.Text = "Splněno:";
             // 
-            // label13
+            // labelMid
             // 
-            label13.AutoSize = true;
-            label13.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label13.Location = new System.Drawing.Point(14, 25);
-            label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(215, 54);
-            label13.TabIndex = 6;
-            label13.Text = "U - slovesa";
+            labelMid.AutoSize = true;
+            labelMid.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelMid.Location = new System.Drawing.Point(14, 25);
+            labelMid.Name = "labelMid";
+            labelMid.Size = new System.Drawing.Size(215, 54);
+            labelMid.TabIndex = 6;
+            labelMid.Text = "U - slovesa";
             // 
             // AbecedyPanel
             // 
             AbecedyPanel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             AbecedyPanel.Controls.Add(progressBar1);
             AbecedyPanel.Controls.Add(label11);
-            AbecedyPanel.Controls.Add(label6);
-            AbecedyPanel.Controls.Add(label5);
+            AbecedyPanel.Controls.Add(labelTopMissingNumber);
+            AbecedyPanel.Controls.Add(labelTopCompleteNumber);
             AbecedyPanel.Controls.Add(label4);
             AbecedyPanel.Controls.Add(label1);
-            AbecedyPanel.Controls.Add(label2);
+            AbecedyPanel.Controls.Add(labelTop);
             AbecedyPanel.Location = new System.Drawing.Point(0, 0);
             AbecedyPanel.Name = "AbecedyPanel";
             AbecedyPanel.Size = new System.Drawing.Size(1066, 250);
@@ -279,25 +257,25 @@
             label11.TabIndex = 13;
             label11.Text = "Pro více detailů klikněte na graf";
             // 
-            // label6
+            // labelTopMissingNumber
             // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label6.Location = new System.Drawing.Point(156, 117);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(45, 28);
-            label6.TabIndex = 9;
-            label6.Text = "100";
+            labelTopMissingNumber.AutoSize = true;
+            labelTopMissingNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelTopMissingNumber.Location = new System.Drawing.Point(156, 117);
+            labelTopMissingNumber.Name = "labelTopMissingNumber";
+            labelTopMissingNumber.Size = new System.Drawing.Size(45, 28);
+            labelTopMissingNumber.TabIndex = 9;
+            labelTopMissingNumber.Text = "100";
             // 
-            // label5
+            // labelTopCompleteNumber
             // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(167, 79);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(34, 28);
-            label5.TabIndex = 8;
-            label5.Text = "50";
+            labelTopCompleteNumber.AutoSize = true;
+            labelTopCompleteNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelTopCompleteNumber.Location = new System.Drawing.Point(167, 79);
+            labelTopCompleteNumber.Name = "labelTopCompleteNumber";
+            labelTopCompleteNumber.Size = new System.Drawing.Size(34, 28);
+            labelTopCompleteNumber.TabIndex = 8;
+            labelTopCompleteNumber.Text = "50";
             // 
             // label4
             // 
@@ -319,15 +297,16 @@
             label1.TabIndex = 6;
             label1.Text = "Splněno:";
             // 
-            // label2
+            // labelTop
             // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(14, 25);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(239, 54);
-            label2.TabIndex = 6;
-            label2.Text = "RU - slovesa";
+            labelTop.AutoSize = true;
+            labelTop.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelTop.Location = new System.Drawing.Point(14, 25);
+            labelTop.Name = "labelTop";
+            labelTop.Size = new System.Drawing.Size(239, 54);
+            labelTop.TabIndex = 6;
+            labelTop.Text = "RU - slovesa";
+            labelTop.Click += label2_Click;
             // 
             // AccountDetail2
             // 
@@ -352,28 +331,26 @@
 
         public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private TransparentProgressBar transparentProgressBar1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel AbecedyPanel;
-        private TransparentProgressBar progressBar1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private TransparentProgressBar transparentProgressBar2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        public TransparentProgressBar transparentProgressBar1;
+        public TransparentProgressBar progressBar1;
+        public TransparentProgressBar transparentProgressBar2;
+        public System.Windows.Forms.Label labelMidMissingNumber;
+        public System.Windows.Forms.Label labelMidCompleteNumber;
+        public System.Windows.Forms.Label labelMid;
+        public System.Windows.Forms.Label labelTopMissingNumber;
+        public System.Windows.Forms.Label labelTopCompleteNumber;
+        public System.Windows.Forms.Label labelTop;
+        public System.Windows.Forms.Label labelBot;
+        public System.Windows.Forms.Label labelBotMissingNumber;
+        public System.Windows.Forms.Label labelBotCompleteNumber;
+        public System.Windows.Forms.Panel panel3;
     }
 }

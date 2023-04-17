@@ -76,62 +76,24 @@ namespace Japonstina
 
         }
 
-        private void KatakanaGraf_Click(object sender, EventArgs e)
-        {
-        }
 
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
-            if (StavAplikace.ActiveForm != "DetailKatakana")
-            {
-                StavAplikace.ActiveForm = "DetailKatakana";
-                Program.welcome.panel1.Controls.Clear();
-                AccountDetail2 a = new AccountDetail2();
-                a.TopLevel = false;
-                Program.welcome.panel1.Controls.Add(a);
-                a.Dock = DockStyle.Fill;
-                a.Show();
-            }
-        }
-
-        private void AbecedyPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void AccountMenu_Load(object sender, EventArgs e)
-        {
-
+            AccountFormDetail accountFormDetailInstance = new AccountFormDetail();
+            accountFormDetailInstance.SetAccountForm("DetailKatakana");
         }
 
         private void progressBar2_Click(object sender, EventArgs e)
         {
-            if (StavAplikace.ActiveForm != "DetailKanji")
-            {
-                StavAplikace.ActiveForm = "DetailKanji";
-                Program.welcome.panel1.Controls.Clear();
-                AccountDetail2 a = new AccountDetail2();
-                a.TopLevel = false;
-                Program.welcome.panel1.Controls.Add(a);
-                a.Dock = DockStyle.Fill;
-                a.Show();
-            }
-
+            AccountFormDetail accountFormDetailInstance = new AccountFormDetail();
+            accountFormDetailInstance.SetAccountForm("DetailKanji");
         }
 
         private void progressBar3_Click(object sender, EventArgs e)
         {
-            if (StavAplikace.ActiveForm != "DetailSlovesa")
-            {
-                StavAplikace.ActiveForm = "DetailSlovesa";
-                Program.welcome.panel1.Controls.Clear();
-                AccountDetail2 a = new AccountDetail2();
-                a.TopLevel = false;
-                Program.welcome.panel1.Controls.Add(a);
-                a.Dock = DockStyle.Fill;
-                a.Show();
-            }
+            AccountFormDetail accountFormDetailInstance = new AccountFormDetail();
+            accountFormDetailInstance.SetAccountForm("DetailSlovesa");
         }
     }
 

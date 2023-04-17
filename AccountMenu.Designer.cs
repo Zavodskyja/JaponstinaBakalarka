@@ -69,7 +69,7 @@
             AbecedyPanel.Name = "AbecedyPanel";
             AbecedyPanel.Size = new System.Drawing.Size(1066, 250);
             AbecedyPanel.TabIndex = 4;
-            AbecedyPanel.Paint += AbecedyPanel_Paint;
+           
             // 
             // progressBarKatakana
             // 
@@ -309,7 +309,6 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "AccountMenu";
             Text = "Form1";
-            Load += AccountMenu_Load;
             AbecedyPanel.ResumeLayout(false);
             AbecedyPanel.PerformLayout();
             KanjiPanel.ResumeLayout(false);

@@ -52,7 +52,7 @@ namespace Japonstina
         {
             if(StavAplikace.ActiveForm == "DetailKatakana")
             {
-
+                
             }
 
             if (StavAplikace.ActiveForm == "DetailKanji")
