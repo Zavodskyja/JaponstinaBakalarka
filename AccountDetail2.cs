@@ -24,9 +24,9 @@ namespace Japonstina
             Control clickedControl = sender as Control;
             string controlName = clickedControl.Name;
             AccountFormDetail accountFormDetailInstance = new AccountFormDetail();
-           // AccountDataSetup accountDataInstance = new AccountDataSetup();
             accountFormDetailInstance.SetAccountForm(controlName);
-           // accountDataInstance.SetProgressData(controlName);
+            account accountDataInstance = new account();
+            accountDataInstance.SetCheckedState(controlName);
 
 
         }
@@ -39,6 +39,8 @@ namespace Japonstina
             // AccountDataSetup accountDataInstance = new AccountDataSetup();
             accountFormDetailInstance.SetAccountForm(controlName);
             // accountDataInstance.SetProgressData(controlName);
+            account accountDataInstance = new account();
+            accountDataInstance.SetCheckedState(controlName);
         }
 
         private void transparentProgressBar2_Click(object sender, EventArgs e)
@@ -49,6 +51,8 @@ namespace Japonstina
             // AccountDataSetup accountDataInstance = new AccountDataSetup();
             accountFormDetailInstance.SetAccountForm(controlName);
             // accountDataInstance.SetProgressData(controlName);
+            account accountDataInstance = new account();
+            accountDataInstance.SetCheckedState(controlName);
         }
 
 

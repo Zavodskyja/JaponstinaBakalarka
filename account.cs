@@ -106,7 +106,7 @@ namespace Japonstina
 
         public void SetCheckedState(string detailType)
         {
-
+            //TODO - dodelat vyber dle detailTypy.
             var slovnik = vyuka.JP.Slovnik();
             var ProgressHiragana = slovnik.Where(i => i.Key.znaky == vyuka.abeceda.Hiragana).Select(x => x.Value.JP).ToList();
             var HiraganaCount = ProgressHiragana.Count();
@@ -121,39 +121,14 @@ namespace Japonstina
 
             ZnakSplnenoH = ProgressData(detailType);
             SplnenoH = ZnakSplnenoH.Count();
-            // ProgressManager.ProgressAccountZnaky();
-
-            /*foreach (string setType in setTypes)
-            {
-                if (setType == "Hiragana")
-                {
-
-                }
-                else if (setType == "Katakana")
-                {
-                    ZnakSplnenoK = ProgressData(setType);
-                    SplnenoK = ZnakSplnenoK.Count();
-                }
-                else
-                {
-
-                }
-            }
-            */
-            // Instance.SetProgressBar(SplnenoH, SplnenoK, HiraganaProgressBar);
 
             ProgressManager.ProgressAccount(HiraganaCount, SplnenoH, KatakanaCount, SplnenoK);
 
             foreach (string znak in ProgressHiragana)
             {
                 ItemList.Items.Add(znak);
+            }
 
-            }
-            /*foreach (string znak in ProgressKatakana)
-            {
-                KatakanaList.Items.Add(znak);
-            }
-            */
             foreach (int ID in ZnakSplnenoH)
             {
                 string znak = GetZnakID(ID);
@@ -164,16 +139,6 @@ namespace Japonstina
                 }
             }
 
-            /*foreach (int ID in ZnakSplnenoK)
-            {
-                string znak = GetZnakID(ID);
-                int index = KatakanaList.FindStringExact(znak);
-                if (index != -1)
-                {
-                    KatakanaList.SetItemChecked(index, true);
-                }
-            }
-            */
 
         }
         public string GetZnakID(int id)
