@@ -156,6 +156,7 @@
             progressBar2.Size = new System.Drawing.Size(965, 35);
             progressBar2.TabIndex = 13;
             progressBar2.Value = 0;
+            progressBar2.Click += progressBar2_Click;
             // 
             // progressBar3
             // 
@@ -166,6 +167,7 @@
             progressBar3.Size = new System.Drawing.Size(965, 35);
             progressBar3.TabIndex = 13;
             progressBar3.Value = 0;
+            progressBar3.Click += progressBar3_Click;
             // 
             // label1
             // 
@@ -307,6 +309,7 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "AccountMenu";
             Text = "Form1";
+            Load += AccountMenu_Load;
             AbecedyPanel.ResumeLayout(false);
             AbecedyPanel.PerformLayout();
             KanjiPanel.ResumeLayout(false);

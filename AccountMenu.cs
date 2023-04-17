@@ -83,9 +83,9 @@ namespace Japonstina
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
-            if (StavAplikace.ActiveForm != "Abecedy")
+            if (StavAplikace.ActiveForm != "DetailKatakana")
             {
-                StavAplikace.ActiveForm = "Abecedy";
+                StavAplikace.ActiveForm = "DetailKatakana";
                 Program.welcome.panel1.Controls.Clear();
                 account a = new account();
                 a.TopLevel = false;
@@ -100,8 +100,29 @@ namespace Japonstina
 
         }
 
+        private void AccountMenu_Load(object sender, EventArgs e)
+        {
 
+        }
 
+        private void progressBar2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar3_Click(object sender, EventArgs e)
+        {
+            if (StavAplikace.ActiveForm != "DetailSlovesa")
+            {
+                StavAplikace.ActiveForm = "DetailSlovesa";
+                Program.welcome.panel1.Controls.Clear();
+                AccountDetail2 a = new AccountDetail2();
+                a.TopLevel = false;
+                Program.welcome.panel1.Controls.Add(a);
+                a.Dock = DockStyle.Fill;
+                a.Show();
+            }
+        }
     }
 
 }

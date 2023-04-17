@@ -25,14 +25,6 @@ namespace Japonstina
 
 
 
-
-
-
-
-
-
-
-
         public static void Init()
         {
             LoadKanji();
