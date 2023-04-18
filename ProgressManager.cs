@@ -143,7 +143,7 @@ namespace Japonstina
             double SplnenoKa = SplnenoK;
             double hiragana = (double)SplnenoHi / ZnakyHi * 100;
             double katakana = (double)SplnenoKa / ZnakyKa * 100;
-            ProgressAbecedy(hiragana, katakana);
+           // ProgressAbecedy(hiragana, katakana);
         }
 
         public static void ProgressAbecedy(double hiragana, double katakana)

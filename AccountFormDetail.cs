@@ -30,7 +30,9 @@ namespace Japonstina
                 }
                 else
                 {
+
                     account a = new account();
+                    a.SetCheckedState(form);
                     a.TopLevel = false;
                     Program.welcome.panel1.Controls.Add(a);
                     a.Dock = DockStyle.Fill;

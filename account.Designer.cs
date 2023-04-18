@@ -38,7 +38,7 @@ namespace Japonstina
             ItemList = new System.Windows.Forms.CheckedListBox();
             panel7 = new System.Windows.Forms.Panel();
             panel1 = new System.Windows.Forms.Panel();
-            label3 = new System.Windows.Forms.Label();
+            labelDetail = new System.Windows.Forms.Label();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -136,23 +136,23 @@ namespace Japonstina
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(252, 201, 185);
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(labelDetail);
             panel1.Controls.Add(panel3);
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(1066, 730);
             panel1.TabIndex = 0;
             // 
-            // label3
+            // labelDetail
             // 
-            label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label3.ForeColor = System.Drawing.Color.White;
-            label3.Location = new System.Drawing.Point(0, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(1066, 57);
-            label3.TabIndex = 4;
-            label3.Text = "Detail ";
-            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelDetail.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelDetail.ForeColor = System.Drawing.Color.White;
+            labelDetail.Location = new System.Drawing.Point(0, 0);
+            labelDetail.Name = "labelDetail";
+            labelDetail.Size = new System.Drawing.Size(1066, 57);
+            labelDetail.TabIndex = 4;
+            labelDetail.Text = "Hiragana";
+            labelDetail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // account
             // 
@@ -173,7 +173,7 @@ namespace Japonstina
         public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.CheckedListBox ItemList;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelDetail;
         private CircularProgressBar2 progressBarCircle;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label labelNesplnenoValue;

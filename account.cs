@@ -27,7 +27,7 @@ namespace Japonstina
         public account()
         {
             InitializeComponent();
-            SetCheckedState("Hiragana");
+            //SetCheckedState("Hiragana");
         }
 
 
@@ -106,6 +106,7 @@ namespace Japonstina
 
         public void SetCheckedState(string detailType)
         {
+            labelDetail.Text= detailType;
             //TODO - dodelat vyber dle detailTypy.
             var slovnik = vyuka.JP.Slovnik();
             var ProgressHiragana = slovnik.Where(i => i.Key.znaky == vyuka.abeceda.Hiragana).Select(x => x.Value.JP).ToList();
@@ -116,28 +117,51 @@ namespace Japonstina
             int SplnenoH = 0;
             int SplnenoK = 0;
 
-            List<int> ZnakSplnenoK = new List<int>();
             List<int> ZnakSplnenoH = new List<int>();
 
             ZnakSplnenoH = ProgressData(detailType);
             SplnenoH = ZnakSplnenoH.Count();
 
-            ProgressManager.ProgressAccount(HiraganaCount, SplnenoH, KatakanaCount, SplnenoK);
 
-            foreach (string znak in ProgressHiragana)
-            {
-                ItemList.Items.Add(znak);
-            }
 
-            foreach (int ID in ZnakSplnenoH)
+            //ProgressManager.ProgressAccount(HiraganaCount, SplnenoH, KatakanaCount, SplnenoK);
+            if (detailType == "Katakana")
             {
-                string znak = GetZnakID(ID);
-                int index = ItemList.FindStringExact(znak);
-                if (index != -1)
+                foreach (string znak in ProgressKatakana)
                 {
-                    ItemList.SetItemChecked(index, true);
+                    ItemList.Items.Add(znak);
+                }
+
+                foreach (int ID in ZnakSplnenoH)
+                {
+                    string znak = GetZnakID(ID);
+                    int index = ItemList.FindStringExact(znak);
+                    if (index != -1)
+                    {
+                        ItemList.SetItemChecked(index, true);
+                    }
                 }
             }
+
+            if (detailType=="Hiragana")
+            {
+                foreach (string znak in ProgressHiragana)
+                {
+                    ItemList.Items.Add(znak);
+                }
+
+                foreach (int ID in ZnakSplnenoH)
+                {
+                    string znak = GetZnakID(ID);
+                    int index = ItemList.FindStringExact(znak);
+                    if (index != -1)
+                    {
+                        ItemList.SetItemChecked(index, true);
+                    }
+                }
+            }
+
+
 
 
         }
