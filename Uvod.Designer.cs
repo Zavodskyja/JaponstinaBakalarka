@@ -29,97 +29,96 @@ namespace Japonstina
         /// </summary>
         private void InitializeComponent()
         {
-            this.WelcomeScreen = new System.Windows.Forms.Panel();
-            this.WelcomeText_small = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.WelcomeText = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.WelcomeScreen.SuspendLayout();
-            this.WelcomeText_small.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.WelcomeText.SuspendLayout();
-            this.SuspendLayout();
+            WelcomeScreen = new System.Windows.Forms.Panel();
+            WelcomeText_small = new System.Windows.Forms.Panel();
+            label3 = new System.Windows.Forms.Label();
+            pictureBox4 = new System.Windows.Forms.PictureBox();
+            WelcomeText = new System.Windows.Forms.Panel();
+            label1 = new System.Windows.Forms.Label();
+            WelcomeScreen.SuspendLayout();
+            WelcomeText_small.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            WelcomeText.SuspendLayout();
+            SuspendLayout();
             // 
             // WelcomeScreen
             // 
-            this.WelcomeScreen.BackColor = System.Drawing.Color.Salmon;
-            this.WelcomeScreen.Controls.Add(this.WelcomeText_small);
-            this.WelcomeScreen.Controls.Add(this.pictureBox4);
-            this.WelcomeScreen.Controls.Add(this.WelcomeText);
-            this.WelcomeScreen.Location = new System.Drawing.Point(0, 0);
-            this.WelcomeScreen.Name = "WelcomeScreen";
-            this.WelcomeScreen.Size = new System.Drawing.Size(1066, 768);
-            this.WelcomeScreen.TabIndex = 2;
+            WelcomeScreen.BackColor = System.Drawing.Color.Salmon;
+            WelcomeScreen.Controls.Add(WelcomeText_small);
+            WelcomeScreen.Controls.Add(pictureBox4);
+            WelcomeScreen.Controls.Add(WelcomeText);
+            WelcomeScreen.Location = new System.Drawing.Point(0, 0);
+            WelcomeScreen.Name = "WelcomeScreen";
+            WelcomeScreen.Size = new System.Drawing.Size(1066, 768);
+            WelcomeScreen.TabIndex = 2;
             // 
             // WelcomeText_small
             // 
-            this.WelcomeText_small.Controls.Add(this.label3);
-            this.WelcomeText_small.Dock = System.Windows.Forms.DockStyle.Top;
-            this.WelcomeText_small.Location = new System.Drawing.Point(0, 67);
-            this.WelcomeText_small.Name = "WelcomeText_small";
-            this.WelcomeText_small.Size = new System.Drawing.Size(1066, 61);
-            this.WelcomeText_small.TabIndex = 2;
+            WelcomeText_small.Controls.Add(label3);
+            WelcomeText_small.Dock = System.Windows.Forms.DockStyle.Top;
+            WelcomeText_small.Location = new System.Drawing.Point(0, 67);
+            WelcomeText_small.Name = "WelcomeText_small";
+            WelcomeText_small.Size = new System.Drawing.Size(1066, 61);
+            WelcomeText_small.TabIndex = 2;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(333, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(388, 30);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Pro spuštění aplikace se prosím přihlašte";
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.ForeColor = System.Drawing.Color.White;
+            label3.Location = new System.Drawing.Point(333, 15);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(388, 30);
+            label3.TabIndex = 0;
+            label3.Text = "Pro spuštění aplikace se prosím přihlašte";
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = global::Japonstina.Properties.Resources.JP_Logo;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 67);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1066, 701);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
+            pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            pictureBox4.Image = Properties.Resources.pokus1;
+            pictureBox4.Location = new System.Drawing.Point(0, 67);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new System.Drawing.Size(1066, 701);
+            pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 1;
+            pictureBox4.TabStop = false;
             // 
             // WelcomeText
             // 
-            this.WelcomeText.Controls.Add(this.label1);
-            this.WelcomeText.Dock = System.Windows.Forms.DockStyle.Top;
-            this.WelcomeText.Location = new System.Drawing.Point(0, 0);
-            this.WelcomeText.Name = "WelcomeText";
-            this.WelcomeText.Size = new System.Drawing.Size(1066, 67);
-            this.WelcomeText.TabIndex = 0;
+            WelcomeText.Controls.Add(label1);
+            WelcomeText.Dock = System.Windows.Forms.DockStyle.Top;
+            WelcomeText.Location = new System.Drawing.Point(0, 0);
+            WelcomeText.Name = "WelcomeText";
+            WelcomeText.Size = new System.Drawing.Size(1066, 67);
+            WelcomeText.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(223, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(607, 65);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Vítejte v aplikaci Japonština";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Location = new System.Drawing.Point(223, 2);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(607, 65);
+            label1.TabIndex = 0;
+            label1.Text = "Vítejte v aplikaci Japonština";
             // 
             // Uvod
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 824);
-            this.Controls.Add(this.WelcomeScreen);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Uvod";
-            this.Text = "Uvod";
-            this.WelcomeScreen.ResumeLayout(false);
-            this.WelcomeText_small.ResumeLayout(false);
-            this.WelcomeText_small.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.WelcomeText.ResumeLayout(false);
-            this.WelcomeText.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1241, 824);
+            Controls.Add(WelcomeScreen);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Name = "Uvod";
+            Text = "Uvod";
+            WelcomeScreen.ResumeLayout(false);
+            WelcomeText_small.ResumeLayout(false);
+            WelcomeText_small.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            WelcomeText.ResumeLayout(false);
+            WelcomeText.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

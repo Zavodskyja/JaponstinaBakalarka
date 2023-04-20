@@ -121,11 +121,26 @@
   <data name="window-minimize-regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img_assety\window-minimize-regular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="20180707_130430" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20180707_130430.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HiraganaChartPinkAPIECEOFSUSHI.COM_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img_assety\HiraganaChartPinkAPIECEOFSUSHI.COM_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="JP_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img_assety\JP_Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pokus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pokus1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20180702_173543" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20180702_173543.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user-regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img_assety\user-regular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vocabulary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vocabulary.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="HiraganaChartBlueAPIECEOFSUSHI.COM_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img_assety\HiraganaChartBlueAPIECEOFSUSHI.COM_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,10 +154,7 @@
   <data name="KatakanaChartPinkAPIECEOFSUSHI.COM_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img_assety\KatakanaChartPinkAPIECEOFSUSHI.COM_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="JP_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img_assety\JP_Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Vocabulary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vocabulary.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="pokus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pokus2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

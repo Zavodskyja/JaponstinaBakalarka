@@ -63,6 +63,26 @@ namespace Japonstina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20180702_173543 {
+            get {
+                object obj = ResourceManager.GetObject("20180702_173543", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20180707_130430 {
+            get {
+                object obj = ResourceManager.GetObject("20180707_130430", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HiraganaChartBlueAPIECEOFSUSHI_COM_ {
             get {
                 object obj = ResourceManager.GetObject("HiraganaChartBlueAPIECEOFSUSHI.COM_", resourceCulture);
@@ -106,6 +126,26 @@ namespace Japonstina.Properties {
         internal static System.Drawing.Bitmap key_solid {
             get {
                 object obj = ResourceManager.GetObject("key-solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokus {
+            get {
+                object obj = ResourceManager.GetObject("pokus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokus1 {
+            get {
+                object obj = ResourceManager.GetObject("pokus1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -120,10 +120,10 @@ namespace Japonstina
             ItemList.Location = new System.Drawing.Point(0, 293);
             ItemList.MultiColumn = true;
             ItemList.Name = "ItemList";
-            ItemList.ScrollAlwaysVisible = true;
             ItemList.SelectionMode = System.Windows.Forms.SelectionMode.None;
             ItemList.Size = new System.Drawing.Size(1040, 380);
             ItemList.TabIndex = 0;
+            ItemList.TabStop = false;
             ItemList.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged_1;
             // 
             // panel7

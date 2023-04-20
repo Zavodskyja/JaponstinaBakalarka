@@ -67,9 +67,9 @@ namespace Japonstina
                 accountDetailInstance.labelTop.Text = "RU - Ichidan";
                 accountDetailInstance.labelMid.Text = "U - Godan";
                 accountDetailInstance.labelBot.Text = "Nepravidelná";
-                accountDetailInstance.progressBar1.Name = "Hiragana";
-                accountDetailInstance.progressBar2.Name = "Katakana";
-                accountDetailInstance.progressBar3.Name = "Hiragana";
+                accountDetailInstance.progressBar1.Name = "RU - Ichidan";
+                accountDetailInstance.progressBar2.Name = "U - Godan";
+                accountDetailInstance.progressBar3.Name = "Nepravidelné";
             }
         }
 
