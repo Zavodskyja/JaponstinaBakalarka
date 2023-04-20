@@ -149,7 +149,7 @@ namespace Japonstina
                 SetGraph(accountDetailInstance.progressBar3, verbValue);
             }
 
-            if (form is "DetailKatakana")
+            if (form == "DetailKatakana")
             {
                var sourceListHiragana = katakanaDictionary.Where(i => i.Key.znaky == abeceda.Hiragana).Select(x => x.Value.JP).ToList();
                var sourceListKatakana = katakanaDictionary.Where(i => i.Key.znaky == abeceda.Katakana).Select(x => x.Value.JP).ToList();
@@ -173,7 +173,7 @@ namespace Japonstina
                 accountDetailInstance.labelMidMissingNumber.Text = (sourceListKatakana.Count() - completedIdKatakana.Count()).ToString();
                 SetGraph(accountDetailInstance.progressBar2, katakanaValue);
             }
-            if (form is "DetailKanji")
+            if (form == "DetailKanji")
             {
 
                 var sourceListN5 = kanjiDictionary.Where(i => i.KanjiUroven =="N5").Select(x => x.KanjiJp).ToList();
@@ -199,7 +199,7 @@ namespace Japonstina
                 SetGraph(accountDetailInstance.progressBar2, n4Value);
 
             }
-            if (form is "DetailSlovesa")
+            if (form == "DetailSlovesa")
             {
                 var sourceListRuVerbs = kanjiDictionary.Where(i => i.Typ2 == "RU - Ichidan").Select(x => x.KanjiJp).ToList();
                 var sourceListUVerbs = kanjiDictionary.Where(i => i.Typ2 == "U - Godan").Select(x => x.KanjiJp).ToList();
