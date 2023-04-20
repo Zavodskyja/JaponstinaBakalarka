@@ -11,6 +11,7 @@ using System.IO;
 using Japonstina.models;
 using Newtonsoft.Json;
 using Japonstina;
+using System.Security.Cryptography;
 
 
 
@@ -118,7 +119,7 @@ namespace Japonstina
                 sr.Close();
                 MessageBox.Show($"Naskytla se Chyba při načítání uživatelských účtů. Data byla resetována.", "Chyba uživatele", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                // Delete the file and create a new one
+                
                 File.Delete(path);
                 using (StreamWriter sw = File.CreateText(path))
                 {
@@ -209,8 +210,8 @@ namespace Japonstina
         {
             var user = new usermodel()
             {
-                username = LoginBox.Text,
-                password = PasswordBox.Text
+                username = ComputeSha256Hash(LoginBox.Text),
+                password = ComputeSha256Hash(PasswordBox.Text)
 
             };
             if (userstorage.login(user))
@@ -283,6 +284,20 @@ namespace Japonstina
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private static string ComputeSha256Hash(string rawData)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
         }
     }
 }

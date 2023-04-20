@@ -11,6 +11,7 @@ using System.IO;
 using Japonstina.models;
 using Japonstina.Registrace;
 using System.Text.RegularExpressions;
+using System.Security.Cryptography;
 
 
 namespace Japonstina
@@ -32,7 +33,7 @@ namespace Japonstina
         private void button1_Click(object sender, EventArgs e)
         {
             var validatePassword = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,15}$");
-            var validateLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$"); 
+            var validateLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$");
 
             if (userstorage.exist(RegistrationLoginBox.Text))
             {
@@ -54,27 +55,12 @@ namespace Japonstina
             }
 
             else
-                using (StreamWriter writetext = new StreamWriter("login", append: true))
-                {
 
-                    writetext.WriteLine(RegistrationLoginBox.Text + '|' + RegistrationPasswordBox1.Text);
-                    RegistrationError.Text = "";
-                    var user = new usermodel();
-                    user.username = RegistrationLoginBox.Text;
-                    user.password = RegistrationPasswordBox1.Text;
-                    userstorage.adduser(user);
-                    Program.welcome.panel1.Controls.Clear();
-                    RegistraceOk ROk = new RegistraceOk();
-                    Program.welcome.panel1.Controls.Add(ROk);
-                    ROk.Dock = DockStyle.Fill;
-                    ROk.Show();
-                    StavAplikace.ActiveForm = "RegistraceOk";
-                    ProgressManager.FirstLoginRun(user.username);
+            {
 
+                RegisterUser();
 
-
-                }
-
+            }
         }
 
         private void RegistrationLoginBox_TextChanged(object sender, EventArgs e)
@@ -110,6 +96,44 @@ namespace Japonstina
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public void RegisterUser()
+        {
+            using (StreamWriter writetext = new StreamWriter("login", append: true))
+            {
+                string hashedPassword = ComputeSha256Hash(RegistrationPasswordBox1.Text);
+                string hashedUser = ComputeSha256Hash(RegistrationLoginBox.Text);
+
+
+                writetext.WriteLine(hashedUser + '|' + hashedPassword);
+                RegistrationError.Text = "";
+                var user = new usermodel();
+                user.username = hashedUser;
+                user.password = hashedPassword;
+                userstorage.adduser(user);
+                Program.welcome.panel1.Controls.Clear();
+                RegistraceOk ROk = new RegistraceOk();
+                Program.welcome.panel1.Controls.Add(ROk);
+                ROk.Dock = DockStyle.Fill;
+                ROk.Show();
+                StavAplikace.ActiveForm = "RegistraceOk";
+                ProgressManager.FirstLoginRun(user.username);
+            }
+        }
+
+        private static string ComputeSha256Hash(string rawData)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
         }
     }
 }
