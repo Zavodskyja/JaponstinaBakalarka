@@ -210,7 +210,7 @@ namespace Japonstina
         {
             var user = new usermodel()
             {
-                username = ComputeSha256Hash(LoginBox.Text),
+                username = LoginBox.Text,
                 password = ComputeSha256Hash(PasswordBox.Text)
 
             };
@@ -220,7 +220,7 @@ namespace Japonstina
                 ProgressManager.FirstLoginRun(user.username);
                 ProgressManager.LoadProgress(user.username);
                 
-                PrihlasenyUzivatel = LoginBox.Text;
+                PrihlasenyUzivatel = user.username;
                 LoginPanel.Controls.Clear();
                 MainMenu m = new MainMenu();
                 m.TopLevel = false;

@@ -103,13 +103,13 @@ namespace Japonstina
             using (StreamWriter writetext = new StreamWriter("login", append: true))
             {
                 string hashedPassword = ComputeSha256Hash(RegistrationPasswordBox1.Text);
-                string hashedUser = ComputeSha256Hash(RegistrationLoginBox.Text);
+                string username = RegistrationLoginBox.Text;
 
 
-                writetext.WriteLine(hashedUser + '|' + hashedPassword);
+                writetext.WriteLine(username + '|' + hashedPassword);
                 RegistrationError.Text = "";
                 var user = new usermodel();
-                user.username = hashedUser;
+                user.username = RegistrationLoginBox.Text;
                 user.password = hashedPassword;
                 userstorage.adduser(user);
                 Program.welcome.panel1.Controls.Clear();
@@ -118,7 +118,7 @@ namespace Japonstina
                 ROk.Dock = DockStyle.Fill;
                 ROk.Show();
                 StavAplikace.ActiveForm = "RegistraceOk";
-                ProgressManager.FirstLoginRun(user.username);
+                ProgressManager.FirstLoginRun(username);
             }
         }
 
