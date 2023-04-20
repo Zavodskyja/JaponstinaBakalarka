@@ -114,10 +114,13 @@ namespace Japonstina
             List<string> sourceList = new List<string>();
             List<int> completedList = new List<int>();
             var completedCount = sourceList.Count();
-
             completedList = ProgressData(detailType);
-            /* TODO - dodelat do ProgressManager.ProgressAccount(HiraganaCount, SplnenoH, KatakanaCount, SplnenoK);
-            int completedListCount = 0;
+            var completedListCount = completedList.Count();
+            var sourcelistCount = sourceList.Count();
+            
+
+            /*TODO - dodelat do ProgressManager.ProgressAccount(HiraganaCount, SplnenoH, KatakanaCount, SplnenoK);
+            
             completedListCount = completedList.Count();
             */
 
@@ -127,6 +130,7 @@ namespace Japonstina
             {
                 sourceList = katakanaDictionary.Where(i => i.Key.znaky == vyuka.abeceda.Katakana).Select(x => x.Value.JP).ToList();
                 AccountListFill(sourceList, completedList);
+                
             }
 
             if (detailType == "Hiragana")
@@ -180,6 +184,10 @@ namespace Japonstina
 
         public void AccountListFill(List<string> sourceList, List<int> completedList)
         {
+            double graphValue = (double)completedList.Count() / sourceList.Count() * 100;
+            progressBarCircle.Value = (int)graphValue;
+            labelSplnenoValue.Text = completedList.Count().ToString();
+            labelNesplnenoValue.Text = (sourceList.Count() - completedList.Count()).ToString();
             foreach (string character in sourceList)
             {
                 ItemList.Items.Add(character);

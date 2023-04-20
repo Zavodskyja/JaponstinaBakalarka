@@ -234,6 +234,7 @@
             AbecedyPanel.Name = "AbecedyPanel";
             AbecedyPanel.Size = new System.Drawing.Size(1066, 250);
             AbecedyPanel.TabIndex = 5;
+            AbecedyPanel.Paint += AbecedyPanel_Paint;
             // 
             // progressBar1
             // 

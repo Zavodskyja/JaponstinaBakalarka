@@ -98,21 +98,9 @@ namespace Japonstina
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (StavAplikace.ActiveForm != "AccountDetail")
-            {
 
-                Program.welcome.panel1.Controls.Clear();
-                AccountMenu a = new AccountMenu();
-                a.TopLevel = false;
-                Program.welcome.panel1.Controls.Add(a);
-                a.Dock = DockStyle.Fill;
-                a.Show();
-                StavAplikace.ActiveForm = "AccountDetail";
-            }
-            else
-            {
-
-            }
+            AccountFormDetail accountFormDetailInstance = new AccountFormDetail();
+            accountFormDetailInstance.SetAccountForm("AccountDetail");
 
 
 

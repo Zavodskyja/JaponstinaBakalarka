@@ -82,7 +82,6 @@ namespace Japonstina
         {
             AccountFormDetail accountFormDetailInstance = new AccountFormDetail();
             accountFormDetailInstance.SetAccountForm("DetailKatakana");
-            
         }
 
         private void progressBar2_Click(object sender, EventArgs e)
