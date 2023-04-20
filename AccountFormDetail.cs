@@ -240,10 +240,7 @@ namespace Japonstina
                 accountDetailInstance.labelBotCompleteNumber.Text = completedIdIrregular.Count().ToString();
                 accountDetailInstance.labelBotMissingNumber.Text = (sourceListIrregular.Count() - completedIdIrregular.Count()).ToString();
                 SetGraph(accountDetailInstance.progressBar3, verbValue);
-
             }
-
-
         }
 
         public void SetGraph(TransparentProgressBar item, int value)
@@ -253,7 +250,7 @@ namespace Japonstina
             {
                 item.ForeColor = Color.FromArgb(195, 39, 43);
             }
-            else if (item.Value >= 30 || item.Value < 100)
+            else if (item.Value >= 30 && item.Value < 100)
             {
                 item.ForeColor = Color.FromArgb(240, 143, 144);
             }
@@ -263,6 +260,11 @@ namespace Japonstina
                 item.ForeColor = Color.FromArgb(165, 186, 147);
             }
         }
+
+
+
+
+
 
 
     }

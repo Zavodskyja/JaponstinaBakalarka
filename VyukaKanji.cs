@@ -32,6 +32,8 @@ namespace Japonstina
 
         string CorrectAnswer { get; set; }
 
+        int CorrectAnswerId { get; set; }
+
 
         string CurrentSet { get; set; }
 
@@ -105,7 +107,7 @@ namespace Japonstina
         {
             kanji_char.Text = string.IsNullOrEmpty(kanji) ? furigana : kanji;
             kanji_hiragana.Text = string.IsNullOrEmpty(kanji) ? "" : furigana;
-            if (CurrentSet is "RU - Ichidan" or "U - Godan" or "Nepravidelná")
+            if (CurrentSet is "RU - Ichidan" or "U - Godan" or "Nepravidelné")
             {
                 label2.Text = correctConjugationType;
             }
@@ -148,6 +150,7 @@ namespace Japonstina
             Kanji = KanjiZnak.KanjiZnak;
             Furigana = KanjiZnak.KanjiJp;
             CorrectAnswer = KanjiZnak.KanjiCZ;
+            CorrectAnswerId = KanjiZnak.Id;
             var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.Id)).Select(x => x.KanjiCZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
             ButtonText(PrekladRandom);
@@ -179,6 +182,7 @@ namespace Japonstina
             string correctConjugationType = shuffledConjugationPairs[0].Key;
             string correctConjugationForm = shuffledConjugationPairs[0].Value;
             CorrectAnswer = correctConjugationForm;
+            CorrectAnswerId = randomVerb.Id;
             ButtonDefault();
             KanjiInHiragana(Kanji, Furigana, correctConjugationType);
             if (Cviceni_vyber.CheckBoxTimeLimit)
@@ -205,6 +209,7 @@ namespace Japonstina
             var RandomJpZnaku = SeznamZnaku[random.Next(SeznamZnaku.Count)];
             var Znak = slovnik.FirstOrDefault(i => i.Key.ID == RandomJpZnaku);
             CorrectAnswer = Znak.Value.CZ;
+            CorrectAnswerId=Znak.Key.ID;
             kanji_char.Text = Znak.Value.JP;
             var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.Key.ID)).Select(x => x.Value.CZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
@@ -305,11 +310,12 @@ namespace Japonstina
             ButtonDisable();
             timer10Seconds.Stop();
             progressBarTimer.Stop();
-            //pridat logiku na save progressu pro correct X incorrect
+
             if (buttonText == CorrectAnswer)
             {
                 button.BackColor = Color.Green;
                 await Task.Delay(1000);
+                ProgressManager.UpdateProgress(CurrentSet, CorrectAnswerId, true);
                 KanjiMain();
             }
             else
@@ -317,6 +323,7 @@ namespace Japonstina
                 button.BackColor = Color.FromArgb(188, 0, 45);
                 DisplayCorrectAnswer();
                 await Task.Delay(2000);
+                ProgressManager.UpdateProgress(CurrentSet, CorrectAnswerId, false);
                 KanjiMain();
             }
         }

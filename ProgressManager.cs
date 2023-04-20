@@ -7,6 +7,9 @@ using Japonstina.models;
 using System.IO;
 using Japonstina.Properties;
 using System.Text;
+using System;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Japonstina
 {
@@ -51,19 +54,7 @@ namespace Japonstina
             VocabularyProgress = new ProgressDataModel { JapaneseProgress = japanese };
 
 
-           /* ProgressData = new ProgressDataModel()
-            {
-                ProgressZnaku = slovnik.Select(polozka => new ZnakModel()
-                {
-                    ZnakId = polozka.Key.ID,
-                    Abeceda = polozka.Key.znaky.ToString(),
-                }).ToList()
-            };
-           */
-
-
-
-            /*KanjiLoadData = new KanjiDataModel()
+            KanjiLoadData = new KanjiDataModel()
             {
                 Data = KanjiSlovnik.Select(kanji => new KanjiModel() 
                 {
@@ -77,39 +68,63 @@ namespace Japonstina
                 }).ToList()
 
             };
-            */
-
 
         }
 
-        /*TODO predelat ukladani udaju*/
-
-
-        /*public static void ProgressAccountZnaky()
+        public static void UpdateProgress(string currentSet,int id, bool correctAnswer)
         {
-            var ZnakSplneno = ProgressData.ProgressZnaku.Where(a => a.ZnakSplneno == true).Select(i => i.ZnakId).ToList<int>();
+            
+            
 
-        }
-        */
-        /*public static void UpdateProgress(int znakId, int ChybaPocet)
-        {
-            var znakToUpdate = ProgressData.ProgressZnaku.FirstOrDefault(znak => znak.ZnakId == znakId);
-
-
-
-            if (ChybaPocet == 0)
+            if(currentSet == "Hiragana" || currentSet == "Katakana" )
             {
-                znakToUpdate.ZnakProgress++;
+                var znakToUpdate = ProgressData.JapaneseProgress.Katakana.FirstOrDefault(znak => znak.KatakanaId == id);
+                if (correctAnswer == true)
+                {
+                    znakToUpdate.KatakanaProgress++;
+                }
+
+                if (znakToUpdate == null)
+                {
+                    return;
+                }
+                znakToUpdate.KatakanaCompletion = znakToUpdate.KatakanaProgress == 3 ? true : false;
             }
 
-            if (znakToUpdate == null)
+            if (currentSet == "N5" || currentSet == "N4")
             {
-                return;
+               var znakToUpdate= ProgressData.JapaneseProgress.Vocabulary.FirstOrDefault(znak => znak.Id == id);
+                if (correctAnswer == true)
+                {
+                    znakToUpdate.KanjiProgress = (znakToUpdate.KanjiProgress < 3) ? znakToUpdate.KanjiProgress + 1 : znakToUpdate.KanjiProgress;
+                }
+
+                if (znakToUpdate == null)
+                {
+                    return;
+                }
+                znakToUpdate.KanjiCompletion = znakToUpdate.KanjiProgress == 3 ? true : false;
+
             }
 
-            znakToUpdate.ZnakSplneno = znakToUpdate.ZnakProgress == 3 ? true : false;
+            if (currentSet == "RU - Ichidan" || currentSet == "U - Godan" || currentSet == "Nepravidelné")
+            {
+                var znakToUpdate = ProgressData.JapaneseProgress.Vocabulary.FirstOrDefault(znak => znak.Id == id);
+                if (correctAnswer == true)
+                {
+                    znakToUpdate.ConjugationProgress = (znakToUpdate.ConjugationProgress < 3) ? znakToUpdate.ConjugationProgress + 1 : znakToUpdate.ConjugationProgress;
+                }
+
+                if (znakToUpdate == null)
+                {
+                    return;
+                }
+                znakToUpdate.ConjugationCompletion = znakToUpdate.ConjugationProgress == 3 ? true : false;
+
+            }
+            SaveProgress();
         }
-        */
+
         public static void SaveProgress()
         {
             string json = JsonConvert.SerializeObject(ProgressData, Formatting.Indented);
@@ -119,11 +134,18 @@ namespace Japonstina
 
         public static void LoadProgress(string user)
         {
-            var username = user;
-            var path = $"Data/{username}";
-            string jsonFile = File.ReadAllText(path);
-            ProgressData = JsonConvert.DeserializeObject<ProgressDataModel>(jsonFile);
-
+            try
+            {
+                var username = user;
+                var path = $"Data/{username}";
+                string jsonFile = File.ReadAllText(path);
+                ProgressData = JsonConvert.DeserializeObject<ProgressDataModel>(jsonFile);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Naskytla se Chyba při načítání dat uživatele {user}. Data byla resetována.", "Chyba uživatele", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FirstLoginRun(user);
+            }
         }
 
         public static void FirstLoginRun(string user)
@@ -135,41 +157,11 @@ namespace Japonstina
             { File.WriteAllText(filename, json); }
         }
 
-        public static void ProgressAccount(int HiraganaCount, double SplnenoH, int KatakanaCount, double SplnenoK)
-        {
-            int ZnakyHi = HiraganaCount;
-            int ZnakyKa = KatakanaCount;
-            double SplnenoHi = SplnenoH;
-            double SplnenoKa = SplnenoK;
-            double hiragana = (double)SplnenoHi / ZnakyHi * 100;
-            double katakana = (double)SplnenoKa / ZnakyKa * 100;
-           // ProgressAbecedy(hiragana, katakana);
-        }
-
-        public static void ProgressAbecedy(double hiragana, double katakana)
-        {
-            account.HiraganaProgress = (int)hiragana;
-            account.KatakanaProgress = (int)katakana;
-
-        }
-
-        public static void ProgressAbecedy()
-        {
-
-
-
-        }
-
         public static void LoadKanji()
         {
             string jsonFile = Resources.Vocabulary;
             KanjiLoadData = JsonConvert.DeserializeObject<KanjiDataModel>(jsonFile);
         }
-
-
-
-
-
 
     }
 
