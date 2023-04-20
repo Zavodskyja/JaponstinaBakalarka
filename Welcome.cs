@@ -66,41 +66,68 @@ namespace Japonstina
         private void Form1_Load(object sender, EventArgs e)
         {
             string path = @"login";
-            if (!File.Exists(path))
-            {
+            StreamReader sr = null;
+            bool fileOpened = false;
 
-                using (StreamWriter sw = File.CreateText(path))
+            while (!fileOpened)
+            {
+                try
                 {
+                    if (!File.Exists(path))
+                    {
+                        using (StreamWriter sw = File.CreateText(path))
+                        {
+                        }
+                    }
+
+                    sr = new StreamReader(path);
+                    fileOpened = true;
+                }
+                catch (Exception ex)
+                {
+                    sr?.Close();
+                    File.Delete(path);
+
+                    using (StreamWriter sw = File.CreateText(path))
+                    {
+                    }
                 }
             }
 
             System.IO.FileInfo file = new System.IO.FileInfo("Data\\");
             file.Directory.Create();
 
-
-
-            StreamReader sr = new StreamReader("login");
-
-
             string line;
 
-
-            while ((line = sr.ReadLine()) != null)
+            try
             {
-
-                string[] components = line.Split('|');
-
-                var user = new usermodel()
+                while ((line = sr.ReadLine()) != null)
                 {
-                    username = components[0],
-                    password = components[1]
+                    string[] components = line.Split('|');
 
-                };
-                userstorage.adduser(user);
+                    var user = new usermodel()
+                    {
+                        username = components[0],
+                        password = components[1]
+                    };
+                    userstorage.adduser(user);
+                }
             }
+            catch (Exception ex)
+            {
+                sr.Close();
+                MessageBox.Show($"Naskytla se Chyba při načítání uživatelských účtů. Data byla resetována.", "Chyba uživatele", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-            sr.Close();
+                // Delete the file and create a new one
+                File.Delete(path);
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                }
+            }
+            finally
+            {
+                sr.Close();
+            }
 
         }
 
@@ -226,10 +253,7 @@ namespace Japonstina
                     string AccLine;
                     while ((AccLine = SrAcc.ReadLine()) != null)
                     {
-
                         string[] components = AccLine.Split('|');
-
-
                     }
 
 

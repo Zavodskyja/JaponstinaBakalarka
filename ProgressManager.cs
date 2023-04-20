@@ -56,7 +56,7 @@ namespace Japonstina
 
             KanjiLoadData = new KanjiDataModel()
             {
-                Data = KanjiSlovnik.Select(kanji => new KanjiModel() 
+                Data = KanjiSlovnik.Select(kanji => new KanjiModel()
                 {
                     Id = kanji.Key.ID,
                     KanjiUroven = kanji.Key.Uroven.ToString(),
@@ -71,12 +71,12 @@ namespace Japonstina
 
         }
 
-        public static void UpdateProgress(string currentSet,int id, bool correctAnswer)
+        public static void UpdateProgress(string currentSet, int id, bool correctAnswer)
         {
-            
-            
 
-            if(currentSet == "Hiragana" || currentSet == "Katakana" )
+
+
+            if (currentSet == "Hiragana" || currentSet == "Katakana")
             {
                 var znakToUpdate = ProgressData.JapaneseProgress.Katakana.FirstOrDefault(znak => znak.KatakanaId == id);
                 if (correctAnswer == true)
@@ -93,7 +93,7 @@ namespace Japonstina
 
             if (currentSet == "N5" || currentSet == "N4")
             {
-               var znakToUpdate= ProgressData.JapaneseProgress.Vocabulary.FirstOrDefault(znak => znak.Id == id);
+                var znakToUpdate = ProgressData.JapaneseProgress.Vocabulary.FirstOrDefault(znak => znak.Id == id);
                 if (correctAnswer == true)
                 {
                     znakToUpdate.KanjiProgress = (znakToUpdate.KanjiProgress < 3) ? znakToUpdate.KanjiProgress + 1 : znakToUpdate.KanjiProgress;
