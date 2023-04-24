@@ -96,23 +96,23 @@
             // 
             // labelBotMissingNumber
             // 
-            labelBotMissingNumber.AutoSize = true;
             labelBotMissingNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             labelBotMissingNumber.Location = new System.Drawing.Point(156, 117);
             labelBotMissingNumber.Name = "labelBotMissingNumber";
-            labelBotMissingNumber.Size = new System.Drawing.Size(45, 28);
+            labelBotMissingNumber.Size = new System.Drawing.Size(50, 30);
             labelBotMissingNumber.TabIndex = 9;
             labelBotMissingNumber.Text = "100";
+            labelBotMissingNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelBotCompleteNumber
             // 
-            labelBotCompleteNumber.AutoSize = true;
             labelBotCompleteNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            labelBotCompleteNumber.Location = new System.Drawing.Point(167, 79);
+            labelBotCompleteNumber.Location = new System.Drawing.Point(156, 79);
             labelBotCompleteNumber.Name = "labelBotCompleteNumber";
-            labelBotCompleteNumber.Size = new System.Drawing.Size(34, 28);
+            labelBotCompleteNumber.Size = new System.Drawing.Size(50, 30);
             labelBotCompleteNumber.TabIndex = 8;
             labelBotCompleteNumber.Text = "50";
+            labelBotCompleteNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label16
             // 
@@ -172,23 +172,23 @@
             // 
             // labelMidMissingNumber
             // 
-            labelMidMissingNumber.AutoSize = true;
             labelMidMissingNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             labelMidMissingNumber.Location = new System.Drawing.Point(156, 117);
             labelMidMissingNumber.Name = "labelMidMissingNumber";
-            labelMidMissingNumber.Size = new System.Drawing.Size(45, 28);
+            labelMidMissingNumber.Size = new System.Drawing.Size(50, 30);
             labelMidMissingNumber.TabIndex = 9;
             labelMidMissingNumber.Text = "100";
+            labelMidMissingNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelMidCompleteNumber
             // 
-            labelMidCompleteNumber.AutoSize = true;
             labelMidCompleteNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            labelMidCompleteNumber.Location = new System.Drawing.Point(167, 79);
+            labelMidCompleteNumber.Location = new System.Drawing.Point(156, 77);
             labelMidCompleteNumber.Name = "labelMidCompleteNumber";
-            labelMidCompleteNumber.Size = new System.Drawing.Size(34, 28);
+            labelMidCompleteNumber.Size = new System.Drawing.Size(50, 30);
             labelMidCompleteNumber.TabIndex = 8;
             labelMidCompleteNumber.Text = "50";
+            labelMidCompleteNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label10
             // 
@@ -260,23 +260,23 @@
             // 
             // labelTopMissingNumber
             // 
-            labelTopMissingNumber.AutoSize = true;
             labelTopMissingNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             labelTopMissingNumber.Location = new System.Drawing.Point(156, 117);
             labelTopMissingNumber.Name = "labelTopMissingNumber";
-            labelTopMissingNumber.Size = new System.Drawing.Size(45, 28);
+            labelTopMissingNumber.Size = new System.Drawing.Size(50, 30);
             labelTopMissingNumber.TabIndex = 9;
             labelTopMissingNumber.Text = "100";
+            labelTopMissingNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelTopCompleteNumber
             // 
-            labelTopCompleteNumber.AutoSize = true;
             labelTopCompleteNumber.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            labelTopCompleteNumber.Location = new System.Drawing.Point(167, 79);
+            labelTopCompleteNumber.Location = new System.Drawing.Point(156, 78);
             labelTopCompleteNumber.Name = "labelTopCompleteNumber";
-            labelTopCompleteNumber.Size = new System.Drawing.Size(34, 28);
+            labelTopCompleteNumber.Size = new System.Drawing.Size(50, 30);
             labelTopCompleteNumber.TabIndex = 8;
             labelTopCompleteNumber.Text = "50";
+            labelTopCompleteNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 

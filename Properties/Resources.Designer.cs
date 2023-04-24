@@ -83,6 +83,16 @@ namespace Japonstina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hiragana {
+            get {
+                object obj = ResourceManager.GetObject("Hiragana", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HiraganaChartBlueAPIECEOFSUSHI_COM_ {
             get {
                 object obj = ResourceManager.GetObject("HiraganaChartBlueAPIECEOFSUSHI.COM_", resourceCulture);
@@ -106,6 +116,16 @@ namespace Japonstina.Properties {
         internal static System.Drawing.Bitmap JP_Logo {
             get {
                 object obj = ResourceManager.GetObject("JP_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Katakana {
+            get {
+                object obj = ResourceManager.GetObject("Katakana", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

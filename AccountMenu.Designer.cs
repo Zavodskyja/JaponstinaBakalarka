@@ -69,7 +69,6 @@
             AbecedyPanel.Name = "AbecedyPanel";
             AbecedyPanel.Size = new System.Drawing.Size(1066, 250);
             AbecedyPanel.TabIndex = 4;
-           
             // 
             // progressBarKatakana
             // 
@@ -96,24 +95,24 @@
             // 
             // labelMissingKatakanaValue
             // 
-            labelMissingKatakanaValue.AutoSize = true;
             labelMissingKatakanaValue.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             labelMissingKatakanaValue.Location = new System.Drawing.Point(156, 117);
             labelMissingKatakanaValue.Name = "labelMissingKatakanaValue";
-            labelMissingKatakanaValue.Size = new System.Drawing.Size(45, 28);
+            labelMissingKatakanaValue.Size = new System.Drawing.Size(50, 30);
             labelMissingKatakanaValue.TabIndex = 9;
             labelMissingKatakanaValue.Text = "100";
+            labelMissingKatakanaValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             labelMissingKatakanaValue.Click += label6_Click;
             // 
             // labelCompletedKatakanaValue
             // 
-            labelCompletedKatakanaValue.AutoSize = true;
             labelCompletedKatakanaValue.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            labelCompletedKatakanaValue.Location = new System.Drawing.Point(167, 79);
+            labelCompletedKatakanaValue.Location = new System.Drawing.Point(156, 79);
             labelCompletedKatakanaValue.Name = "labelCompletedKatakanaValue";
-            labelCompletedKatakanaValue.Size = new System.Drawing.Size(34, 28);
+            labelCompletedKatakanaValue.Size = new System.Drawing.Size(50, 30);
             labelCompletedKatakanaValue.TabIndex = 8;
             labelCompletedKatakanaValue.Text = "50";
+            labelCompletedKatakanaValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelMissingKatakana
             // 
@@ -195,23 +194,23 @@
             // 
             // labelMissingKanjiValue
             // 
-            labelMissingKanjiValue.AutoSize = true;
             labelMissingKanjiValue.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             labelMissingKanjiValue.Location = new System.Drawing.Point(156, 106);
             labelMissingKanjiValue.Name = "labelMissingKanjiValue";
-            labelMissingKanjiValue.Size = new System.Drawing.Size(45, 28);
+            labelMissingKanjiValue.Size = new System.Drawing.Size(50, 30);
             labelMissingKanjiValue.TabIndex = 12;
             labelMissingKanjiValue.Text = "100";
+            labelMissingKanjiValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelCompletedKanjiValue
             // 
-            labelCompletedKanjiValue.AutoSize = true;
             labelCompletedKanjiValue.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            labelCompletedKanjiValue.Location = new System.Drawing.Point(167, 67);
+            labelCompletedKanjiValue.Location = new System.Drawing.Point(156, 67);
             labelCompletedKanjiValue.Name = "labelCompletedKanjiValue";
-            labelCompletedKanjiValue.Size = new System.Drawing.Size(34, 28);
+            labelCompletedKanjiValue.Size = new System.Drawing.Size(50, 30);
             labelCompletedKanjiValue.TabIndex = 10;
             labelCompletedKanjiValue.Text = "20";
+            labelCompletedKanjiValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelMissingKanji
             // 
@@ -219,9 +218,9 @@
             labelMissingKanji.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             labelMissingKanji.Location = new System.Drawing.Point(23, 106);
             labelMissingKanji.Name = "labelMissingKanji";
-            labelMissingKanji.Size = new System.Drawing.Size(109, 28);
+            labelMissingKanji.Size = new System.Drawing.Size(118, 28);
             labelMissingKanji.TabIndex = 11;
-            labelMissingKanji.Text = "Neplněno:";
+            labelMissingKanji.Text = "Nesplněno:";
             // 
             // labelCompletedKanji
             // 
@@ -249,23 +248,23 @@
             // 
             // labelMissingVerbsValue
             // 
-            labelMissingVerbsValue.AutoSize = true;
             labelMissingVerbsValue.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             labelMissingVerbsValue.Location = new System.Drawing.Point(156, 106);
             labelMissingVerbsValue.Name = "labelMissingVerbsValue";
-            labelMissingVerbsValue.Size = new System.Drawing.Size(45, 28);
+            labelMissingVerbsValue.Size = new System.Drawing.Size(50, 30);
             labelMissingVerbsValue.TabIndex = 12;
             labelMissingVerbsValue.Text = "100";
+            labelMissingVerbsValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelCompletedVerbsValue
             // 
-            labelCompletedVerbsValue.AutoSize = true;
             labelCompletedVerbsValue.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            labelCompletedVerbsValue.Location = new System.Drawing.Point(167, 67);
+            labelCompletedVerbsValue.Location = new System.Drawing.Point(156, 67);
             labelCompletedVerbsValue.Name = "labelCompletedVerbsValue";
-            labelCompletedVerbsValue.Size = new System.Drawing.Size(34, 28);
+            labelCompletedVerbsValue.Size = new System.Drawing.Size(50, 30);
             labelCompletedVerbsValue.TabIndex = 10;
             labelCompletedVerbsValue.Text = "90";
+            labelCompletedVerbsValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelMissingVerbs
             // 
@@ -273,9 +272,9 @@
             labelMissingVerbs.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             labelMissingVerbs.Location = new System.Drawing.Point(23, 106);
             labelMissingVerbs.Name = "labelMissingVerbs";
-            labelMissingVerbs.Size = new System.Drawing.Size(109, 28);
+            labelMissingVerbs.Size = new System.Drawing.Size(118, 28);
             labelMissingVerbs.TabIndex = 11;
-            labelMissingVerbs.Text = "Neplněno:";
+            labelMissingVerbs.Text = "Nesplněno:";
             // 
             // labelCompletedVerbs
             // 

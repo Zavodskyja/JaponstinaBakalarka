@@ -29,131 +29,144 @@ namespace Japonstina
         /// </summary>
         private void InitializeComponent()
         {
-            this.Hiragana = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Katakana2 = new System.Windows.Forms.PictureBox();
-            this.Hiragana2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Katakana = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Hiragana)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Katakana2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Hiragana2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Katakana)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tabulky));
+            Hiragana = new System.Windows.Forms.PictureBox();
+            panel2 = new System.Windows.Forms.Panel();
+            label3 = new System.Windows.Forms.Label();
+            Katakana2 = new System.Windows.Forms.PictureBox();
+            Hiragana2 = new System.Windows.Forms.PictureBox();
+            label2 = new System.Windows.Forms.Label();
+            Katakana = new System.Windows.Forms.PictureBox();
+            panel1 = new System.Windows.Forms.Panel();
+            label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)Hiragana).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Katakana2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Hiragana2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Katakana).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // Hiragana
             // 
-            this.Hiragana.Image = global::Japonstina.Properties.Resources.HiraganaChartPinkAPIECEOFSUSHI_COM_;
-            this.Hiragana.Location = new System.Drawing.Point(0, 174);
-            this.Hiragana.Name = "Hiragana";
-            this.Hiragana.Size = new System.Drawing.Size(139, 130);
-            this.Hiragana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Hiragana.TabIndex = 0;
-            this.Hiragana.TabStop = false;
-            this.Hiragana.Click += new System.EventHandler(this.pictureBox1_Click);
+            Hiragana.Image = (System.Drawing.Image)resources.GetObject("Hiragana.Image");
+            Hiragana.Location = new System.Drawing.Point(0, 174);
+            Hiragana.Name = "Hiragana";
+            Hiragana.Size = new System.Drawing.Size(139, 130);
+            Hiragana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            Hiragana.TabIndex = 0;
+            Hiragana.TabStop = false;
+            Hiragana.Click += pictureBox1_Click;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.Katakana2);
-            this.panel2.Controls.Add(this.Hiragana2);
-            this.panel2.Location = new System.Drawing.Point(171, 9);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(894, 744);
-            this.panel2.TabIndex = 1;
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(Katakana2);
+            panel2.Controls.Add(Hiragana2);
+            panel2.Location = new System.Drawing.Point(171, 9);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(894, 744);
+            panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(0, 307);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(894, 108);
+            label3.TabIndex = 2;
+            label3.Text = "Po najetí myší na náhled se zobrazí tabulka.\r\nPro stažení klikněte na náhled.";
+            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Katakana2
             // 
-            this.Katakana2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Katakana2.Image = global::Japonstina.Properties.Resources.KatakanaChartPinkAPIECEOFSUSHI_COM_;
-            this.Katakana2.Location = new System.Drawing.Point(0, 0);
-            this.Katakana2.Name = "Katakana2";
-            this.Katakana2.Size = new System.Drawing.Size(894, 744);
-            this.Katakana2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Katakana2.TabIndex = 2;
-            this.Katakana2.TabStop = false;
-            this.Katakana2.Visible = false;
+            Katakana2.Dock = System.Windows.Forms.DockStyle.Fill;
+            Katakana2.Image = (System.Drawing.Image)resources.GetObject("Katakana2.Image");
+            Katakana2.Location = new System.Drawing.Point(0, 0);
+            Katakana2.Name = "Katakana2";
+            Katakana2.Size = new System.Drawing.Size(894, 744);
+            Katakana2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            Katakana2.TabIndex = 2;
+            Katakana2.TabStop = false;
+            Katakana2.Visible = false;
+            Katakana2.Click += Katakana2_Click;
             // 
             // Hiragana2
             // 
-            this.Hiragana2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Hiragana2.Image = global::Japonstina.Properties.Resources.HiraganaChartPinkAPIECEOFSUSHI_COM_;
-            this.Hiragana2.Location = new System.Drawing.Point(0, 0);
-            this.Hiragana2.Name = "Hiragana2";
-            this.Hiragana2.Size = new System.Drawing.Size(894, 744);
-            this.Hiragana2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Hiragana2.TabIndex = 2;
-            this.Hiragana2.TabStop = false;
-            this.Hiragana2.Visible = false;
+            Hiragana2.Dock = System.Windows.Forms.DockStyle.Fill;
+            Hiragana2.Image = (System.Drawing.Image)resources.GetObject("Hiragana2.Image");
+            Hiragana2.Location = new System.Drawing.Point(0, 0);
+            Hiragana2.Name = "Hiragana2";
+            Hiragana2.Size = new System.Drawing.Size(894, 744);
+            Hiragana2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            Hiragana2.TabIndex = 2;
+            Hiragana2.TabStop = false;
+            Hiragana2.Visible = false;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Salmon;
-            this.label2.Location = new System.Drawing.Point(3, 339);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 54);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Katakana";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.ForeColor = System.Drawing.Color.Salmon;
+            label2.Location = new System.Drawing.Point(3, 339);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(139, 54);
+            label2.TabIndex = 1;
+            label2.Text = "Katakana";
+            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
             // 
             // Katakana
             // 
-            this.Katakana.Image = global::Japonstina.Properties.Resources.KatakanaChartPinkAPIECEOFSUSHI_COM_;
-            this.Katakana.Location = new System.Drawing.Point(3, 396);
-            this.Katakana.Name = "Katakana";
-            this.Katakana.Size = new System.Drawing.Size(139, 130);
-            this.Katakana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Katakana.TabIndex = 0;
-            this.Katakana.TabStop = false;
-            this.Katakana.Click += new System.EventHandler(this.pictureBox2_Click);
+            Katakana.Image = (System.Drawing.Image)resources.GetObject("Katakana.Image");
+            Katakana.Location = new System.Drawing.Point(3, 396);
+            Katakana.Name = "Katakana";
+            Katakana.Size = new System.Drawing.Size(139, 130);
+            Katakana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            Katakana.TabIndex = 0;
+            Katakana.TabStop = false;
+            Katakana.Click += pictureBox2_Click;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.Katakana);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.Hiragana);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 9);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(142, 747);
-            this.panel1.TabIndex = 2;
+            panel1.Controls.Add(Katakana);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(Hiragana);
+            panel1.Controls.Add(label1);
+            panel1.Location = new System.Drawing.Point(12, 9);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(142, 747);
+            panel1.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Salmon;
-            this.label1.Location = new System.Drawing.Point(0, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 45);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hiragana";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.Salmon;
+            label1.Location = new System.Drawing.Point(0, 126);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(139, 45);
+            label1.TabIndex = 1;
+            label1.Text = "Hiragana";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
             // Tabulky
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(201)))), ((int)(((byte)(185)))));
-            this.ClientSize = new System.Drawing.Size(1066, 768);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Tabulky";
-            this.Text = "Tabulky";
-            ((System.ComponentModel.ISupportInitialize)(this.Hiragana)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Katakana2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Hiragana2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Katakana)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(252, 201, 185);
+            ClientSize = new System.Drawing.Size(1066, 768);
+            Controls.Add(panel1);
+            Controls.Add(panel2);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Name = "Tabulky";
+            Text = "Tabulky";
+            ((System.ComponentModel.ISupportInitialize)Hiragana).EndInit();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)Katakana2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Hiragana2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Katakana).EndInit();
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
@@ -165,5 +178,6 @@ namespace Japonstina
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Katakana2;
         public System.Windows.Forms.PictureBox Hiragana2;
+        private System.Windows.Forms.Label label3;
     }
 }
