@@ -129,60 +129,70 @@ namespace Japonstina
             if (detailType == "Katakana")
             {
                 sourceList = katakanaDictionary.Where(i => i.Key.znaky == vyuka.abeceda.Katakana).Select(x => x.Value.JP).ToList();
-                AccountListFill(sourceList, completedList);
+                AccountListFill(sourceList, completedList, detailType);
                 
             }
 
             if (detailType == "Hiragana")
             {
                 sourceList = katakanaDictionary.Where(i => i.Key.znaky == vyuka.abeceda.Hiragana).Select(x => x.Value.JP).ToList();
-                AccountListFill(sourceList, completedList);
+                AccountListFill(sourceList, completedList, detailType);
             }
 
             if (detailType == "N5")
             {
                 sourceList = kanjiDictionary.Where(i => i.KanjiUroven == detailType).Select(x => x.KanjiJp).ToList();
-                AccountListFill(sourceList, completedList);
+                AccountListFill(sourceList, completedList, detailType);
             }
 
             if (detailType == "N4")
             {
                 sourceList = kanjiDictionary.Where(i => i.KanjiUroven == detailType).Select(x => x.KanjiJp).ToList();
-                AccountListFill(sourceList, completedList);
+                AccountListFill(sourceList, completedList, detailType);
             }
 
             if (detailType == "RU - Ichidan")
             {
                 sourceList = kanjiDictionary.Where(i => i.Typ2 == detailType).Select(x => x.KanjiJp).ToList();
-                AccountListFill(sourceList, completedList);
+                AccountListFill(sourceList, completedList, detailType);
             }
 
             if (detailType == "U - Godan")
             {
                 sourceList = kanjiDictionary.Where(i => i.Typ2 == detailType).Select(x => x.KanjiJp).ToList();
-                AccountListFill(sourceList, completedList);
+                AccountListFill(sourceList, completedList, detailType);
             }
             if (detailType == "Nepravidelné")
             {
                 sourceList = kanjiDictionary.Where(i => i.Typ2 == detailType).Select(x => x.KanjiJp).ToList();
-                AccountListFill(sourceList, completedList);
+                AccountListFill(sourceList, completedList, detailType);
             }
 
 
 
 
         }
-        public string GetZnakID(int id)
+        public string GetZnakID(int id, string detailType)
         {
-            var slovnik = vyuka.JP.Slovnik();
-            var Znak = slovnik.FirstOrDefault(i => i.Key.ID == id);
-            var JpZnak = Znak.Value.JP;
-
-            return JpZnak;
+            if (detailType is "Hiragana" or "Katakana")
+            {
+                var slovnik = vyuka.JP.Slovnik();
+                var Znak = slovnik.FirstOrDefault(i => i.Key.ID == id);
+                var JpZnak = Znak.Value.JP;
+                return JpZnak;
+            }
+            else
+            {
+                var slovnik = ProgressManager.KanjiLoadData.Data;
+                var Znak = slovnik.FirstOrDefault(i => i.Id == id);
+                var JpZnak = Znak.KanjiJp;
+                return JpZnak;
+            }
+            
         }
 
 
-        public void AccountListFill(List<string> sourceList, List<int> completedList)
+        public void AccountListFill(List<string> sourceList, List<int> completedList, string detailType)
         {
             double graphValue = (double)completedList.Count() / sourceList.Count() * 100;
             progressBarCircle.Value = (int)graphValue;
@@ -193,15 +203,18 @@ namespace Japonstina
                 ItemList.Items.Add(character);
             }
 
-            foreach (int ID in completedList)
-            {
-                string character = GetZnakID(ID);
-                int index = ItemList.FindStringExact(character);
-                if (index != -1)
+
+            checkBox(completedList, detailType);
+            /*foreach (int ID in completedList)
                 {
-                    ItemList.SetItemChecked(index, true);
-                }
+                    string character = GetZnakID(ID,detailType);
+                    int index = ItemList.FindStringExact(character);
+                    if (index != -1)
+                    {
+                        ItemList.SetItemChecked(index, true);
+                    }
             }
+            */
         }
 
         private void KatakanaProgressBar_Click(object sender, EventArgs e)
@@ -211,6 +224,20 @@ namespace Japonstina
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        public void checkBox(List<int> completedList,string detailType)
+        {
+            foreach (int ID in completedList)
+            {
+                string character = GetZnakID(ID, detailType);
+                int index = ItemList.FindStringExact(character);
+                if (index != -1)
+                {
+                    ItemList.SetItemChecked(index, true);
+                }
+            }
 
         }
     }
