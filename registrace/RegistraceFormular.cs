@@ -18,8 +18,10 @@ namespace Japonstina
 {
     public partial class PanelRegistrace : Form
     {
-        private static readonly Regex validatePassword = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,15}$");
-        private static readonly Regex ValidateLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$");
+        private static readonly string loginValidateRules = @"^[a-zA-Z]{4,10}$";
+        private static readonly string passwordValidateRules = @"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,15}$";
+        private static readonly Regex validatePassword = new Regex(passwordValidateRules);
+        private static readonly Regex ValidateLogin = new Regex(loginValidateRules, RegexOptions.IgnoreCase);
 
         public PanelRegistrace()
         {

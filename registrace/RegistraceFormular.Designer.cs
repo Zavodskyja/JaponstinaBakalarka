@@ -159,7 +159,7 @@ namespace Japonstina
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(507, 28);
             label4.TabIndex = 9;
-            label4.Text = "Požadavky na login: Délka 4-10 znaků bez diakritiky\r\n";
+            label4.Text = "Požadavky na login: Délka 4-10 znaků bez diakritiky";
             // 
             // label6
             // 
