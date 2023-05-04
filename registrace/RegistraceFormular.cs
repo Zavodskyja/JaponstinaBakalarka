@@ -33,7 +33,7 @@ namespace Japonstina
         private void button1_Click(object sender, EventArgs e)
         {
             var validatePassword = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,15}$");
-            //var validateLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$");
+            var validateLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$");
 
             if (userstorage.exist(RegistrationLoginBox.Text))
             {
@@ -47,6 +47,11 @@ namespace Japonstina
                 RegistrationError.Text = "Nevyplněn login";
             }
 
+            else if
+                 (!validateLogin.IsMatch(RegistrationLoginBox.Text))
+            {
+                RegistrationError.Text = "Login neodpovídá požadavkům";
+            }
 
             else if
                  (RegistrationPasswordBox1.Text != RegistrationPasswordBox2.Text)
@@ -60,12 +65,8 @@ namespace Japonstina
                 RegistrationError.Text = "Heslo neodpovídá požadavkům";
             }
 
-          /*  else if
-                  (!validateLogin.IsMatch(RegistrationLoginBox.Text))
-            {
-                RegistrationError.Text = "Login neodpovídá požadavkům";
-            }
-          */
+
+
 
             else
 
