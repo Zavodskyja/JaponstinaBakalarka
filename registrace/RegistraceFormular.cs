@@ -18,6 +18,8 @@ namespace Japonstina
 {
     public partial class PanelRegistrace : Form
     {
+        private static readonly Regex validatePassword = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,15}$");
+        private static readonly Regex ValidateLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$");
 
         public PanelRegistrace()
         {
@@ -32,12 +34,10 @@ namespace Japonstina
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var validatePassword = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,15}$");
-            var validateLogin = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z]).{4,10}$");
+
 
             if (userstorage.exist(RegistrationLoginBox.Text))
             {
-
                 RegistrationError.Text = "Login již existuje";
             }
 
@@ -48,7 +48,7 @@ namespace Japonstina
             }
 
             else if
-                 (!validateLogin.IsMatch(RegistrationLoginBox.Text))
+                 (!ValidateLogin.IsMatch(RegistrationLoginBox.Text))
             {
                 RegistrationError.Text = "Login neodpovídá požadavkům";
             }
@@ -65,15 +65,9 @@ namespace Japonstina
                 RegistrationError.Text = "Heslo neodpovídá požadavkům";
             }
 
-
-
-
             else
-
             {
-
                 RegisterUser();
-
             }
         }
 
@@ -118,7 +112,6 @@ namespace Japonstina
             {
                 string hashedPassword = ComputeSha256Hash(RegistrationPasswordBox1.Text);
                 string username = RegistrationLoginBox.Text;
-
 
                 writetext.WriteLine(username + '|' + hashedPassword);
                 RegistrationError.Text = "";
