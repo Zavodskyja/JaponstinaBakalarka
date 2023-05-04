@@ -48,14 +48,14 @@ namespace Japonstina
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.ForeColor = System.Drawing.Color.White;
-            label2.Location = new System.Drawing.Point(148, 270);
+            label2.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.ForeColor = System.Drawing.Color.FromArgb(165, 186, 147);
+            label2.Location = new System.Drawing.Point(0, 191);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(415, 21);
+            label2.Size = new System.Drawing.Size(710, 119);
             label2.TabIndex = 1;
             label2.Text = "Z levého menu si můžete zvolit Vámi požadovanou činnost";
+            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -70,7 +70,7 @@ namespace Japonstina
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.Color.White;
+            label1.ForeColor = System.Drawing.Color.FromArgb(120, 119, 155);
             label1.Location = new System.Drawing.Point(304, 22);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(103, 37);
@@ -88,7 +88,6 @@ namespace Japonstina
             Name = "MainPage";
             Text = "MainPage";
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);

@@ -63,6 +63,7 @@ namespace Japonstina
             // 
             // progressBar
             // 
+            progressBar.BackColor = Color.Transparent;
             progressBar.ForeColor = Color.Black;
             progressBar.Location = new Point(263, 582);
             progressBar.Maximum = 90;
@@ -97,6 +98,7 @@ namespace Japonstina
             // 
             Vyuka_button4.BackColor = Color.FromArgb(240, 143, 144);
             Vyuka_button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            Vyuka_button4.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             Vyuka_button4.Location = new Point(563, 473);
             Vyuka_button4.Name = "Vyuka_button4";
             Vyuka_button4.Size = new Size(250, 40);
@@ -109,6 +111,7 @@ namespace Japonstina
             // 
             Vyuka_button3.BackColor = Color.FromArgb(120, 119, 155);
             Vyuka_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            Vyuka_button3.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             Vyuka_button3.Location = new Point(263, 473);
             Vyuka_button3.Name = "Vyuka_button3";
             Vyuka_button3.Size = new Size(250, 40);
@@ -122,6 +125,7 @@ namespace Japonstina
             Vyuka_button2.BackColor = Color.FromArgb(188, 0, 45);
             Vyuka_button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             Vyuka_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            Vyuka_button2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             Vyuka_button2.Location = new Point(563, 401);
             Vyuka_button2.Name = "Vyuka_button2";
             Vyuka_button2.Size = new Size(250, 40);
@@ -134,6 +138,7 @@ namespace Japonstina
             // 
             Vyuka_button1.BackColor = Color.FromArgb(165, 186, 147);
             Vyuka_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            Vyuka_button1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             Vyuka_button1.Location = new Point(263, 401);
             Vyuka_button1.Name = "Vyuka_button1";
             Vyuka_button1.Size = new Size(250, 40);

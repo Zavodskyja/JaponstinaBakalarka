@@ -115,8 +115,9 @@ namespace Japonstina
             ItemList.BackColor = System.Drawing.Color.FromArgb(252, 201, 185);
             ItemList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             ItemList.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            ItemList.ForeColor = System.Drawing.Color.White;
+            ItemList.ForeColor = System.Drawing.Color.Black;
             ItemList.FormattingEnabled = true;
+            ItemList.HorizontalScrollbar = true;
             ItemList.Location = new System.Drawing.Point(0, 293);
             ItemList.MultiColumn = true;
             ItemList.Name = "ItemList";
@@ -125,6 +126,7 @@ namespace Japonstina
             ItemList.TabIndex = 0;
             ItemList.TabStop = false;
             ItemList.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged_1;
+            //ItemList.ColumnWidth = 150;
             // 
             // panel7
             // 
@@ -146,7 +148,7 @@ namespace Japonstina
             // labelDetail
             // 
             labelDetail.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            labelDetail.ForeColor = System.Drawing.Color.White;
+            labelDetail.ForeColor = System.Drawing.Color.FromArgb(120, 119, 155);
             labelDetail.Location = new System.Drawing.Point(0, 0);
             labelDetail.Name = "labelDetail";
             labelDetail.Size = new System.Drawing.Size(1066, 57);

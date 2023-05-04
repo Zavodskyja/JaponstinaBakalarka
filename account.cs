@@ -117,7 +117,7 @@ namespace Japonstina
             completedList = ProgressData(detailType);
             var completedListCount = completedList.Count();
             var sourcelistCount = sourceList.Count();
-            
+
 
             /*TODO - dodelat do ProgressManager.ProgressAccount(HiraganaCount, SplnenoH, KatakanaCount, SplnenoK);
             
@@ -130,7 +130,7 @@ namespace Japonstina
             {
                 sourceList = katakanaDictionary.Where(i => i.Key.znaky == vyuka.abeceda.Katakana).Select(x => x.Value.JP).ToList();
                 AccountListFill(sourceList, completedList, detailType);
-                
+
             }
 
             if (detailType == "Hiragana")
@@ -188,7 +188,7 @@ namespace Japonstina
                 var JpZnak = Znak.KanjiJp;
                 return JpZnak;
             }
-            
+
         }
 
 
@@ -203,18 +203,31 @@ namespace Japonstina
                 ItemList.Items.Add(character);
             }
 
-
+            CheckListWidth(sourceList);
             checkBox(completedList, detailType);
-            /*foreach (int ID in completedList)
+
+
+        }
+
+        public void CheckListWidth(List<string> sourceList)
+        {
+            int maxWidth = 0;
+            using (Graphics g = ItemList.CreateGraphics())
+            {
+                foreach (object item in ItemList.Items)
                 {
-                    string character = GetZnakID(ID,detailType);
-                    int index = ItemList.FindStringExact(character);
-                    if (index != -1)
-                    {
-                        ItemList.SetItemChecked(index, true);
-                    }
+                    int itemWidth = (int)g.MeasureString(item.ToString(), ItemList.Font).Width;
+                    maxWidth = Math.Max(maxWidth, itemWidth);
+                }
             }
-            */
+            if(maxWidth > 100)
+            {
+                ItemList.ColumnWidth = maxWidth + SystemInformation.VerticalScrollBarWidth + 10;
+            }
+            else
+            {
+                ItemList.ColumnWidth = 100;
+            }
         }
 
         private void KatakanaProgressBar_Click(object sender, EventArgs e)
@@ -227,7 +240,7 @@ namespace Japonstina
 
         }
 
-        public void checkBox(List<int> completedList,string detailType)
+        public void checkBox(List<int> completedList, string detailType)
         {
             foreach (int ID in completedList)
             {

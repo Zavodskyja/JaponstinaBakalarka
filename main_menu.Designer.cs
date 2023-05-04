@@ -78,14 +78,14 @@ namespace Japonstina
             // 
             // button4
             // 
-            button4.BackColor = System.Drawing.Color.Salmon;
+            button4.BackColor = System.Drawing.Color.FromArgb(188, 0, 45);
             button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button4.ForeColor = System.Drawing.Color.White;
+            button4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button4.ForeColor = System.Drawing.Color.Black;
             button4.Location = new System.Drawing.Point(162, 23);
             button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(125, 35);
+            button4.Size = new System.Drawing.Size(125, 39);
             button4.TabIndex = 0;
             button4.Text = "Logout";
             button4.UseVisualStyleBackColor = false;
@@ -102,7 +102,7 @@ namespace Japonstina
             // 
             // button3
             // 
-            button3.BackColor = System.Drawing.Color.FromArgb(188, 243, 189);
+            button3.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button3.Location = new System.Drawing.Point(50, 25);
@@ -124,7 +124,7 @@ namespace Japonstina
             // 
             // button2
             // 
-            button2.BackColor = System.Drawing.Color.FromArgb(188, 243, 189);
+            button2.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
             button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button2.Location = new System.Drawing.Point(50, 25);
@@ -146,7 +146,7 @@ namespace Japonstina
             // 
             // button1
             // 
-            button1.BackColor = System.Drawing.Color.FromArgb(188, 243, 189);
+            button1.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button1.Location = new System.Drawing.Point(46, 28);

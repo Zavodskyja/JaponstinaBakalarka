@@ -88,7 +88,7 @@ namespace Japonstina
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            label2.ForeColor = System.Drawing.Color.FromArgb(188, 0, 45);
             label2.Location = new System.Drawing.Point(12, 34);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(120, 25);
@@ -97,7 +97,7 @@ namespace Japonstina
             // 
             // Register_button
             // 
-            Register_button.BackColor = System.Drawing.Color.Salmon;
+            Register_button.BackColor = System.Drawing.Color.FromArgb(188, 0, 45);
             Register_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             Register_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             Register_button.Location = new System.Drawing.Point(177, 31);
@@ -119,8 +119,9 @@ namespace Japonstina
             // 
             // button1
             // 
-            button1.BackColor = System.Drawing.Color.FromArgb(188, 243, 189);
+            button1.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             button1.Location = new System.Drawing.Point(12, 24);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(275, 50);

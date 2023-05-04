@@ -119,7 +119,7 @@ namespace Japonstina
                 sr.Close();
                 MessageBox.Show($"Naskytla se Chyba při načítání uživatelských účtů. Data byla resetována.", "Chyba uživatele", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                
+
                 File.Delete(path);
                 using (StreamWriter sw = File.CreateText(path))
                 {
@@ -219,7 +219,7 @@ namespace Japonstina
                 ProgressManager.LoadKanji();
                 ProgressManager.FirstLoginRun(user.username);
                 ProgressManager.LoadProgress(user.username);
-                
+
                 PrihlasenyUzivatel = user.username;
                 LoginPanel.Controls.Clear();
                 MainMenu m = new MainMenu();

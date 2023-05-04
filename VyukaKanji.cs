@@ -47,7 +47,7 @@ namespace Japonstina
 
         private int timeRemaining;
 
-                
+
 
 
 
@@ -209,7 +209,7 @@ namespace Japonstina
             var RandomJpZnaku = SeznamZnaku[random.Next(SeznamZnaku.Count)];
             var Znak = slovnik.FirstOrDefault(i => i.Key.ID == RandomJpZnaku);
             CorrectAnswer = Znak.Value.CZ;
-            CorrectAnswerId=Znak.Key.ID;
+            CorrectAnswerId = Znak.Key.ID;
             kanji_char.Text = Znak.Value.JP;
             var Preklad = slovnik.Where(i => SeznamZnaku.Contains(i.Key.ID)).Select(x => x.Value.CZ).ToList();
             var PrekladRandom = Preklad.OrderBy(a => random.Next()).ToList();
@@ -274,6 +274,7 @@ namespace Japonstina
                 if (b != null)
                 {
                     b.Enabled = false;
+                    b.ForeColor = Color.Black;
                 }
             }
 
@@ -363,15 +364,15 @@ namespace Japonstina
             progressBar.Value = timeRemaining;
 
 
-             if (timeRemaining <= 60)
-             {
-                 progressBar.ForeColor = Color.FromArgb(240, 143, 144);
-             }
-             if (timeRemaining <= 30)
-             {
-                 progressBar.ForeColor = Color.FromArgb(188, 0, 45);
-             }
-            
+            if (timeRemaining <= 60)
+            {
+                progressBar.ForeColor = Color.FromArgb(240, 143, 144);
+            }
+            if (timeRemaining <= 30)
+            {
+                progressBar.ForeColor = Color.FromArgb(188, 0, 45);
+            }
+
         }
 
 
@@ -401,6 +402,6 @@ namespace Japonstina
 
     }
 
-    
+
 }
 

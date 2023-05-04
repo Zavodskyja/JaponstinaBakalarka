@@ -85,12 +85,15 @@ namespace Japonstina
             // 
             // button4
             // 
+            button4.BackColor = System.Drawing.Color.FromArgb(120, 119, 155);
+            button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             button4.Location = new System.Drawing.Point(353, 585);
             button4.Name = "button4";
             button4.Size = new System.Drawing.Size(361, 36);
             button4.TabIndex = 13;
             button4.Text = "Kombinace";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // label3
@@ -150,12 +153,15 @@ namespace Japonstina
             // 
             // button3
             // 
+            button3.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
+            button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             button3.Location = new System.Drawing.Point(746, 300);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(150, 40);
             button3.TabIndex = 3;
             button3.Text = "Slovesa";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // label2
@@ -213,22 +219,28 @@ namespace Japonstina
             // 
             // button2
             // 
+            button2.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
+            button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             button2.Location = new System.Drawing.Point(455, 300);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(150, 40);
             button2.TabIndex = 2;
             button2.Text = "Kanji";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button1
             // 
+            button1.BackColor = System.Drawing.Color.FromArgb(165, 186, 147);
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             button1.Location = new System.Drawing.Point(165, 300);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(150, 40);
             button1.TabIndex = 1;
             button1.Text = "Abecedy";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // label1
